@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>twb.vim — Terminal Workbench for Vim</title>
+<meta name="description" content="Terminal Workbench colorschemes for classic Vim — calm graphite surfaces, restrained ANSI-style accents. Dark + light, true color with 256-color fallback.">
+<style>
+  :root {
+    --bg0:#090c0d; --bg1:#0e1214; --bg2:#13191c; --bg3:#182024;
+    --border:#2a363d; --border-strong:#39484f;
+    --text:#dce4df; --soft:#b4c3bd; --muted:#879994; --faint:#63736f;
+    --accent:#63f2ab; --accent-alt:#6bdcff; --warm:#f0c674;
+    --mono:"Berkeley Mono","JetBrains Mono","Cascadia Code",ui-monospace,Consolas,monospace;
+  }
+  * { box-sizing:border-box; margin:0; }
+  body {
+    background:var(--bg0); color:var(--text);
+    font:15px/1.7 var(--mono);
+    padding:48px 20px 64px;
+  }
+  .wrap { max-width:1060px; margin:0 auto; }
+  .manifest {
+    font-size:10.5px; font-weight:700; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted);
+  }
+  h1 { font-size:2em; line-height:1.2; margin:10px 0 6px; color:var(--accent); font-weight:700; }
+  .tagline { color:var(--soft); max-width:62ch; }
+  .links { margin:22px 0 40px; display:flex; gap:10px; flex-wrap:wrap; }
+  .btn {
+    display:inline-block; padding:7px 14px; border-radius:6px;
+    border:1px solid var(--border-strong); color:var(--text);
+    text-decoration:none; font-size:13px; transition:background .12s ease,border-color .12s ease;
+  }
+  .btn:hover { background:var(--bg2); border-color:var(--accent); }
+  .btn.primary { background:var(--accent); border-color:var(--accent); color:#07100d; font-weight:700; }
+  .btn.primary:hover { filter:brightness(1.08); }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:20px; }
+  .editor { border:1px solid; border-radius:6px; overflow:hidden; font-size:13px; line-height:1.55; }
+  .titlebar { padding:6px 12px; font-size:10.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; border-bottom:1px solid; }
+  .code { padding:10px 0; overflow-x:auto; }
+  .row { display:flex; white-space:pre; }
+  .ln { width:3.2em; flex:none; text-align:right; padding-right:1.1em; user-select:none; }
+  .statusline { padding:4px 12px; font-size:12px; display:flex; justify-content:space-between; }
+
+  /* per-scheme tokens */
+  .ed-dark {
+    --e-bg0:#090c0d; --e-bg1:#0e1214; --e-bg2:#13191c; --e-border:#2a363d;
+    --e-text:#dce4df; --e-soft:#b4c3bd; --e-muted:#879994; --e-faint:#63736f;
+    --e-accent:#63f2ab; --e-cyan:#6bdcff; --e-warm:#f0c674; --e-orange:#f7a35c;
+    --e-violet:#b78cff; --e-oncur:#07100d; --e-todobg:#2c281c;
+  }
+  .ed-light {
+    --e-bg0:#f5f7f4; --e-bg1:#edf2ee; --e-bg2:#e2eae5; --e-border:#bfcbc5;
+    --e-text:#17201d; --e-soft:#34443f; --e-muted:#60706a; --e-faint:#81918a;
+    --e-accent:#007a4d; --e-cyan:#006f9e; --e-warm:#a46600; --e-orange:#b65800;
+    --e-violet:#7357b8; --e-oncur:#f9fbf8; --e-todobg:#e9e1cf;
+  }
+  .editor { background:var(--e-bg0); color:var(--e-text); border-color:var(--e-border); }
+  .titlebar { background:var(--e-bg1); color:var(--e-muted); border-color:var(--e-border); }
+  .ln { color:var(--e-faint); }
+  .cursorline { background:var(--e-bg1); }
+  .cursorline .ln { color:var(--e-accent); font-weight:700; }
+  .statusline { background:var(--e-bg2); color:var(--e-soft); }
+  .k { color:var(--e-violet); }
+  .t { color:var(--e-accent); }
+  .fn { color:var(--e-cyan); }
+  .s, .n { color:var(--e-orange); }
+  .c { color:var(--e-muted); }
+  .sp { color:var(--e-warm); }
+  .o { color:var(--e-soft); }
+  .todo { color:var(--e-warm); background:var(--e-todobg); font-weight:700; }
+  .cursor { background:var(--e-accent); color:var(--e-oncur); }
+
+  .swatches { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
+  .sw { width:22px; height:22px; border-radius:4px; border:1px solid var(--border); }
+
+  h2 { font-size:1.15em; color:var(--accent-alt); margin:48px 0 12px; }
+  pre.install {
+    background:var(--bg2); border:1px solid var(--border); border-radius:6px;
+    padding:14px 16px; font-size:13px; overflow-x:auto; color:var(--soft);
+  }
+  pre.install .cmt { color:var(--faint); }
+  footer { margin-top:56px; padding-top:16px; border-top:1px solid var(--border); color:var(--faint); font-size:12.5px; }
+  footer a { color:var(--accent-alt); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="manifest">Terminal Workbench · Vim Port</div>
+  <h1>twb.vim</h1>
+  <p class="tagline">Two colorschemes for classic Vim — <strong>twb-dark</strong> and <strong>twb-light</strong> —
+  porting the Terminal Workbench design system: calm graphite surfaces, restrained ANSI-style
+  accents, quiet chrome with color reserved for signal.</p>
+  <div class="links">
+    <a class="btn primary" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim">GitHub&nbsp;→</a>
+    <a class="btn" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases">Releases</a>
+    <a class="btn" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system">Design System</a>
+  </div>
+
+  <div class="grid">
+
+    <div>
+      <div class="editor ed-dark">
+        <div class="titlebar">twb-dark</div>
+        <div class="code"><div class="row"><span class="ln">1</span><span><span class="c">/* Calm graphite, restrained accents.</span></span></div>
+<div class="row"><span class="ln">2</span><span><span class="c"> * <span class="todo">TODO:</span> try both schemes. */</span></span></div>
+<div class="row"><span class="ln">3</span><span><span class="k">#include</span> <span class="s">&lt;stdio.h&gt;</span></span></div>
+<div class="row"><span class="ln">4</span><span><span class="k">#define</span> ANSWER <span class="n">42</span></span></div>
+<div class="row"><span class="ln">5</span><span> </span></div>
+<div class="row"><span class="ln">6</span><span><span class="t">typedef struct</span> Point { <span class="t">int</span> x, y; } Point;</span></div>
+<div class="row"><span class="ln">7</span><span> </span></div>
+<div class="row"><span class="ln">8</span><span><span class="t">static int</span> <span class="fn">add</span>(<span class="t">int</span> a, <span class="t">int</span> b) { <span class="k">return</span> a <span class="o">+</span> b; }</span></div>
+<div class="row"><span class="ln">9</span><span> </span></div>
+<div class="row cursorline"><span class="ln">10</span><span><span class="t">int</span> <span class="fn">main</span>(<span class="t">void</span>) {<span class="cursor">&nbsp;</span></span></div>
+<div class="row"><span class="ln">11</span><span>    <span class="t">const char</span> <span class="o">*</span>msg <span class="o">=</span> <span class="s">"hi, <span class="sp">\x1b[32m</span>workbench<span class="sp">\n</span>"</span>;</span></div>
+<div class="row"><span class="ln">12</span><span>    <span class="k">for</span> (<span class="t">int</span> i <span class="o">=</span> <span class="n">0</span>; i <span class="o">&lt;</span> <span class="n">10</span>; i<span class="o">++</span>)</span></div>
+<div class="row"><span class="ln">13</span><span>        <span class="k">if</span> (i <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span>)</span></div>
+<div class="row"><span class="ln">14</span><span>            <span class="fn">printf</span>(<span class="s">"%d<span class="sp">\n</span>"</span>, <span class="fn">add</span>(ANSWER, i));</span></div>
+<div class="row"><span class="ln">15</span><span>    <span class="k">return</span> <span class="n">0</span>;</span></div>
+<div class="row"><span class="ln">16</span><span>}</span></div></div>
+        <div class="statusline"><span>NORMAL · sample.c</span><span>c · utf-8 · 10:24</span></div>
+      </div>
+      <div class="swatches">
+        <div class="sw" style="background:#090c0d" title="bg0 #090c0d"></div>
+        <div class="sw" style="background:#13191c" title="bg2 #13191c"></div>
+        <div class="sw" style="background:#dce4df" title="text #dce4df"></div>
+        <div class="sw" style="background:#63f2ab" title="accent #63f2ab"></div>
+        <div class="sw" style="background:#6bdcff" title="accent-alt #6bdcff"></div>
+        <div class="sw" style="background:#f0c674" title="warm #f0c674"></div>
+        <div class="sw" style="background:#ff6e7a" title="red #ff6e7a"></div>
+        <div class="sw" style="background:#f7a35c" title="orange #f7a35c"></div>
+        <div class="sw" style="background:#b78cff" title="violet #b78cff"></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="editor ed-light">
+        <div class="titlebar">twb-light</div>
+        <div class="code"><div class="row"><span class="ln">1</span><span><span class="c">/* Calm graphite, restrained accents.</span></span></div>
+<div class="row"><span class="ln">2</span><span><span class="c"> * <span class="todo">TODO:</span> try both schemes. */</span></span></div>
+<div class="row"><span class="ln">3</span><span><span class="k">#include</span> <span class="s">&lt;stdio.h&gt;</span></span></div>
+<div class="row"><span class="ln">4</span><span><span class="k">#define</span> ANSWER <span class="n">42</span></span></div>
+<div class="row"><span class="ln">5</span><span> </span></div>
+<div class="row"><span class="ln">6</span><span><span class="t">typedef struct</span> Point { <span class="t">int</span> x, y; } Point;</span></div>
+<div class="row"><span class="ln">7</span><span> </span></div>
+<div class="row"><span class="ln">8</span><span><span class="t">static int</span> <span class="fn">add</span>(<span class="t">int</span> a, <span class="t">int</span> b) { <span class="k">return</span> a <span class="o">+</span> b; }</span></div>
+<div class="row"><span class="ln">9</span><span> </span></div>
+<div class="row cursorline"><span class="ln">10</span><span><span class="t">int</span> <span class="fn">main</span>(<span class="t">void</span>) {<span class="cursor">&nbsp;</span></span></div>
+<div class="row"><span class="ln">11</span><span>    <span class="t">const char</span> <span class="o">*</span>msg <span class="o">=</span> <span class="s">"hi, <span class="sp">\x1b[32m</span>workbench<span class="sp">\n</span>"</span>;</span></div>
+<div class="row"><span class="ln">12</span><span>    <span class="k">for</span> (<span class="t">int</span> i <span class="o">=</span> <span class="n">0</span>; i <span class="o">&lt;</span> <span class="n">10</span>; i<span class="o">++</span>)</span></div>
+<div class="row"><span class="ln">13</span><span>        <span class="k">if</span> (i <span class="o">%</span> <span class="n">2</span> <span class="o">==</span> <span class="n">0</span>)</span></div>
+<div class="row"><span class="ln">14</span><span>            <span class="fn">printf</span>(<span class="s">"%d<span class="sp">\n</span>"</span>, <span class="fn">add</span>(ANSWER, i));</span></div>
+<div class="row"><span class="ln">15</span><span>    <span class="k">return</span> <span class="n">0</span>;</span></div>
+<div class="row"><span class="ln">16</span><span>}</span></div></div>
+        <div class="statusline"><span>NORMAL · sample.c</span><span>c · utf-8 · 10:24</span></div>
+      </div>
+      <div class="swatches">
+        <div class="sw" style="background:#f5f7f4" title="bg0 #f5f7f4"></div>
+        <div class="sw" style="background:#e2eae5" title="bg2 #e2eae5"></div>
+        <div class="sw" style="background:#17201d" title="text #17201d"></div>
+        <div class="sw" style="background:#007a4d" title="accent #007a4d"></div>
+        <div class="sw" style="background:#006f9e" title="accent-alt #006f9e"></div>
+        <div class="sw" style="background:#a46600" title="warm #a46600"></div>
+        <div class="sw" style="background:#c8324c" title="red #c8324c"></div>
+        <div class="sw" style="background:#b65800" title="orange #b65800"></div>
+        <div class="sw" style="background:#7357b8" title="violet #7357b8"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Install</h2>
+  <pre class="install"><span class="cmt">" Vim 8 packages (both colors/ and autoload/ are required):</span>
+git clone https://github.com/Real-Fruit-Snacks/terminal-workbench-vim ~/.vim/pack/themes/start/twb.vim
+
+<span class="cmt">" vimrc:</span>
+set termguicolors
+colorscheme twb-dark        <span class="cmt">" or twb-light</span></pre>
+  <p style="color:var(--muted); font-size:13px; margin-top:10px;">
+    Without <code>termguicolors</code> the themes fall back to hand-tuned xterm-256 colors automatically.
+    Requires Vim 8+; loads in Neovim too. No italics anywhere; Vim's <code>:terminal</code> gets a matching ANSI palette.
+  </p>
+
+  <footer>
+    MIT · palette from the
+    <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system">Terminal Workbench design system</a>
+  </footer>
+
+</div>
+</body>
+</html>

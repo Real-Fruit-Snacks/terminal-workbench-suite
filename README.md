@@ -1,11 +1,30 @@
-# twb.vim — Terminal Workbench for Vim
+<div align="center">
 
-Two classic-Vim colorschemes — `twb-dark` and `twb-light` — porting the
-[Terminal Workbench design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system):
-calm graphite surfaces, restrained ANSI-style accents, quiet chrome with
-color reserved for signal.
+<picture>
+  <source media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-vim/main/docs/assets/cover-dark.svg" />
+  <img alt="twb.vim"
+    src="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-vim/main/docs/assets/cover-light.svg"
+    width="820" />
+</picture>
 
-**[Live preview →](https://real-fruit-snacks.github.io/terminal-workbench-vim/)**
+<br/>
+
+Two classic-Vim colorschemes — <code>twb-dark</code> and <code>twb-light</code> — porting the
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system">Terminal Workbench design system</a>:
+calm graphite surfaces, restrained ANSI-style accents, quiet chrome with color reserved for signal.
+
+<br/><br/>
+
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases"><img src="https://img.shields.io/github/v/release/Real-Fruit-Snacks/terminal-workbench-vim?style=flat-square&color=63f2ab" alt="Release"></a>
+<img src="https://img.shields.io/badge/license-MIT-6bdcff?style=flat-square" alt="License: MIT">
+<img src="https://img.shields.io/badge/vim-8%2B-b78cff?style=flat-square" alt="Vim 8+">
+
+<a href="https://real-fruit-snacks.github.io/terminal-workbench-vim/">Live Preview</a> ·
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases">Releases</a> ·
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/issues">Issues</a>
+
+</div>
 
 ## Install
 
@@ -21,6 +40,11 @@ share an engine in `autoload/twb.vim`).
 **vim-plug:**
 
     Plug 'Real-Fruit-Snacks/terminal-workbench-vim'
+
+**Release package:** each [release](https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases)
+ships a complete archive of the theme, the demo site (`docs/`), and a
+`.gitlab-ci.yml` — push the tree to GitLab and the demo site publishes itself
+on GitLab Pages.
 
 ## Use
 
