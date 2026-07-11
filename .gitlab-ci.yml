@@ -1,0 +1,12 @@
+# GitLab CI: lets this repository be mirrored or self-hosted on GitLab with no
+# extra setup. Push to GitLab and the pipeline below runs automatically.
+
+bundle:
+  stage: build
+  image: alpine:latest
+  script:
+    - mkdir -p dist
+    - cp "Terminal Workbench Dark.xml" "Terminal Workbench Light.xml" dist/
+  artifacts:
+    paths:
+      - dist
