@@ -55,8 +55,8 @@ RULES = """
       (comment this section out to leave code fonts alone)
    ============================================================ */
 body {
-  --font-monospace: "Shellback Mono", ui-monospace, monospace;
-  --font-monospace-theme: "Shellback Mono", ui-monospace, monospace;
+  --font-monospace: "Terminal Workbench Mono", ui-monospace, monospace;
+  --font-monospace-theme: "Terminal Workbench Mono", ui-monospace, monospace;
 }
 .markdown-source-view .cm-inline-code,
 .markdown-rendered code,
@@ -86,8 +86,8 @@ body {
       (comment this section out to keep your reading font)
    ============================================================ */
 body {
-  --font-text: "Shellback Mono", ui-monospace, monospace;
-  --font-text-theme: "Shellback Mono", ui-monospace, monospace;
+  --font-text: "Terminal Workbench Mono", ui-monospace, monospace;
+  --font-text-theme: "Terminal Workbench Mono", ui-monospace, monospace;
 }
 .markdown-preview-view,
 .markdown-source-view.mod-cm6 .cm-content {
@@ -99,8 +99,8 @@ body {
       (comment this section out for a normal UI font)
    ============================================================ */
 body {
-  --font-interface: "Shellback Mono", ui-monospace, monospace;
-  --font-interface-theme: "Shellback Mono", ui-monospace, monospace;
+  --font-interface: "Terminal Workbench Mono", ui-monospace, monospace;
+  --font-interface-theme: "Terminal Workbench Mono", ui-monospace, monospace;
 }
 """
 
