@@ -27,7 +27,7 @@ HEADER = """\
 /* ============================================================
    Terminal Workbench Mono — Obsidian snippet (fully self-contained)
    ------------------------------------------------------------
-   All four font styles are EMBEDDED below as base64. No other
+   All six font styles are EMBEDDED below as base64. No other
    files are needed; this works in synced vaults and on machines
    where the font is not installed.
 
