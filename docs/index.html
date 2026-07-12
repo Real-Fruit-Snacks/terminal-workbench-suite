@@ -1,279 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Shellback Mono -- A water-cooled monospace for security notes, terminals and Obsidian vaults. Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and seven coding ligatures.">
-    <meta name="keywords" content="Shellback Mono, plugin, Shellback Mono, sub vault, productivity, knowledge management, note taking">
-    <title>Shellback Mono -- Shellback Mono Plugin</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminal Workbench Mono — official monospace of Terminal Workbench</title>
+<meta name="description" content="A clean geometric monospace with a slashed zero, unambiguous glyphs, coding ligatures and a full terminal pack. The official typeface of the Terminal Workbench design system.">
+<meta property="og:title" content="Terminal Workbench Mono">
+<meta property="og:description" content="The official monospace of the Terminal Workbench design system.">
+<meta property="og:image" content="https://real-fruit-snacks.github.io/terminal-workbench-mono/og-image.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="terminal-workbench-mono.css">
+<style>
+  /* ===== Base (copied from the design-system demo) ===== */
+  * { box-sizing: border-box; }
+  html { background: var(--twb-bg-0); }
+  body {
+    margin: 0; background: var(--twb-bg-0); color: var(--twb-text-normal);
+    font-family: var(--twb-font-ui); font-size: 15px;
+    line-height: var(--twb-line-height);
+  }
+  ::selection { background: var(--twb-selection); }
+  a { color: var(--twb-accent-alt); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: var(--twb-accent-alt); }
+  code, pre, kbd, .mono { font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  @media (prefers-reduced-motion: no-preference) {
+    button, a { transition: background var(--twb-transition), color var(--twb-transition),
+      border-color var(--twb-transition); }
+  }
+
+  /* ===== Manifest label idiom (copied from the demo) ===== */
+  .manifest {
+    font-family: "Terminal Workbench Mono", var(--twb-font-mono);
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--twb-text-muted);
+  }
+
+  /* ===== Layout / header / mode switch (copied from the demo) ===== */
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  header.site {
+    border-bottom: 1px solid var(--twb-border); background: var(--twb-bg-1);
+    position: sticky; top: 0; z-index: 10;
+  }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 46px; }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand .prompt { color: var(--twb-accent); font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-weight: 700; }
+  .mode-switch { display: flex; border: 1px solid var(--twb-border); border-radius: var(--twb-radius-s); overflow: hidden; }
+  .mode-switch button {
+    appearance: none; border: 0; background: transparent; padding: 5px 10px; cursor: pointer;
+    font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-size: 9.5px; font-weight: 700;
+    letter-spacing: 0.07em; text-transform: uppercase; color: var(--twb-text-muted);
+  }
+  .mode-switch button + button { border-left: 1px solid var(--twb-border); }
+  .mode-switch button:hover { background: var(--twb-bg-3); color: var(--twb-text-normal); }
+  .mode-switch button[aria-pressed="true"] { background: var(--twb-bg-3); color: var(--twb-accent); }
+  .mode-switch button:focus-visible { outline: 2px solid var(--twb-focus-ring); outline-offset: -2px; }
+
+  main { padding: 48px 0 24px; }
+  section { margin: 56px 0; }
+  section > .manifest { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  section > .manifest::after {
+    content: ""; flex: 1; height: 1px;
+    background: linear-gradient(to right, var(--twb-border), transparent);
+  }
+
+  /* ===== Hero ===== */
+  h1 { font-size: 2.1em; font-weight: 760; line-height: 1.2; margin: 0 0 6px;
+       font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  .subtitle { color: var(--twb-text-muted); margin: 0 0 20px; max-width: 62ch; }
+  .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 7px 14px; border-radius: var(--twb-radius-m);
+    font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-size: 12px; font-weight: 700;
+    border: 1px solid var(--twb-border);
+  }
+  .btn.primary { background: var(--twb-accent); color: var(--twb-text-on-accent); border-color: transparent; }
+  .btn.primary:hover { border-bottom-color: transparent; filter: brightness(1.08); }
+  .btn.ghost { color: var(--twb-text-soft); }
+  .btn.ghost:hover { background: var(--twb-bg-3); border-bottom-color: transparent; }
+
+  /* ===== Panel idiom (pane with header band) ===== */
+  .pane { border: 1px solid var(--twb-border); border-radius: var(--twb-radius-m);
+          background: var(--twb-bg-2); overflow: hidden; }
+  .pane .pane-head {
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--twb-bg-3); border-bottom: 1px solid var(--twb-border); padding: 6px 12px;
+  }
+  .pane pre { margin: 0; padding: 14px 16px; overflow-x: auto;
+              font-size: 14px; line-height: var(--twb-line-height-code); color: var(--twb-text-soft); }
+
+  /* ===== Specimen sections ===== */
+  .waterfall div { white-space: nowrap; overflow: hidden; color: var(--twb-text-normal);
+                   font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  .waterfall .size { color: var(--twb-text-faint); font-size: 10.5px; margin-right: 10px;
+                     font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+
+  .pairs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .pair { border: 1px solid var(--twb-border); border-radius: var(--twb-radius-m);
+          background: var(--twb-bg-1); padding: 14px 16px; text-align: center; }
+  .pair .glyphs { font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-size: 44px;
+                  color: var(--twb-accent); line-height: 1.3; }
+  .pair .why { font-size: 12.5px; color: var(--twb-text-muted); }
+
+  .liga-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .liga-grid pre { font-size: 22px; line-height: 1.9; }
+  .liga-off pre { font-feature-settings: "calt" 0, "liga" 0; }
+  @media (max-width: 640px) { .liga-grid { grid-template-columns: 1fr; } }
+
+  .styles-list div { font-size: 21px; line-height: 1.9; color: var(--twb-text-normal);
+                     font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  .styles-list .tag { color: var(--twb-text-faint); font-size: 10.5px; letter-spacing: 0.08em;
+                      text-transform: uppercase; margin-right: 12px; font-weight: 400; font-style: normal; }
+
+  .code .k { color: var(--twb-violet); }
+  .code .s { color: var(--twb-accent); }
+  .code .n { color: var(--twb-orange); }
+  .code .f { color: var(--twb-accent-alt); }
+  .code .c { color: var(--twb-text-faint); font-style: italic; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+  .card { border: 1px solid var(--twb-border); border-radius: var(--twb-radius-m);
+          background: var(--twb-bg-1); padding: 16px; font-size: 13.5px; color: var(--twb-text-soft); }
+  .card .manifest { display: block; margin-bottom: 8px; color: var(--twb-accent); }
+  .card code { font-size: 12px; background: var(--twb-bg-2); border: 1px solid var(--twb-border);
+               border-radius: var(--twb-radius-s); padding: 1px 5px; }
+
+  footer { border-top: 1px solid var(--twb-border); margin-top: 64px; padding: 20px 0 40px;
+           color: var(--twb-text-faint); font-size: 12.5px; }
+</style>
 </head>
 <body>
 
-    <!-- ==================== NAV ==================== -->
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <svg class="nav-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg>
-                Shellback Mono
-            </a>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#how-it-works">How It Works</a>
-                <a href="#install">Install</a>
-                <a href="https://github.com/Real-Fruit-Snacks/shellback-mono" class="nav-github" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                </a>
-            </div>
-        </div>
-    </nav>
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <span class="prompt">❯</span>
+      <span class="manifest" style="color:var(--twb-text-normal)">terminal-workbench-mono</span>
+    </div>
+    <div class="mode-switch" role="group" aria-label="Color mode">
+      <button type="button" data-mode="dark">Dark</button>
+      <button type="button" data-mode="auto">Auto</button>
+      <button type="button" data-mode="light">Light</button>
+    </div>
+  </div>
+</header>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="hero">
-        <div class="hero-glow hero-glow--1"></div>
-        <div class="hero-glow hero-glow--2"></div>
-        <div class="hero-grid"></div>
+<main>
+<div class="wrap">
 
-        <div class="hero-content">
-            <div class="hero-badge">Open Source &middot; MIT License</div>
-            <h1 class="hero-title">
-                A water-cooled monospace for security notes.
-            </h1>
-            <p class="hero-subtitle">
-                A water-cooled monospace for security notes, terminals and Obsidian vaults. Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and seven coding ligatures.
-            </p>
-            <div class="hero-actions">
-                <a href="https://github.com/Real-Fruit-Snacks/shellback-mono/releases/latest" class="btn btn--primary">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download
-                </a>
-                <a href="https://github.com/Real-Fruit-Snacks/shellback-mono" class="btn btn--ghost" target="_blank" rel="noopener">
-                    View on GitHub
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-                </a>
-            </div>
-        </div>
+  <h1>Terminal Workbench Mono</h1>
+  <p class="subtitle">The official monospace of the
+    <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system">Terminal
+    Workbench design system</a> — clean geometric letterforms, a slashed zero,
+    unambiguous 0O&thinsp;Il1&thinsp;5S&thinsp;8B, eleven coding ligatures and a full
+    terminal pack. Six styles, generated from a parametric Python engine, OFL licensed.</p>
+  <div class="hero-links">
+    <a class="btn primary" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/releases/latest">Download</a>
+    <a class="btn ghost" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-mono">GitHub</a>
+    <a class="btn ghost" href="https://real-fruit-snacks.github.io/terminal-workbench-design-system/">Design system</a>
+  </div>
 
-        <!-- Floating mock UI cards -->
-        <div class="hero-visual">
-            <div class="mock-window">
-                <div class="mock-titlebar">
-                    <span class="mock-dot mock-dot--red"></span>
-                    <span class="mock-dot mock-dot--yellow"></span>
-                    <span class="mock-dot mock-dot--green"></span>
-                    <span class="mock-titlebar-text">Shellback Mono</span>
-                </div>
-                <div class="mock-body" style="font-family: monospace;">
-                    <div class="mock-sidebar" style="background: var(--base); border-right: 1px solid var(--surface-1);">
-                        <div class="mock-folder mock-folder--active" style="color: var(--accent);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-                            ~/dev/shellback
-                        </div>
-                        <div class="mock-file mock-file--nested">box_glyphs.py</div>
-                        <div class="mock-file mock-file--nested">build.py</div>
-                        <div class="mock-file mock-file--nested">validate.py</div>
-                    </div>
-                    <div class="mock-editor" style="background: var(--mantle);">
-                        <div class="mock-editor-line" style="color: var(--sub0);"># shellback-mono v1.0.0</div>
-                        <div class="mock-editor-line mock-editor-line--empty"></div>
-                        <div class="mock-editor-line"><span style="color: var(--accent);">def</span> <span style="color: var(--green);">render_specimen</span>():</div>
-                        <div class="mock-editor-line">    <span style="color: var(--accent);">return</span> {</div>
-                        <div class="mock-editor-line">        <span style="color: var(--text);">"ambiguous"</span>: <span style="color: var(--green);">"0O Il1 5S 8B"</span>,</div>
-                        <div class="mock-editor-line">        <span style="color: var(--text);">"ligatures"</span>: <span style="color: var(--green);">"-> => != == ::"</span>,</div>
-                        <div class="mock-editor-line">        <span style="color: var(--text);">"box_drawing"</span>: <span style="color: var(--green);">"┌─┬─┐ ╔═╦═╗"</span></div>
-                        <div class="mock-editor-line">    }</div>
-                        <div class="mock-editor-line mock-editor-line--empty"></div>
-                        <div class="mock-editor-line"><span style="color: var(--sub0);">❯ python3 build.py</span></div>
-                        <div class="mock-editor-line" style="color: var(--green);">[+] Built 6 styles successfully.</div>
-                    <div class="mock-editor" style="background: var(--mantle); width: 100%;">
-                        <div class="mock-editor-line" style="color: var(--sub0);"># Specimen Render</div>
-                        <div class="mock-editor-line mock-editor-line--empty"></div>
-                        <div class="mock-editor-line"><span style="color: var(--text);">0O Il1 5S 8B</span></div>
-                        <div class="mock-editor-line"><span style="color: var(--accent);">-> => != == ::</span></div>
-                        <div class="mock-editor-line" style="color: var(--green);">┌─┬─┐ ╔═╦═╗</div>
-                        <div class="mock-editor-line" style="color: var(--green);">│ │ │ ║ ║ ║</div>
-                        <div class="mock-editor-line" style="color: var(--green);">└─┴─┘ ╚═╩═╝</div>
-                    </div>
-                </div>
-                <div class="mock-statusbar">
-                    <span class="mock-statusbar-vault">OFL-1.1 | 600 UPM | Python 3.11</span>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="waterfall">
+    <div class="manifest">Waterfall</div>
+    <div class="waterfall">
+      <div style="font-size:33px"><span class="size">33</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklm</div>
+      <div style="font-size:27px"><span class="size">27</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrs</div>
+      <div style="font-size:21px"><span class="size">21</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456</div>
+      <div style="font-size:17px"><span class="size">17</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 !@#$%&amp;*</div>
+      <div style="font-size:14px"><span class="size">14</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 !@#$%&amp;* ({[&lt;&gt;]})</div>
+      <div style="font-size:12px"><span class="size">12</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 !@#$%&amp;* ({[&lt;&gt;]}) à é ñ ü ç</div>
+    </div>
+  </section>
 
-    <!-- ==================== FEATURES ==================== -->
-    <section class="features" id="features">
-        <div class="section-inner">
-            <div class="section-header">
-                <p class="section-label">Capabilities</p>
-                <h2 class="section-title">Built for code and terminals.</h2>
-                <p class="section-desc">Every glyph is exactly one cell. Clean lines, unambiguous characters, and fully featured for development and writing.</p>
-            </div>
+  <section id="disambiguation">
+    <div class="manifest">Disambiguation</div>
+    <div class="pairs">
+      <div class="pair"><div class="glyphs">0 O</div><div class="why">slashed zero vs round O</div></div>
+      <div class="pair"><div class="glyphs">I l 1</div><div class="why">serifed cap-I, tailed ell, footed one</div></div>
+      <div class="pair"><div class="glyphs">5 S</div><div class="why">flat-top five vs spined S</div></div>
+      <div class="pair"><div class="glyphs">8 B</div><div class="why">pinched eight vs straight B</div></div>
+    </div>
+  </section>
 
-            <div class="feature-grid">
-                <div class="feature-card" data-reveal>
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
-                    </div>
-                    <h3>Unambiguous Glyphs</h3>
-                    <p>Features a slashed zero, footed one, tailed ell, and serifed cap-I so hashes and IPs are perfectly readable at 2 a.m.</p>
-                </div>
+  <section id="ligatures">
+    <div class="manifest">Ligatures</div>
+    <div class="liga-grid">
+      <div class="pane">
+        <div class="pane-head"><span class="manifest">liga on</span><span class="manifest" style="color:var(--twb-accent)">calt + liga</span></div>
+        <pre>-&gt;  &lt;-  =&gt;
+!=  ==  ===  !==
+&lt;=  &gt;=  :=  ::</pre>
+      </div>
+      <div class="pane liga-off">
+        <div class="pane-head"><span class="manifest">liga off</span><span class="manifest">plain</span></div>
+        <pre>-&gt;  &lt;-  =&gt;
+!=  ==  ===  !==
+&lt;=  &gt;=  :=  ::</pre>
+      </div>
+    </div>
+  </section>
 
-                <div class="feature-card" data-reveal>
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                    </div>
-                    <h3>Coding Ligatures</h3>
-                    <p>Beautifully styled operator ligatures for <code>-></code>, <code>!=</code>, <code>==</code>, <code>===</code>, <code><=</code>, <code>>=</code>, <code>:=</code>, and <code>::</code> via standard calt features.</p>
-                </div>
+  <section id="terminal">
+    <div class="manifest">Terminal</div>
+    <div class="pane">
+      <div class="pane-head"><span class="manifest" style="color:var(--twb-accent)">tmux · session 0</span><span class="manifest">80×12</span></div>
+      <pre>┌─ pane 1 ─────────┬─ pane 2 ─────────┐
+│ $ tail -f app.log│ $ htop           │
+│ ▁▂▃▄▅▆▇█ blocks  │ ░▒▓█ shades      │
+╞══════════════════╪══════════════════╡
+│ ╭─ rounded ─────╮│ ┏━ heavy ━━━━━━┓ │
+│ ╰───────────────╯│ ┗━━━━━━━━━━━━━━┛ │
+└──────────────────┴──────────────────┘</pre>
+    </div>
+  </section>
 
-                <div class="feature-card" data-reveal>
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-                    </div>
-                    <h3>Terminal Box-Drawing</h3>
-                    <p>Perfectly aligned box-drawing elements (light/heavy/double/rounded), block elements, shades, and Powerline separators.</p>
-                </div>
+  <section id="styles">
+    <div class="manifest">Styles</div>
+    <div class="styles-list">
+      <div style="font-weight:400"><span class="tag">400</span>Regular — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:400;font-style:italic"><span class="tag">400i</span>Italic — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:500"><span class="tag">500</span>Medium — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:500;font-style:italic"><span class="tag">500i</span>Medium Italic — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:700"><span class="tag">700</span>Bold — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:700;font-style:italic"><span class="tag">700i</span>Bold Italic — Sphinx of black quartz, judge my vow.</div>
+    </div>
+  </section>
 
-                <div class="feature-card" data-reveal>
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-                    </div>
-                    <h3>Six Metric-True Styles</h3>
-                    <p>Regular, Medium, and Bold — plus matching true-italic obliques. Every glyph is exactly 600 UPM wide across all weights.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section id="code" class="code">
+    <div class="manifest">Code</div>
+    <div class="pane">
+      <div class="pane-head"><span class="manifest" style="color:var(--twb-accent)">workbench.py</span><span class="manifest">utf-8</span></div>
+      <pre><span class="c"># attach every pane in the session</span>
+<span class="k">def</span> <span class="f">attach</span>(session, count=<span class="n">4</span>):
+    panes = [<span class="f">Pane</span>(i) <span class="k">for</span> i <span class="k">in</span> <span class="f">range</span>(count)]
+    <span class="k">if</span> session.status == <span class="s">"active"</span>:
+        <span class="f">print</span>(<span class="s">f"attached -&gt; {panes}"</span>)
+    <span class="k">return</span> panes</pre>
+    </div>
+  </section>
 
-    <!-- ==================== HOW IT WORKS ==================== -->
-    <section class="how" id="how-it-works">
-        <div class="section-inner">
-            <div class="section-header">
-                <p class="section-label">Workflow</p>
-                <h2 class="section-title">Install anywhere.</h2>
-            </div>
+  <section id="install">
+    <div class="manifest">Install</div>
+    <div class="cards">
+      <div class="card"><span class="manifest">Desktop · TTF</span>
+        Unzip <code>TerminalWorkbenchMono-TTF.zip</code>, install all six TTFs,
+        then pick "Terminal Workbench Mono" in your terminal or editor.</div>
+      <div class="card"><span class="manifest">Obsidian · Snippet</span>
+        Drop <code>terminal-workbench-mono.css</code> into
+        <code>.obsidian/snippets/</code> and enable it — fonts embedded, nothing
+        to install.</div>
+      <div class="card"><span class="manifest">Web · WOFF2</span>
+        Link <code>terminal-workbench-mono.css</code> next to a
+        <code>fonts/</code> folder — six styles, ~5&nbsp;KB each.</div>
+    </div>
+  </section>
 
-            <div class="steps-timeline">
-                <div class="step" data-reveal>
-                    <div class="step-marker">
-                        <span class="step-num">1</span>
-                        <div class="step-line"></div>
-                    </div>
-                    <div class="step-content">
-                        <h3>Desktop TTF</h3>
-                        <p>Install the TTF files on Windows, macOS, or Linux using standard tools for use in terminals, editors, and apps.</p>
-                    </div>
-                </div>
+</div>
+</main>
 
-                <div class="step" data-reveal>
-                    <div class="step-marker">
-                        <span class="step-num">2</span>
-                        <div class="step-line"></div>
-                    </div>
-                    <div class="step-content">
-                        <h3>Obsidian CSS Snippet</h3>
-                        <p>Drop the provided <code>shellback-mono.css</code> snippet into your vault to instantly theme your entire Obsidian workspace with embedded fonts.</p>
-                    </div>
-                </div>
+<footer>
+  <div class="wrap">
+    SIL Open Font License 1.1 · built from a parametric Python engine ·
+    <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-mono">source</a>
+  </div>
+</footer>
 
-                <div class="step" data-reveal>
-                    <div class="step-marker">
-                        <span class="step-num">3</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Web WOFF2</h3>
-                        <p>Deploy the web font payload (~5 KB per style) to your static site or web app for blazingly fast typographic delivery.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+(function () {
+  var KEY = "twm-theme";
+  var buttons = document.querySelectorAll(".mode-switch button");
+  function apply(mode) {
+    if (mode === "auto") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
+    });
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () { apply(b.dataset.mode); });
+  });
+  var saved = "auto";
+  try { saved = localStorage.getItem(KEY) || "auto"; } catch (e) {}
+  apply(saved);
+})();
+</script>
 
-    <!-- ==================== INSTALL ==================== -->
-    <section class="install" id="install">
-        <div class="section-inner">
-            <div class="section-header">
-                <p class="section-label">Get Started</p>
-                <h2 class="section-title">Install in under a minute.</h2>
-            </div>
-
-            <div class="install-grid">
-                <div class="install-card" data-reveal>
-                    <div class="install-card-header">
-                        <span class="install-card-label">Recommended</span>
-                        <h3>BRAT</h3>
-                    </div>
-                    <ol>
-                        <li>Install the <a href="https://github.com/TfTHacker/Shellback Mono42-brat" target="_blank" rel="noopener">BRAT</a> community plugin.</li>
-                        <li>Open BRAT settings and click <strong>Add Beta plugin</strong>.</li>
-                        <li>Paste this repository URL.</li>
-                        <li>Enable <strong>Shellback Mono</strong> in your plugin list.</li>
-                    </ol>
-                </div>
-
-                <div class="install-card" data-reveal>
-                    <div class="install-card-header">
-                        <h3>Manual</h3>
-                    </div>
-                    <ol>
-                        <li>Download <code>main.js</code>, <code>manifest.json</code>, and <code>styles.css</code> from the <a href="https://github.com/Real-Fruit-Snacks/shellback-mono/releases/latest" target="_blank" rel="noopener">latest release</a>.</li>
-                        <li>Create <code>.Shellback Mono/plugins/{{REPO_NAME_LOWER}}/</code> inside your vault.</li>
-                        <li>Place the three files inside that folder.</li>
-                        <li>Reload Shellback Mono and enable the plugin.</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="footer">
-        <div class="section-inner footer-inner">
-            <div class="footer-left">
-                <svg class="footer-logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
-                <span>Shellback Mono</span>
-            </div>
-            <p class="footer-copy">Built for <a href="https://Shellback Mono.md" target="_blank" rel="noopener">Shellback Mono</a>. Open source under the MIT License. Created by <a href="https://github.com/Real-Fruit-Snacks" target="_blank" rel="noopener">Real-Fruit-Snacks</a>.</p>
-        </div>
-    </footer>
-
-    <script>
-        // ---- Sticky nav ----
-        const nav = document.getElementById('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('nav--scrolled', window.scrollY > 40);
-        });
-
-        // ---- Scroll reveal ----
-        const revealEls = document.querySelectorAll('[data-reveal]');
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15 });
-        revealEls.forEach(el => revealObserver.observe(el));
-
-        // ---- Smooth anchor scroll ----
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
-
-
-
