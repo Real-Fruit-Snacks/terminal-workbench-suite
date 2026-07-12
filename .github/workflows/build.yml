@@ -41,7 +41,7 @@ jobs:
       - name: Upload built fonts
         uses: actions/upload-artifact@v4
         with:
-          name: shellback-mono-fonts
+          name: terminal-workbench-mono-fonts
           path: |
             dist/ttf/*.ttf
             dist/webfonts/*.woff2

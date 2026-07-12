@@ -1,20 +1,18 @@
 <div align="center">
 
-  # Shellback Mono
+  # Terminal Workbench Mono
 
-  **A water-cooled monospace for security notes, terminals and Obsidian vaults. Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and seven coding ligatures.**
+  **The official monospace of the [Terminal Workbench design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system). Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and eleven coding ligatures.**
 
-  [![License: OFL-1.1](https://img.shields.io/badge/License-OFL--1.1-cba6f7.svg)](OFL.txt)
-  [![Version](https://img.shields.io/badge/version-1.0.0-89b4fa)](https://github.com/Real-Fruit-Snacks/shellback-mono/releases)
-  
-  [Live Specimen](https://real-fruit-snacks.github.io/shellback-mono/) • [Report Issue](https://github.com/Real-Fruit-Snacks/shellback-mono/issues)
+  [![License: OFL-1.1](https://img.shields.io/badge/License-OFL--1.1-f0c674?style=flat-square)](OFL.txt)
+  [![Version](https://img.shields.io/badge/version-2.0.0-6bdcff?style=flat-square)](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/releases)
+  ![Modes](https://img.shields.io/badge/design%20system-official%20typeface-63f2ab?style=flat-square)
+
+  [Live Specimen](https://real-fruit-snacks.github.io/terminal-workbench-mono/) • [Design System](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system) • [Report Issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/issues)
 
 </div>
 
 ---
-
-## Overview
-
 
 ## Highlights
 
@@ -33,13 +31,13 @@ Every release is built from source by CI and ships with **signed build provenanc
 
 ## Download
 
-Grab the [**latest release**](https://github.com/Real-Fruit-Snacks/shellback-mono/releases/latest):
+Grab the [**latest release**](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/releases/latest):
 
 | Asset | Contents |
 |---|---|
-| `ShellbackMono-TTF.zip` | Desktop fonts for Windows / macOS / Linux |
-| `ShellbackMono-WOFF2.zip` | Web fonts + ready-made `shellback.css` |
-| `ShellbackMono-Obsidian.zip` | Single-file CSS snippet for Obsidian (fonts embedded) |
+| `TerminalWorkbenchMono-TTF.zip` | Desktop fonts for Windows / macOS / Linux |
+| `TerminalWorkbenchMono-WOFF2.zip` | Web fonts + ready-made `terminal-workbench-mono.css` |
+| `TerminalWorkbenchMono-Obsidian.zip` | Single-file CSS snippet for Obsidian (fonts embedded) |
 | `SHA256SUMS.txt` | Checksums for everything — verify before you trust |
 
 ### Verify the download
@@ -48,7 +46,7 @@ Every release is built by GitHub Actions and carries signed build provenance.
 Confirm a file came from this repo's pipeline (not a hand-upload):
 
 ```bash
-gh attestation verify ShellbackMono-TTF.zip --repo Real-Fruit-Snacks/shellback-mono
+gh attestation verify TerminalWorkbenchMono-TTF.zip --repo Real-Fruit-Snacks/terminal-workbench-mono
 sha256sum -c SHA256SUMS.txt        # or: shasum -a 256 -c
 ```
 
@@ -65,23 +63,34 @@ py tools/install_windows.py
 **Linux**
 
 ```bash
-mkdir -p ~/.local/share/fonts/ShellbackMono
-cp *.ttf ~/.local/share/fonts/ShellbackMono/
+mkdir -p ~/.local/share/fonts/TerminalWorkbenchMono
+cp *.ttf ~/.local/share/fonts/TerminalWorkbenchMono/
 fc-cache -f
+```
+
+## Use with the Terminal Workbench design system
+
+This font is the design system's official `--twb-font-mono` face. In a web
+project, link the system's stylesheets and you get both the tokens and the
+font:
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-design-system@main/fonts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-design-system@main/tokens.css">
 ```
 
 ## Obsidian
 
-1. Drop [`shellback-mono.css`](obsidian/shellback-mono.css) — one file, all six
+1. Drop [`terminal-workbench-mono.css`](obsidian/terminal-workbench-mono.css) — one file, all six
    font styles are embedded in it — into `<vault>/.obsidian/snippets/`.
-2. **Settings → Appearance → CSS snippets** → enable **shellback-mono**.
+2. **Settings → Appearance → CSS snippets** → enable **terminal-workbench-mono**.
 
 The snippet themes **all of Obsidian** — interface, note text, and code (with
 ligatures) — in any vault, on any machine, no font install required. Each
 numbered section in the file can be commented out independently, e.g. keep
-your UI font but write notes in Shellback. Prefer the built-in way? Install
-the TTFs and pick the font under **Settings → Appearance → Font** (restart
-Obsidian after installing so it appears in the list).
+your UI font but write notes in Terminal Workbench Mono. Prefer the built-in
+way? Install the TTFs and pick the font under **Settings → Appearance → Font**
+(restart Obsidian after installing so it appears in the list).
 
 > Why embedded? Obsidian resolves `url()` in snippet CSS against the app, not
 > the snippets folder, so a snippet can't reference font files sitting next to
@@ -93,20 +102,20 @@ The [`docs/`](docs/) folder is the published specimen site. Reuse the stylesheet
 anywhere:
 
 ```html
-<link rel="stylesheet" href="shellback.css">
-<style> code, pre { font-family: "Shellback Mono", monospace; } </style>
+<link rel="stylesheet" href="terminal-workbench-mono.css">
+<style> code, pre { font-family: "Terminal Workbench Mono", monospace; } </style>
 ```
 
 ### Published notes sites (Quartz, MkDocs, Hugo…)
 
 Hosting your vault as a static site? Copy `dist/webfonts/*.woff2` and
-`docs/shellback.css` into the site's static assets and point code at the font:
+`docs/terminal-workbench-mono.css` into the site's static assets and point code at the font:
 
 ```css
 /* Quartz: custom.scss · MkDocs Material: docs/stylesheets/extra.css · etc. */
-@import url("/shellback.css");          /* or copy the @font-face rules in */
-:root { --font-monospace: "Shellback Mono", ui-monospace, monospace; }
-code, pre, kbd, .cm-editor { font-family: "Shellback Mono", ui-monospace, monospace;
+@import url("/terminal-workbench-mono.css");    /* or copy the @font-face rules in */
+:root { --font-monospace: "Terminal Workbench Mono", ui-monospace, monospace; }
+code, pre, kbd, .cm-editor { font-family: "Terminal Workbench Mono", ui-monospace, monospace;
   font-feature-settings: "calt" 1, "liga" 1; }   /* keep coding ligatures on */
 ```
 
@@ -156,7 +165,7 @@ of three numbers per style — `w` (stroke weight), `cut` (corner radius), `segs
 
 [SIL Open Font License 1.1](OFL.txt). Use it, ship it, modify it — just don't
 sell the font files by themselves, and use a different name for forks
-("Shellback Mono" is reserved).
+("Terminal Workbench Mono" is reserved).
 
 ---
 

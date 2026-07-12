@@ -1,8 +1,27 @@
 # Changelog
 
-All notable changes to Shellback Mono. Versioning is roughly semantic:
+All notable changes to Terminal Workbench Mono. Versioning is roughly semantic:
 MAJOR for breaking metric/encoding changes, MINOR for new glyphs/features,
 PATCH for fixes.
+
+## [2.0.0] — 2026-07-11
+
+### Changed
+- **Renamed the family to Terminal Workbench Mono** — now the official
+  typeface of the [Terminal Workbench design
+  system](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system).
+  Font metadata, file names (`TerminalWorkbenchMono-*`), the web CSS
+  (`terminal-workbench-mono.css`), the Obsidian snippet, and the release
+  archives all carry the new name. The GitHub repo is now
+  `terminal-workbench-mono` (old URLs redirect).
+- Specimen site rebuilt on the design system's `tokens.css` — graphite
+  surfaces, mint/cyan/amber accents, and dark + light modes.
+- OpenGraph card and favicon regenerated in the Terminal Workbench palette.
+
+### Breaking
+- The font family name, PostScript names, all file names, and the OFL
+  Reserved Font Name changed. Update any CSS `font-family` rules, editor
+  settings, and `@font-face` sources that referenced "Shellback Mono".
 
 ## [1.1.0] — 2026-06-12
 

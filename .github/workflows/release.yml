@@ -48,23 +48,22 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            build/release/ShellbackMono-TTF.zip
-            build/release/ShellbackMono-WOFF2.zip
-            build/release/ShellbackMono-Obsidian.zip
+            build/release/TerminalWorkbenchMono-TTF.zip
+            build/release/TerminalWorkbenchMono-WOFF2.zip
+            build/release/TerminalWorkbenchMono-Obsidian.zip
             build/release/SHA256SUMS.txt
           generate_release_notes: true
           fail_on_unmatched_files: true
           body: |
-            **Shellback Mono** — a water-cooled monospace for security notes,
-            terminals and Obsidian vaults. [Live specimen](https://real-fruit-snacks.github.io/shellback-mono/).
+            **Terminal Workbench Mono** — the official monospace of the Terminal Workbench design system. [Live specimen](https://real-fruit-snacks.github.io/terminal-workbench-mono/).
 
             These archives were built from source by this workflow and carry
             signed build provenance:
 
             ```
-            gh attestation verify ShellbackMono-TTF.zip --repo Real-Fruit-Snacks/shellback-mono
+            gh attestation verify TerminalWorkbenchMono-TTF.zip --repo Real-Fruit-Snacks/terminal-workbench-mono
             sha256sum -c SHA256SUMS.txt
             ```
 
-            See [CHANGELOG.md](https://github.com/Real-Fruit-Snacks/shellback-mono/blob/main/CHANGELOG.md) for what changed.
+            See [CHANGELOG.md](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/blob/main/CHANGELOG.md) for what changed.
             ---
