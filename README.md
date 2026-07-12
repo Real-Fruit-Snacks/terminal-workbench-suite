@@ -1,5 +1,12 @@
 <div align="center">
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-mono/main/docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench Mono — the official typeface of the Terminal Workbench design system" src="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-mono/main/docs/assets/cover-light.svg" width="820" />
+</picture>
+
+<br/>
+
   # Terminal Workbench Mono
 
   **The official monospace of the [Terminal Workbench design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system). Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and eleven coding ligatures.**
@@ -38,6 +45,7 @@ Grab the [**latest release**](https://github.com/Real-Fruit-Snacks/terminal-work
 | `TerminalWorkbenchMono-TTF.zip` | Desktop fonts for Windows / macOS / Linux |
 | `TerminalWorkbenchMono-WOFF2.zip` | Web fonts + ready-made `terminal-workbench-mono.css` |
 | `TerminalWorkbenchMono-Obsidian.zip` | Single-file CSS snippet for Obsidian (fonts embedded) |
+| `TerminalWorkbenchMono-Site.zip` | The full specimen site, ready to self-host (fonts, CSS, page, GitLab CI file) — works fully offline |
 | `SHA256SUMS.txt` | Checksums for everything — verify before you trust |
 
 ### Verify the download
@@ -120,6 +128,17 @@ code, pre, kbd, .cm-editor { font-family: "Terminal Workbench Mono", ui-monospac
 ```
 
 That keeps your published notes visually identical to your local vault.
+
+## Host it yourself
+
+The specimen site is fully self-contained — no CDNs, no build step, works
+with no internet access. Grab `TerminalWorkbenchMono-Site.zip` from the
+latest release (or copy the `docs/` folder) and serve it from any static
+host:
+
+- **GitHub Pages:** already configured — every push to `main` deploys `docs/` via Actions.
+- **GitLab Pages:** the included [.gitlab-ci.yml](.gitlab-ci.yml) publishes the site on every push to the default branch — ideal for air-gapped GitLab instances.
+- **Anything else:** copy the files to any static web server.
 
 ## Build from source
 

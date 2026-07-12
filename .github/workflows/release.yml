@@ -51,11 +51,14 @@ jobs:
             build/release/TerminalWorkbenchMono-TTF.zip
             build/release/TerminalWorkbenchMono-WOFF2.zip
             build/release/TerminalWorkbenchMono-Obsidian.zip
+            build/release/TerminalWorkbenchMono-Site.zip
             build/release/SHA256SUMS.txt
           generate_release_notes: true
           fail_on_unmatched_files: true
           body: |
             **Terminal Workbench Mono** — the official monospace of the Terminal Workbench design system. [Live specimen](https://real-fruit-snacks.github.io/terminal-workbench-mono/).
+
+            Want to self-host the specimen site instead? Grab `TerminalWorkbenchMono-Site.zip` — the full site, ready to serve (fonts, CSS, page, GitLab CI file), works fully offline.
 
             These archives were built from source by this workflow and carry
             signed build provenance:

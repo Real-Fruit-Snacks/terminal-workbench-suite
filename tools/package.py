@@ -46,7 +46,19 @@ def main():
               [(_p('obsidian', 'terminal-workbench-mono.css'), 'terminal-workbench-mono.css'),
                (_p('OFL.txt'), 'OFL.txt')])
 
-    # 4) checksums over the zips and the raw font binaries
+    # 4) self-host site bundle: the specimen site + GitLab CI, fully offline
+    site_files = ['index.html', 'tokens.css', 'terminal-workbench-mono.css',
+                  'favicon.png', 'og-image.png']
+    write_zip(os.path.join(OUT, 'TerminalWorkbenchMono-Site.zip'),
+              [(_p('docs', f), f) for f in site_files]
+              + [(_p('docs', 'fonts', f), f'fonts/{f}') for f in woff]
+              + [(_p('docs', 'assets', s), f'assets/{s}')
+                 for s in sorted(os.listdir(_p('docs', 'assets')))
+                 if s.endswith('.svg')]
+              + [(_p('.gitlab-ci.yml'), '.gitlab-ci.yml'),
+                 (_p('OFL.txt'), 'OFL.txt')])
+
+    # 5) checksums over the zips and the raw font binaries
     lines = []
     targets = ([os.path.join(OUT, z) for z in sorted(os.listdir(OUT))
                 if z.endswith('.zip')]
