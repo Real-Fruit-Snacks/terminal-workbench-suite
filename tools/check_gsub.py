@@ -3,7 +3,7 @@ import os
 from fontTools.ttLib import TTFont
 
 ttf = os.path.join(os.path.dirname(__file__), '..', 'dist', 'ttf',
-                   'ShellbackMono-Regular.ttf')
+                   'TerminalWorkbenchMono-Regular.ttf')
 g = TTFont(ttf)['GSUB'].table
 feats = sorted({r.FeatureTag for r in g.FeatureList.FeatureRecord})
 print('features:', feats)

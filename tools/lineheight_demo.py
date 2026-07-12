@@ -11,13 +11,13 @@ TABLE = ["┌──────────┬──────────┐"
          "│ 10.0.1.7 │ 0wned    │",
          "╰──────────┴──────────╯"]
 sz = 30
-f = ImageFont.truetype(os.path.join(TTF, 'ShellbackMono-Regular.ttf'), sz)
+f = ImageFont.truetype(os.path.join(TTF, 'TerminalWorkbenchMono-Regular.ttf'), sz)
 img = Image.new('RGB', (760, 320), BG)
 d = ImageDraw.Draw(img)
 for col, (lh, label) in enumerate([(1.5, "line-height 1.5  (gaps)"),
                                    (1.2, "line-height 1.2  (fixed)")]):
     x = 30 + col * 380
-    d.text((x, 16), label, font=ImageFont.truetype(os.path.join(TTF, 'ShellbackMono-Regular.ttf'), 13), fill=DIM)
+    d.text((x, 16), label, font=ImageFont.truetype(os.path.join(TTF, 'TerminalWorkbenchMono-Regular.ttf'), 13), fill=DIM)
     y = 56.0
     for line in TABLE:
         d.text((x, y), line, font=f, fill=FG, anchor='la')

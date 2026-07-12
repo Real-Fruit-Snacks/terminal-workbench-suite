@@ -1,4 +1,4 @@
-"""Per-user install of Shellback Mono on Windows (no admin needed).
+"""Per-user install of Terminal Workbench Mono on Windows (no admin needed).
 
 Copies the TTFs into the per-user font directory and registers them in
 HKCU so every app sees them immediately. Re-running is safe (idempotent).
@@ -12,12 +12,12 @@ ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
 TTF_SRC = os.path.join(ROOT, 'dist', 'ttf')
 
 FILES = {
-    'ShellbackMono-Regular.ttf': 'Shellback Mono (TrueType)',
-    'ShellbackMono-Medium.ttf': 'Shellback Mono Medium (TrueType)',
-    'ShellbackMono-Bold.ttf': 'Shellback Mono Bold (TrueType)',
-    'ShellbackMono-Italic.ttf': 'Shellback Mono Italic (TrueType)',
-    'ShellbackMono-MediumItalic.ttf': 'Shellback Mono Medium Italic (TrueType)',
-    'ShellbackMono-BoldItalic.ttf': 'Shellback Mono Bold Italic (TrueType)',
+    'TerminalWorkbenchMono-Regular.ttf': 'Terminal Workbench Mono (TrueType)',
+    'TerminalWorkbenchMono-Medium.ttf': 'Terminal Workbench Mono Medium (TrueType)',
+    'TerminalWorkbenchMono-Bold.ttf': 'Terminal Workbench Mono Bold (TrueType)',
+    'TerminalWorkbenchMono-Italic.ttf': 'Terminal Workbench Mono Italic (TrueType)',
+    'TerminalWorkbenchMono-MediumItalic.ttf': 'Terminal Workbench Mono Medium Italic (TrueType)',
+    'TerminalWorkbenchMono-BoldItalic.ttf': 'Terminal Workbench Mono Bold Italic (TrueType)',
 }
 
 
@@ -70,7 +70,7 @@ def main():
     print(f'\n{installed}/{len(FILES)} styles installed for user '
           f'{os.environ.get("USERNAME", "")}.')
     print('Broadcast sent; most apps see the font immediately.')
-    print('Pick "Shellback Mono" in Obsidian / VS Code / Windows Terminal.')
+    print('Pick "Terminal Workbench Mono" in Obsidian / VS Code / Windows Terminal.')
     return 0
 
 

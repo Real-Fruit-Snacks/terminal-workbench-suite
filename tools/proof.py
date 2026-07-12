@@ -23,7 +23,7 @@ NOTES = ('Lateral movement via stolen kerberos tickets — the attacker '
 
 
 def font(style, px):
-    return ImageFont.truetype(os.path.join(TTF, f'ShellbackMono-{style}.ttf'), px)
+    return ImageFont.truetype(os.path.join(TTF, f'TerminalWorkbenchMono-{style}.ttf'), px)
 
 
 def main():
@@ -33,7 +33,7 @@ def main():
     x = 48
     y = 40
 
-    d.text((x, y), 'Shellback Mono — compiled proof', font=font('Bold', 34), fill=ACCENT)
+    d.text((x, y), 'Terminal Workbench Mono — compiled proof', font=font('Bold', 34), fill=ACCENT)
     y += 78
 
     for label, style, px, text, color in [

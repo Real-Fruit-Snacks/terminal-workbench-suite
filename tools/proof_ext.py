@@ -16,7 +16,7 @@ DIM = (138, 152, 166)
 
 
 def font(style, px):
-    return ImageFont.truetype(os.path.join(TTF, f'ShellbackMono-{style}.ttf'), px)
+    return ImageFont.truetype(os.path.join(TTF, f'TerminalWorkbenchMono-{style}.ttf'), px)
 
 
 TABLE = [
@@ -24,7 +24,7 @@ TABLE = [
     "│ host       │ status    │",
     "├────────────┼───────────┤",
     "│ 10.0.1.7   │ 0wned     │",
-    "│ shellback  │ Il1 5S 8B │",
+    "│ workbench  │ Il1 5S 8B │",
     "╰────────────┴───────────╯",
 ]
 DOUBLE = [
@@ -40,7 +40,7 @@ def main():
     d = ImageDraw.Draw(img)
     x = 44
     y = 34
-    d.text((x, y), "Shellback Mono — extended coverage", font=font('Bold', 30), fill=ACCENT)
+    d.text((x, y), "Terminal Workbench Mono — extended coverage", font=font('Bold', 30), fill=ACCENT)
     y += 64
 
     d.text((x, y), "accented latin-1", font=font('Regular', 13), fill=DIM); y += 22

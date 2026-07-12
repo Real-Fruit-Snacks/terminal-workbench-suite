@@ -1,4 +1,4 @@
-# Build + QA toolchain for Shellback Mono (pinned for reproducible builds).
+# Build + QA toolchain for Terminal Workbench Mono (pinned for reproducible builds).
 fonttools==4.63.0
 skia-pathops==0.9.2
 brotli==1.2.0

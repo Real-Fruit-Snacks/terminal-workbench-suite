@@ -31,19 +31,19 @@ def main():
     woff = sorted(f for f in os.listdir(_p('dist', 'webfonts')) if f.endswith('.woff2'))
 
     # 1) desktop TTFs
-    write_zip(os.path.join(OUT, 'ShellbackMono-TTF.zip'),
+    write_zip(os.path.join(OUT, 'TerminalWorkbenchMono-TTF.zip'),
               [(_p('dist', 'ttf', f), f) for f in ttf]
               + [(_p('OFL.txt'), 'OFL.txt')])
 
-    # 2) web fonts: shellback.css at root, fonts under fonts/
-    write_zip(os.path.join(OUT, 'ShellbackMono-WOFF2.zip'),
+    # 2) web fonts: terminal-workbench-mono.css at root, fonts under fonts/
+    write_zip(os.path.join(OUT, 'TerminalWorkbenchMono-WOFF2.zip'),
               [(_p('dist', 'webfonts', f), f'fonts/{f}') for f in woff]
-              + [(_p('docs', 'shellback.css'), 'shellback.css'),
+              + [(_p('docs', 'terminal-workbench-mono.css'), 'terminal-workbench-mono.css'),
                  (_p('OFL.txt'), 'OFL.txt')])
 
     # 3) Obsidian: single self-contained snippet
-    write_zip(os.path.join(OUT, 'ShellbackMono-Obsidian.zip'),
-              [(_p('obsidian', 'shellback-mono.css'), 'shellback-mono.css'),
+    write_zip(os.path.join(OUT, 'TerminalWorkbenchMono-Obsidian.zip'),
+              [(_p('obsidian', 'terminal-workbench-mono.css'), 'terminal-workbench-mono.css'),
                (_p('OFL.txt'), 'OFL.txt')])
 
     # 4) checksums over the zips and the raw font binaries

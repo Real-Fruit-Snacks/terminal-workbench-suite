@@ -12,20 +12,20 @@ import os
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '..'))
 WEB = os.path.join(ROOT, 'dist', 'webfonts')
-OUT = os.path.join(ROOT, 'obsidian', 'shellback-mono.css')
+OUT = os.path.join(ROOT, 'obsidian', 'terminal-workbench-mono.css')
 
 STYLES = [
-    ('ShellbackMono-Regular.woff2', 400, 'normal'),
-    ('ShellbackMono-Medium.woff2', 500, 'normal'),
-    ('ShellbackMono-Bold.woff2', 700, 'normal'),
-    ('ShellbackMono-Italic.woff2', 400, 'italic'),
-    ('ShellbackMono-MediumItalic.woff2', 500, 'italic'),
-    ('ShellbackMono-BoldItalic.woff2', 700, 'italic'),
+    ('TerminalWorkbenchMono-Regular.woff2', 400, 'normal'),
+    ('TerminalWorkbenchMono-Medium.woff2', 500, 'normal'),
+    ('TerminalWorkbenchMono-Bold.woff2', 700, 'normal'),
+    ('TerminalWorkbenchMono-Italic.woff2', 400, 'italic'),
+    ('TerminalWorkbenchMono-MediumItalic.woff2', 500, 'italic'),
+    ('TerminalWorkbenchMono-BoldItalic.woff2', 700, 'italic'),
 ]
 
 HEADER = """\
 /* ============================================================
-   Shellback Mono — Obsidian snippet (fully self-contained)
+   Terminal Workbench Mono — Obsidian snippet (fully self-contained)
    ------------------------------------------------------------
    All four font styles are EMBEDDED below as base64. No other
    files are needed; this works in synced vaults and on machines
@@ -34,7 +34,7 @@ HEADER = """\
    Install:
      1. Drop THIS ONE FILE into  <vault>/.obsidian/snippets/
      2. Settings -> Appearance -> CSS snippets -> enable
-        "shellback-mono"
+        "terminal-workbench-mono"
 
    What it does by default — themes ALL of Obsidian:
      1) CODE       code blocks, inline code, frontmatter
@@ -65,7 +65,7 @@ body {
 .markdown-preview-view pre,
 .cm-s-obsidian .HyperMD-codeblock,
 .markdown-source-view.mod-cm6 .cm-content .HyperMD-codeblock {
-  font-family: "Shellback Mono", ui-monospace, monospace !important;
+  font-family: "Terminal Workbench Mono", ui-monospace, monospace !important;
   font-variant-ligatures: contextual common-ligatures;
   font-feature-settings: "calt" 1, "liga" 1;
 }
@@ -112,7 +112,7 @@ def main():
         b64 = base64.b64encode(open(path, 'rb').read()).decode('ascii')
         parts.append(
             '@font-face {\n'
-            '  font-family: "Shellback Mono";\n'
+            '  font-family: "Terminal Workbench Mono";\n'
             f'  src: url(data:font/woff2;base64,{b64}) format("woff2");\n'
             f'  font-weight: {weight};\n'
             f'  font-style: {style};\n'

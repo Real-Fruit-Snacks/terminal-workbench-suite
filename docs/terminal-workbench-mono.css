@@ -1,0 +1,38 @@
+/* Terminal Workbench Mono — @font-face bundle (6 styles)
+ * The official monospace of the Terminal Workbench design system.
+ * Drop this folder on any static host (GitHub Pages, etc.) and:
+ *   <link rel="stylesheet" href="terminal-workbench-mono.css">
+ *   code, pre { font-family: "Terminal Workbench Mono", monospace; }
+ *   .medium  { font-weight: 500; }   // Regular 400 · Medium 500 · Bold 700
+ */
+
+@font-face {
+  font-family: "Terminal Workbench Mono"; font-weight: 400; font-style: normal;
+  font-display: swap;
+  src: url("fonts/TerminalWorkbenchMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Terminal Workbench Mono"; font-weight: 500; font-style: normal;
+  font-display: swap;
+  src: url("fonts/TerminalWorkbenchMono-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Terminal Workbench Mono"; font-weight: 700; font-style: normal;
+  font-display: swap;
+  src: url("fonts/TerminalWorkbenchMono-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Terminal Workbench Mono"; font-weight: 400; font-style: italic;
+  font-display: swap;
+  src: url("fonts/TerminalWorkbenchMono-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Terminal Workbench Mono"; font-weight: 500; font-style: italic;
+  font-display: swap;
+  src: url("fonts/TerminalWorkbenchMono-MediumItalic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Terminal Workbench Mono"; font-weight: 700; font-style: italic;
+  font-display: swap;
+  src: url("fonts/TerminalWorkbenchMono-BoldItalic.woff2") format("woff2");
+}
