@@ -1,0 +1,15 @@
+# Deploys the twb.vim demo site to GitLab Pages.
+# Push this repository to GitLab and the site publishes automatically
+# at https://<user>.gitlab.io/<repo>/ — no other setup required.
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir -p public
+    - cp docs/index.html public/
+    - cp -r docs/assets public/assets
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
