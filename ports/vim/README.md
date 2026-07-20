@@ -2,9 +2,9 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-vim/main/docs/assets/cover-dark.svg" />
+    srcset="docs/assets/cover-dark.svg" />
   <img alt="twb.vim"
-    src="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-vim/main/docs/assets/cover-light.svg"
+    src="docs/assets/cover-light.svg"
     width="820" />
 </picture>
 
@@ -16,13 +16,13 @@ calm graphite surfaces, restrained ANSI-style accents, quiet chrome with color r
 
 <br/><br/>
 
-<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases"><img src="https://img.shields.io/github/v/release/Real-Fruit-Snacks/terminal-workbench-vim?style=flat-square&color=63f2ab" alt="Release"></a>
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases"><img src="https://img.shields.io/github/v/release/Real-Fruit-Snacks/terminal-workbench-suite?style=flat-square&color=63f2ab" alt="Release"></a>
 <img src="https://img.shields.io/badge/license-MIT-6bdcff?style=flat-square" alt="License: MIT">
 <img src="https://img.shields.io/badge/vim-8%2B-b78cff?style=flat-square" alt="Vim 8+">
 
-<a href="https://real-fruit-snacks.github.io/terminal-workbench-vim/">Live Preview</a> ·
-<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases">Releases</a> ·
-<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/issues">Issues</a>
+<a href="https://real-fruit-snacks.github.io/terminal-workbench-suite/ports/vim/docs/">Live Preview</a> ·
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases">Releases</a> ·
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/issues">Issues</a>
 
 </div>
 
@@ -33,15 +33,16 @@ share an engine in `autoload/twb.vim`).
 
 **Vim 8 packages:**
 
-    git clone https://github.com/Real-Fruit-Snacks/terminal-workbench-vim ~/.vim/pack/themes/start/twb.vim
+    git clone https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+    ln -s "$(pwd)/terminal-workbench-suite/ports/vim" ~/.vim/pack/themes/start/twb.vim
 
-(Windows: clone into `~\vimfiles\pack\themes\start\twb.vim`.)
+(Windows: create a junction into `~\vimfiles\pack\themes\start\twb.vim`, or just copy `ports\vim` there.)
 
 **vim-plug:**
 
-    Plug 'Real-Fruit-Snacks/terminal-workbench-vim'
+    Plug 'Real-Fruit-Snacks/terminal-workbench-suite', { 'rtp': 'ports/vim' }
 
-**Release package:** each [release](https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases)
+**Release package:** each [release](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases)
 ships a complete archive of the theme, the demo site (`docs/`), and a
 `.gitlab-ci.yml` — push the tree to GitLab and the demo site publishes itself
 on GitLab Pages.
