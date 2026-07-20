@@ -9,8 +9,8 @@
 
 # Terminal Workbench for Brave
 
-[![Latest release](https://img.shields.io/github/v/release/Real-Fruit-Snacks/terminal-workbench-brave?label=release&color=2a9d6e)](https://github.com/Real-Fruit-Snacks/terminal-workbench-brave/releases/latest)
-[![License: MIT](https://img.shields.io/github/license/Real-Fruit-Snacks/terminal-workbench-brave?color=2a9d6e)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/Real-Fruit-Snacks/terminal-workbench-suite?label=release&color=2a9d6e)](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases)
+[![License: MIT](https://img.shields.io/github/license/Real-Fruit-Snacks/terminal-workbench-suite?color=2a9d6e)](../../LICENSE)
 [![Brave](https://img.shields.io/badge/brave-chromium%20theme-fb542b)](https://brave.com)
 
 A modern terminal-inspired theme for [Brave](https://brave.com), built for people who spend the day in panes, shells, logs, editors, and command palettes.
@@ -31,7 +31,7 @@ Companion to the [Terminal Workbench Obsidian theme](https://github.com/Real-Fru
 
 ### From a release
 
-1. Download `terminal-workbench-dark.zip` or `terminal-workbench-light.zip` from the [latest release](https://github.com/Real-Fruit-Snacks/terminal-workbench-brave/releases/latest) and extract it.
+1. Download `terminal-workbench-dark.zip` or `terminal-workbench-light.zip` from the [latest release](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases) and extract it.
 2. Open `brave://extensions` and enable **Developer mode** (top right).
 3. Select **Load unpacked** and choose the extracted folder.
 
@@ -80,4 +80,4 @@ To cut a release: edit `tokens.json`, run `node build.mjs`, commit, then push a 
 
 ## License
 
-[MIT](LICENSE)
+[MIT](../../LICENSE)
