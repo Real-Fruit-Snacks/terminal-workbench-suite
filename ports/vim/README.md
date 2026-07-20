@@ -43,9 +43,8 @@ share an engine in `autoload/twb.vim`).
     Plug 'Real-Fruit-Snacks/terminal-workbench-suite', { 'rtp': 'ports/vim' }
 
 **Release package:** each [release](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases)
-ships a complete archive of the theme, the demo site (`docs/`), and a
-`.gitlab-ci.yml` — push the tree to GitLab and the demo site publishes itself
-on GitLab Pages.
+ships `terminal-workbench-vim.zip`, an archive of just the theme itself —
+`autoload/`, `colors/`, and `README.md`.
 
 ## Use
 

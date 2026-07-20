@@ -73,10 +73,9 @@ A Chromium theme styles the browser frame, toolbar, tab strip, bookmark bar, and
 | `build.mjs` | Generates both theme packages and runs the contrast gate |
 | `dist/terminal-workbench-dark/` | Installable dark theme package |
 | `dist/terminal-workbench-light/` | Installable light theme package |
-| `THEME-SPEC.md` | Portable design specification for reusing this visual system elsewhere |
-| `.github/workflows/release.yml` | Creates a GitHub release with both theme packages when a version tag is pushed |
+| [`THEME-SPEC.md`](../../THEME-SPEC.md) | Portable design specification for reusing this visual system elsewhere |
 
-To cut a release: edit `tokens.json`, run `node build.mjs`, commit, then push a tag with the version number.
+To cut a release: edit `tokens.json`, run `node build.mjs`, commit, then push a tag with the version number — the suite's single release workflow builds and publishes every port's release assets from there.
 
 ## License
 

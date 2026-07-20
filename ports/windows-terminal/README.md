@@ -110,9 +110,7 @@ Replace both names with their light counterparts:
 
 The project page at [real-fruit-snacks.github.io/terminal-workbench-suite/ports/windows-terminal/docs](https://real-fruit-snacks.github.io/terminal-workbench-suite/ports/windows-terminal/docs/) is a static site served from [`docs/`](docs) with no build step.
 
-- **GitHub Pages** — serve `main` : `/docs` (this repository's configuration).
-- **GitLab Pages** — the suite-level [`.gitlab-ci.yml`](../../.gitlab-ci.yml) publishes this site along with the rest of the suite; push the repository to GitLab and Pages deploys on the default branch.
-- **Anywhere else** — copy the contents of `docs/` to any static file server.
+It publishes automatically as part of the suite's GitHub Pages, since GitHub Pages serves the whole `terminal-workbench-suite` repository tree from `main` — no separate configuration is needed for this port. Or copy the contents of `docs/` to any static file server.
 
 Each release attaches a bundle with everything needed to host.
 
