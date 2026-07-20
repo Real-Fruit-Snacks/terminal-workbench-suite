@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="Terminal Workbench — a color scheme for Windows Terminal, with a preview of the terminal">
+  <title>Terminal Workbench for Windows Terminal</title>
+  <rect x="0.75" y="0.75" width="1198.5" height="458.5" rx="24" fill="#090c0d" stroke="#2a363d" stroke-width="1.5"/>
+
+  <!-- left column -->
+  <text x="68" y="128" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15" font-weight="600" letter-spacing="2.2" fill="#63736f">COLOR SCHEME · WINDOWS TERMINAL</text>
+  <text x="66" y="204" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="56" font-weight="700" letter-spacing="0.5" fill="#dce4df">terminal</text>
+  <text x="66" y="264" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="56" font-weight="700" letter-spacing="0.5" fill="#dce4df">workbench</text>
+  <rect x="382" y="222" width="12" height="46" rx="2" fill="#63f2ab"/>
+  <text x="68" y="322" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="21" fill="#879994">A calm graphite palette — <tspan fill="#63f2ab" font-weight="600">quiet chrome, loud signal</tspan>.</text>
+  <text x="68" y="382" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12.5" letter-spacing="1.6" fill="#63736f">DARK · LIGHT · 16 ANSI COLORS · WINDOW CHROME</text>
+
+  <!-- right column: mock terminal window -->
+  <rect x="624" y="64" width="512" height="332" rx="14" fill="#090c0d" stroke="#2a363d" stroke-width="1.5"/>
+  <path d="M638 64 h484 a14 14 0 0 1 14 14 v30 h-512 v-30 a14 14 0 0 1 14 -14 z" fill="#0e1214"/>
+  <line x1="624" y1="108" x2="1136" y2="108" stroke="#2a363d" stroke-width="1"/>
+  <rect x="642" y="72" width="96" height="36" rx="6" fill="#182024"/>
+  <text x="690" y="94" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#63f2ab" text-anchor="middle">PWSH</text>
+  <text x="800" y="94" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.5" fill="#63736f" text-anchor="middle">UBUNTU</text>
+  <text x="866" y="95" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#63736f">+</text>
+
+  <!-- terminal lines -->
+  <text x="648" y="146" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14"><tspan fill="#63f2ab" font-weight="700">$</tspan><tspan fill="#dce4df" xml:space="preserve"> git status</tspan></text>
+  <text x="648" y="176" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14"><tspan fill="#b4c3bd">On branch </tspan><tspan fill="#6bdcff">main</tspan></text>
+  <text x="648" y="206" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14"><tspan fill="#f0c674" xml:space="preserve">  modified:</tspan><tspan fill="#b4c3bd" xml:space="preserve">   settings.json</tspan></text>
+  <text x="648" y="236" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14"><tspan fill="#ff6e7a" xml:space="preserve">  deleted:</tspan><tspan fill="#b4c3bd" xml:space="preserve">    old-theme.json</tspan></text>
+  <text x="648" y="278" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14"><tspan fill="#63f2ab" font-weight="700">$</tspan><tspan fill="#dce4df" xml:space="preserve"> ls</tspan></text>
+  <text x="648" y="308" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14"><tspan fill="#74a8ff" font-weight="600">docs</tspan><tspan fill="#b4c3bd" xml:space="preserve">   README.md   </tspan><tspan fill="#b78cff">terminal-workbench.json</tspan></text>
+  <text x="648" y="350" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14"><tspan fill="#63f2ab" font-weight="700">$</tspan></text>
+  <rect x="666" y="336" width="10" height="18" rx="1.5" fill="#63f2ab"/>
+</svg>

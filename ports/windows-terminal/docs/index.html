@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terminal Workbench for Windows Terminal</title>
+  <meta name="description" content="A calm, dense, high-contrast theme for Windows Terminal: graphite backgrounds, restrained ANSI-style accents, and matching window chrome in dark and light modes.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#090c0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f5f7f4" media="(prefers-color-scheme: light)">
+  <script>
+    try {
+      var m = localStorage.getItem("tw-mode");
+      if (m === "light" || m === "dark") document.documentElement.setAttribute("data-theme", m);
+    } catch (e) {}
+  </script>
+  <style>
+    :root[data-theme="dark"] {
+      --bg-0: #090c0d; --bg-1: #0e1214; --bg-2: #13191c; --bg-3: #182024;
+      --border: #2a363d; --border-strong: #39484f;
+      --text: #dce4df; --text-soft: #b4c3bd; --muted: #879994; --faint: #63736f;
+      --accent: #63f2ab; --accent-alt: #6bdcff; --warm: #f0c674; --red: #ff6e7a;
+      --violet: #b78cff; --blue: #74a8ff;
+      --on-accent: #07100d;
+      color-scheme: dark;
+    }
+    :root[data-theme="light"] {
+      --bg-0: #f5f7f4; --bg-1: #edf2ee; --bg-2: #e2eae5; --bg-3: #d6e1db;
+      --border: #bfcbc5; --border-strong: #9daea7;
+      --text: #17201d; --text-soft: #34443f; --muted: #60706a; --faint: #81918a;
+      --accent: #007a4d; --accent-alt: #006f9e; --warm: #a46600; --red: #c8324c;
+      --violet: #7357b8; --blue: #2e62b8;
+      --on-accent: #f9fbf8;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg-0);
+      color: var(--text);
+      font-family: "Inter", "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .mono { font-family: "Berkeley Mono", "JetBrains Mono", "Cascadia Code", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace; }
+    .label {
+      font-family: "Berkeley Mono", "JetBrains Mono", "Cascadia Code", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 10.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    a { color: var(--accent-alt); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg-1); border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; height: 46px; }
+    .topbar .label { color: var(--accent); }
+    .topbar-links { display: flex; align-items: center; gap: 18px; }
+    .topbar-links a { color: var(--muted); font-size: 13px; }
+    .topbar-links a:hover { color: var(--text); text-decoration: none; }
+    .toggle {
+      font: inherit; font-size: 12px; cursor: pointer;
+      background: var(--bg-2); color: var(--text-soft);
+      border: 1px solid var(--border); border-radius: 6px; padding: 4px 12px;
+    }
+    .toggle:hover { border-color: var(--border-strong); color: var(--text); }
+
+    .hero { padding: 72px 0 40px; }
+    .hero .label { color: var(--faint); letter-spacing: 0.14em; }
+    h1 {
+      font-family: "Berkeley Mono", "JetBrains Mono", "Cascadia Code", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 40px; font-weight: 700; margin: 10px 0 14px; line-height: 1.2;
+    }
+    h1 .cursor { display: inline-block; width: 0.42em; height: 0.78em; background: var(--accent); border-radius: 2px; margin-left: 6px; vertical-align: baseline; }
+    .tagline { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0 0 26px; }
+    .tagline strong { color: var(--accent); font-weight: 600; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 9px 18px; border-radius: 6px; font-size: 14px; font-weight: 650;
+      border: 1px solid var(--border);
+    }
+    .btn-primary { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+    .btn-primary:hover { filter: brightness(1.08); text-decoration: none; }
+    .btn-ghost { background: var(--bg-2); color: var(--text-soft); }
+    .btn-ghost:hover { border-color: var(--border-strong); color: var(--text); text-decoration: none; }
+
+    section { padding: 34px 0; }
+    h2 {
+      font-family: "Berkeley Mono", "JetBrains Mono", "Cascadia Code", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 18px;
+      padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    }
+
+    .term {
+      background: var(--bg-0); border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; max-width: 720px;
+    }
+    .term-tabs { background: var(--bg-1); border-bottom: 1px solid var(--border); display: flex; align-items: stretch; padding: 6px 10px 0; gap: 4px; }
+    .term-tab { padding: 7px 18px 8px; border-radius: 6px 6px 0 0; font-size: 10.5px; }
+    .term-tab.active { background: var(--bg-3); color: var(--accent); }
+    .term-tab.idle { color: var(--faint); }
+    .term-body { padding: 16px 18px 18px; font-size: 13.5px; line-height: 1.62; overflow-x: auto; }
+    .term-body .row { white-space: pre; }
+    .p { color: var(--accent); font-weight: 700; }
+    .t { color: var(--text); }
+    .s { color: var(--text-soft); }
+    .c-cyan { color: var(--accent-alt); }
+    .c-warm { color: var(--warm); }
+    .c-red { color: var(--red); }
+    .c-blue { color: var(--blue); font-weight: 600; }
+    .c-violet { color: var(--violet); }
+    .block-cursor { display: inline-block; width: 8px; height: 15px; background: var(--accent); border-radius: 1.5px; vertical-align: text-bottom; }
+
+    .palettes { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
+    .palette h3 { margin: 0 0 12px; }
+    .chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 8px; }
+    .chip {
+      display: flex; align-items: center; gap: 9px;
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px;
+      padding: 7px 9px;
+    }
+    .chip .sw { width: 22px; height: 22px; border-radius: 4px; border: 1px solid var(--border); flex: none; }
+    .chip .nm { font-size: 11px; color: var(--muted); display: block; line-height: 1.35; }
+    .chip .hx { font-size: 11px; color: var(--text-soft); display: block; line-height: 1.35; }
+
+    ol.steps { margin: 0; padding-left: 22px; color: var(--text-soft); }
+    ol.steps li { margin-bottom: 10px; }
+    ol.steps code, p code {
+      font-family: "Berkeley Mono", "JetBrains Mono", "Cascadia Code", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em; background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: 4px; padding: 1px 6px; color: var(--text-soft);
+    }
+    pre {
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 6px;
+      padding: 14px 16px; overflow-x: auto; max-width: 720px;
+      font-family: "Berkeley Mono", "JetBrains Mono", "Cascadia Code", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+      font-size: 13px; line-height: 1.62; color: var(--text-soft);
+    }
+    pre .k { color: var(--accent-alt); }
+    pre .v { color: var(--accent); }
+
+    .note { color: var(--muted); font-size: 14px; max-width: 720px; }
+
+    footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 26px 0 40px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    footer, footer a { color: var(--muted); font-size: 13px; }
+    footer a:hover { color: var(--text); }
+
+    @media (prefers-reduced-motion: no-preference) {
+      a, .btn, .toggle, .chip { transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="label">Terminal Workbench</span>
+      <nav class="topbar-links">
+        <a href="https://real-fruit-snacks.github.io/terminal-workbench/">Obsidian theme</a>
+        <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal">GitHub</a>
+        <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal/releases/latest">Releases</a>
+        <button class="toggle" id="mode-toggle" type="button" aria-pressed="false">Light mode</button>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="label">Color scheme · Windows Terminal</span>
+      <h1>terminal workbench<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="tagline">A calm, dense, high-contrast theme for Windows Terminal — graphite backgrounds, restrained ANSI-style accents, and matching window chrome. <strong>Quiet chrome, loud signal.</strong></p>
+      <div class="cta">
+        <a class="btn btn-primary" href="terminal-workbench.json" download>Download terminal-workbench.json</a>
+        <a class="btn btn-ghost" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal">View on GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h2>Preview</h2>
+        <div class="term" role="img" aria-label="Preview of the Terminal Workbench color scheme in a terminal window">
+          <div class="term-tabs">
+            <span class="term-tab active label">pwsh</span>
+            <span class="term-tab idle label">ubuntu</span>
+          </div>
+          <div class="term-body mono">
+            <div class="row"><span class="p">$</span><span class="t"> git status</span></div>
+            <div class="row"><span class="s">On branch </span><span class="c-cyan">main</span></div>
+            <div class="row"><span class="c-warm">  modified:</span><span class="s">   settings.json</span></div>
+            <div class="row"><span class="c-red">  deleted:</span><span class="s">    old-theme.json</span></div>
+            <div class="row">&nbsp;</div>
+            <div class="row"><span class="p">$</span><span class="t"> ls</span></div>
+            <div class="row"><span class="c-blue">docs</span><span class="s">   README.md   </span><span class="c-violet">terminal-workbench.json</span></div>
+            <div class="row"><span class="p">$</span> <span class="block-cursor" aria-hidden="true"></span></div>
+          </div>
+        </div>
+        <p class="note">Use the mode toggle in the top bar — the preview, like the theme, ships in dark and light.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Palette</h2>
+        <div class="palettes">
+          <div class="palette">
+            <h3 class="label">Dark</h3>
+            <div class="chips">
+              <div class="chip"><span class="sw" style="background:#090C0D"></span><span class="mono"><span class="nm">background</span><span class="hx">#090C0D</span></span></div>
+              <div class="chip"><span class="sw" style="background:#DCE4DF"></span><span class="mono"><span class="nm">foreground</span><span class="hx">#DCE4DF</span></span></div>
+              <div class="chip"><span class="sw" style="background:#63F2AB"></span><span class="mono"><span class="nm">green · cursor</span><span class="hx">#63F2AB</span></span></div>
+              <div class="chip"><span class="sw" style="background:#6BDCFF"></span><span class="mono"><span class="nm">cyan</span><span class="hx">#6BDCFF</span></span></div>
+              <div class="chip"><span class="sw" style="background:#F0C674"></span><span class="mono"><span class="nm">yellow</span><span class="hx">#F0C674</span></span></div>
+              <div class="chip"><span class="sw" style="background:#FF6E7A"></span><span class="mono"><span class="nm">red</span><span class="hx">#FF6E7A</span></span></div>
+              <div class="chip"><span class="sw" style="background:#74A8FF"></span><span class="mono"><span class="nm">blue</span><span class="hx">#74A8FF</span></span></div>
+              <div class="chip"><span class="sw" style="background:#B78CFF"></span><span class="mono"><span class="nm">purple</span><span class="hx">#B78CFF</span></span></div>
+              <div class="chip"><span class="sw" style="background:#B4C3BD"></span><span class="mono"><span class="nm">white</span><span class="hx">#B4C3BD</span></span></div>
+              <div class="chip"><span class="sw" style="background:#202A2F"></span><span class="mono"><span class="nm">black</span><span class="hx">#202A2F</span></span></div>
+              <div class="chip"><span class="sw" style="background:#63736F"></span><span class="mono"><span class="nm">bright black</span><span class="hx">#63736F</span></span></div>
+              <div class="chip"><span class="sw" style="background:#1B3A2D"></span><span class="mono"><span class="nm">selection</span><span class="hx">#1B3A2D</span></span></div>
+            </div>
+          </div>
+          <div class="palette">
+            <h3 class="label">Light</h3>
+            <div class="chips">
+              <div class="chip"><span class="sw" style="background:#F5F7F4"></span><span class="mono"><span class="nm">background</span><span class="hx">#F5F7F4</span></span></div>
+              <div class="chip"><span class="sw" style="background:#17201D"></span><span class="mono"><span class="nm">foreground</span><span class="hx">#17201D</span></span></div>
+              <div class="chip"><span class="sw" style="background:#007A4D"></span><span class="mono"><span class="nm">green · cursor</span><span class="hx">#007A4D</span></span></div>
+              <div class="chip"><span class="sw" style="background:#006F9E"></span><span class="mono"><span class="nm">cyan</span><span class="hx">#006F9E</span></span></div>
+              <div class="chip"><span class="sw" style="background:#A46600"></span><span class="mono"><span class="nm">yellow</span><span class="hx">#A46600</span></span></div>
+              <div class="chip"><span class="sw" style="background:#C8324C"></span><span class="mono"><span class="nm">red</span><span class="hx">#C8324C</span></span></div>
+              <div class="chip"><span class="sw" style="background:#2E62B8"></span><span class="mono"><span class="nm">blue</span><span class="hx">#2E62B8</span></span></div>
+              <div class="chip"><span class="sw" style="background:#7357B8"></span><span class="mono"><span class="nm">purple</span><span class="hx">#7357B8</span></span></div>
+              <div class="chip"><span class="sw" style="background:#C8D5CF"></span><span class="mono"><span class="nm">white</span><span class="hx">#C8D5CF</span></span></div>
+              <div class="chip"><span class="sw" style="background:#17201D"></span><span class="mono"><span class="nm">black</span><span class="hx">#17201D</span></span></div>
+              <div class="chip"><span class="sw" style="background:#60706A"></span><span class="mono"><span class="nm">bright black</span><span class="hx">#60706A</span></span></div>
+              <div class="chip"><span class="sw" style="background:#CBE2D8"></span><span class="mono"><span class="nm">selection</span><span class="hx">#CBE2D8</span></span></div>
+            </div>
+          </div>
+        </div>
+        <p class="note">Full 16-slot tables for both modes, including all bright variants, are in the <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal#palette">README</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Install</h2>
+        <ol class="steps">
+          <li>Open Windows Terminal → Settings (<code>Ctrl+,</code>) → <strong>Open JSON file</strong>.</li>
+          <li>Copy both entries from the <code>schemes</code> array of <a href="terminal-workbench.json">terminal-workbench.json</a> into the <code>schemes</code> array of your <code>settings.json</code>.</li>
+          <li>Copy both entries from the <code>themes</code> array into the top-level <code>themes</code> array, creating it if it does not exist.</li>
+          <li>Activate the theme:</li>
+        </ol>
+        <pre>{
+    <span class="k">"theme"</span>: <span class="v">"Terminal Workbench"</span>,
+    <span class="k">"profiles"</span>: { <span class="k">"defaults"</span>: { <span class="k">"colorScheme"</span>: <span class="v">"Terminal Workbench"</span> } }
+}</pre>
+        <p class="note">Color schemes apply to open tabs immediately; the window theme applies after Windows Terminal is closed and reopened. For light mode, use <code>Terminal Workbench Light</code> for both names.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Host it yourself</h2>
+        <p class="note">Every release ships a self-contained bundle of this page (static HTML, no build step) plus a <code>.gitlab-ci.yml</code>, so you can host it on GitHub Pages, GitLab Pages, or any static file server. Grab it from the <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal/releases/latest">latest release</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>MIT License · <a href="https://github.com/Real-Fruit-Snacks">Real-Fruit-Snacks</a></span>
+      <span>Part of the <a href="https://real-fruit-snacks.github.io/terminal-workbench/">Terminal Workbench</a> family</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById("mode-toggle");
+      var root = document.documentElement;
+      function sync() {
+        var dark = root.getAttribute("data-theme") !== "light";
+        btn.textContent = dark ? "Light mode" : "Dark mode";
+        btn.setAttribute("aria-pressed", String(!dark));
+      }
+      btn.addEventListener("click", function () {
+        var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("tw-mode", next); } catch (e) {}
+        sync();
+      });
+      sync();
+    })();
+  </script>
+</body>
+</html>

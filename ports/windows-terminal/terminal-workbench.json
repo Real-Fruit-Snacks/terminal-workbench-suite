@@ -1,0 +1,98 @@
+{
+    "schemes":
+    [
+        {
+            "background": "#090C0D",
+            "black": "#202A2F",
+            "blue": "#74A8FF",
+            "brightBlack": "#63736F",
+            "brightBlue": "#85B2FF",
+            "brightCyan": "#7DE0FF",
+            "brightGreen": "#76F4B5",
+            "brightPurple": "#C09AFF",
+            "brightRed": "#FF7F8A",
+            "brightWhite": "#DCE4DF",
+            "brightYellow": "#F2CD85",
+            "cursorColor": "#63F2AB",
+            "cyan": "#6BDCFF",
+            "foreground": "#DCE4DF",
+            "green": "#63F2AB",
+            "name": "Terminal Workbench",
+            "purple": "#B78CFF",
+            "red": "#FF6E7A",
+            "selectionBackground": "#1B3A2D",
+            "white": "#B4C3BD",
+            "yellow": "#F0C674"
+        },
+        {
+            "background": "#F5F7F4",
+            "black": "#17201D",
+            "blue": "#2E62B8",
+            "brightBlack": "#60706A",
+            "brightBlue": "#2958A6",
+            "brightCyan": "#00648E",
+            "brightGreen": "#006E45",
+            "brightPurple": "#684EA6",
+            "brightRed": "#B42D44",
+            "brightWhite": "#F5F7F4",
+            "brightYellow": "#945C00",
+            "cursorColor": "#007A4D",
+            "cyan": "#006F9E",
+            "foreground": "#17201D",
+            "green": "#007A4D",
+            "name": "Terminal Workbench Light",
+            "purple": "#7357B8",
+            "red": "#C8324C",
+            "selectionBackground": "#CBE2D8",
+            "white": "#C8D5CF",
+            "yellow": "#A46600"
+        }
+    ],
+    "themes":
+    [
+        {
+            "name": "Terminal Workbench",
+            "tab":
+            {
+                "background": "#182024FF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow":
+            {
+                "background": "#0E1214FF",
+                "unfocusedBackground": "#090C0DFF"
+            },
+            "window":
+            {
+                "applicationTheme": "dark",
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        },
+        {
+            "name": "Terminal Workbench Light",
+            "tab":
+            {
+                "background": "#D6E1DBFF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow":
+            {
+                "background": "#EDF2EEFF",
+                "unfocusedBackground": "#F5F7F4FF"
+            },
+            "window":
+            {
+                "applicationTheme": "light",
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        }
+    ]
+}

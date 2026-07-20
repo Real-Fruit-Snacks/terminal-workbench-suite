@@ -1,0 +1,14 @@
+# GitLab Pages deployment for the Terminal Workbench site.
+# Mirrors the GitHub Pages setup (static site served from docs/, no build step).
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir -p public
+    - cp -r docs/. public/
+    - cp terminal-workbench.json public/terminal-workbench.json
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
