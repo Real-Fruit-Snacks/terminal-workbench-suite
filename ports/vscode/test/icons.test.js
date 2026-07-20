@@ -104,5 +104,5 @@ test('package.json contributes the icon theme at an existing path', () => {
   assert.equal(it[0].id, 'terminal-workbench-icons');
   assert.equal(it[0].label, 'Terminal Workbench Icons');
   assert.ok(fs.existsSync(path.join(__dirname, '..', it[0].path)));
-  assert.equal(pkg.version, '0.2.0');
+  assert.equal(pkg.version, '1.0.0');
 });
