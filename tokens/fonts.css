@@ -8,30 +8,30 @@
 @font-face {
   font-family: "Terminal Workbench Mono"; font-weight: 400; font-style: normal;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-mono@main/dist/webfonts/TerminalWorkbenchMono-Regular.woff2") format("woff2");
+  src: url("../font/dist/webfonts/TerminalWorkbenchMono-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Terminal Workbench Mono"; font-weight: 500; font-style: normal;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-mono@main/dist/webfonts/TerminalWorkbenchMono-Medium.woff2") format("woff2");
+  src: url("../font/dist/webfonts/TerminalWorkbenchMono-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "Terminal Workbench Mono"; font-weight: 700; font-style: normal;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-mono@main/dist/webfonts/TerminalWorkbenchMono-Bold.woff2") format("woff2");
+  src: url("../font/dist/webfonts/TerminalWorkbenchMono-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Terminal Workbench Mono"; font-weight: 400; font-style: italic;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-mono@main/dist/webfonts/TerminalWorkbenchMono-Italic.woff2") format("woff2");
+  src: url("../font/dist/webfonts/TerminalWorkbenchMono-Italic.woff2") format("woff2");
 }
 @font-face {
   font-family: "Terminal Workbench Mono"; font-weight: 500; font-style: italic;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-mono@main/dist/webfonts/TerminalWorkbenchMono-MediumItalic.woff2") format("woff2");
+  src: url("../font/dist/webfonts/TerminalWorkbenchMono-MediumItalic.woff2") format("woff2");
 }
 @font-face {
   font-family: "Terminal Workbench Mono"; font-weight: 700; font-style: italic;
   font-display: swap;
-  src: url("https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-mono@main/dist/webfonts/TerminalWorkbenchMono-BoldItalic.woff2") format("woff2");
+  src: url("../font/dist/webfonts/TerminalWorkbenchMono-BoldItalic.woff2") format("woff2");
 }

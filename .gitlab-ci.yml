@@ -1,15 +1,16 @@
-# GitLab Pages deployment for the Terminal Workbench design system.
-# Publishes the static site on every push to the default branch.
+# GitLab Pages deployment for the Terminal Workbench suite.
+# Publishes the demo site on every push to the default branch.
 # No build step — the site is served as-is from the repo files.
 
 pages:
   stage: deploy
   image: alpine:latest
   script:
-    - mkdir -p public
-    - cp index.html tokens.css THEME-SPEC.md LICENSE public/
-    - mkdir -p public/docs/assets
+    - mkdir -p public/tokens public/docs/assets public/font/dist/webfonts
+    - cp index.html THEME-SPEC.md LICENSE public/
+    - cp tokens/tokens.css tokens/fonts.css public/tokens/
     - cp docs/assets/*.svg public/docs/assets/
+    - cp font/dist/webfonts/*.woff2 public/font/dist/webfonts/
   artifacts:
     paths:
       - public
