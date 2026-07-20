@@ -31,9 +31,9 @@ Companion to the [Terminal Workbench Obsidian theme](https://github.com/Real-Fru
 
 ### From a release
 
-1. Download `terminal-workbench-dark.zip` or `terminal-workbench-light.zip` from the [latest release](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases) and extract it.
+1. Download `terminal-workbench-brave.zip` from the [latest release](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases) and extract it.
 2. Open `brave://extensions` and enable **Developer mode** (top right).
-3. Select **Load unpacked** and choose the extracted folder.
+3. Select **Load unpacked** and choose the extracted `dist/terminal-workbench-dark` or `dist/terminal-workbench-light` folder, whichever variant you want.
 
 ### From a clone
 

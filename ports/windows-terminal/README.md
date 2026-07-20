@@ -112,8 +112,6 @@ The project page at [real-fruit-snacks.github.io/terminal-workbench-suite/ports/
 
 It publishes automatically as part of the suite's GitHub Pages, since GitHub Pages serves the whole `terminal-workbench-suite` repository tree from `main` — no separate configuration is needed for this port. Or copy the contents of `docs/` to any static file server.
 
-Each release attaches a bundle with everything needed to host.
-
 ## Related projects
 
 - [Terminal Workbench for Obsidian](https://github.com/Real-Fruit-Snacks/terminal-workbench) — the original theme and its design specification.

@@ -96,8 +96,8 @@
   porting the Terminal Workbench design system: calm graphite surfaces, restrained ANSI-style
   accents, quiet chrome with color reserved for signal.</p>
   <div class="links">
-    <a class="btn primary" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim">GitHub&nbsp;→</a>
-    <a class="btn" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vim/releases">Releases</a>
+    <a class="btn primary" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite">GitHub&nbsp;→</a>
+    <a class="btn" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases">Releases</a>
     <a class="btn" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite">Design System</a>
   </div>
 
@@ -175,7 +175,8 @@
 
   <h2>Install</h2>
   <pre class="install"><span class="cmt">" Vim 8 packages (both colors/ and autoload/ are required):</span>
-git clone https://github.com/Real-Fruit-Snacks/terminal-workbench-vim ~/.vim/pack/themes/start/twb.vim
+git clone https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+ln -s "$(pwd)/terminal-workbench-suite/ports/vim" ~/.vim/pack/themes/start/twb.vim
 
 <span class="cmt">" vimrc:</span>
 set termguicolors

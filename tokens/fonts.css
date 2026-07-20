@@ -1,7 +1,8 @@
 /*
  * Terminal Workbench — official typeface loader
  * Loads Terminal Workbench Mono (the system's --twb-font-mono face) from
- * https://github.com/Real-Fruit-Snacks/terminal-workbench-mono via jsDelivr.
+ * ../font/dist/webfonts/, relative to this file — works whether this repo
+ * tree is served from GitHub Pages or a CDN mirror.
  * Link this before tokens.css; omit it to fall back to local mono fonts.
  */
 

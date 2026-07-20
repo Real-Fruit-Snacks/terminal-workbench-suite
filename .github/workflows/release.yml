@@ -30,7 +30,9 @@ jobs:
           git diff --exit-code -- .
       - name: Package vsix
         working-directory: ports/vscode
-        run: npx --yes @vscode/vsce package --no-dependencies --readme-path build/vsix-readme.md
+        run: |
+          cp "$GITHUB_WORKSPACE/LICENSE" LICENSE
+          npx --yes @vscode/vsce package --no-dependencies --readme-path build/vsix-readme.md
       - name: Assemble release assets
         run: |
           mkdir -p out
