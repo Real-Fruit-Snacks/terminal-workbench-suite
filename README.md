@@ -1,93 +1,63 @@
-<div align="center">
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-design-system/main/docs/assets/cover-dark.svg" />
-  <img alt="Terminal Workbench — portable design system" src="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-design-system/main/docs/assets/cover-light.svg" width="820" />
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench" src="docs/assets/cover-light.svg" width="820" />
 </picture>
 
-<br/>
+# Terminal Workbench Suite
 
-A portable design system: calm graphite surfaces, restrained ANSI-style accents, monospace "manifest" labels, and mandatory dark + light modes.
+One repo for the whole Terminal Workbench family: the design system
+(spec + tokens), every editor/terminal/browser port, and the official
+monospace typeface. Calm graphite surfaces, restrained ANSI-style accents,
+mandatory dark **and** light modes, color spent only on signal.
 
-<br/>
+**Live demo:** <https://real-fruit-snacks.github.io/terminal-workbench-suite/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-f0c674?style=flat-square)](LICENSE)
-&nbsp;![Version](https://img.shields.io/badge/version-1.2.0-6bdcff?style=flat-square)
-&nbsp;![Modes](https://img.shields.io/badge/modes-dark%20%2B%20light-63f2ab?style=flat-square)
+## Get the theme
 
-[Live demo](https://real-fruit-snacks.github.io/terminal-workbench-design-system/) · [Theme spec](THEME-SPEC.md) · [Notepad++ themes](https://github.com/Real-Fruit-Snacks/terminal-workbench-notepad-plus-plus) · [Report an issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system/issues)
-
-</div>
-
----
-
-## Overview
-
-Terminal Workbench is a working surface for people who live in panes, shells, logs, and code — not retro green-on-black novelty. The interface stays quiet; signal (links, prompts, active elements, syntax) carries the color. Distilled from the [Terminal Workbench Obsidian theme](https://github.com/Real-Fruit-Snacks/terminal-workbench) into a form any project can consume.
-
-| File | Purpose |
+| App | How to install |
 |---|---|
-| [THEME-SPEC.md](THEME-SPEC.md) | The source of truth — philosophy, token tables (both modes), typography, shape, motion, and component patterns. Platform-agnostic; hand it to any tool, framework, or AI to reproduce the theme anywhere. |
-| [tokens.css](tokens.css) | Drop-in CSS custom properties implementing the spec. Dark by default, light via `prefers-color-scheme` or `data-theme`. |
-| [fonts.css](fonts.css) | Optional `@font-face` loader for [Terminal Workbench Mono](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono), the system's official monospace (served via jsDelivr from that repo). |
-| [index.html](index.html) | The demo page — a living reference of every token and component, built on `tokens.css`. |
+| **Obsidian** | Settings → Appearance → Themes → browse for **Terminal Workbench** ([standalone repo](https://github.com/Real-Fruit-Snacks/terminal-workbench)) |
+| **Vim** | Grab `terminal-workbench-vim.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), drop `colors/` + `autoload/` into `~/.vim/` — see [ports/vim](ports/vim) |
+| **VS Code** | Download the `.vsix` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), then `code --install-extension terminal-workbench-*.vsix` — see [ports/vscode](ports/vscode) |
+| **Brave** | `terminal-workbench-brave.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), load unpacked via `brave://extensions` — see [ports/brave](ports/brave) |
+| **Notepad++** | `terminal-workbench-notepad-plus-plus.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), XMLs into your `themes\` folder — see [ports/notepad-plus-plus](ports/notepad-plus-plus) |
+| **Windows Terminal** | Merge [`terminal-workbench.json`](ports/windows-terminal/terminal-workbench.json) into `settings.json` — see [ports/windows-terminal](ports/windows-terminal) |
+| **Font** | `terminal-workbench-mono.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases) — TTFs + webfonts, see [font/](font) |
 
-## Use it in a web project
+## Build for the web
 
-Link the tokens:
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-design-system@main/fonts.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-design-system@main/tokens.css">
-```
-
-Build on the variables:
-
-```css
-body {
-  background: var(--twb-bg-0);
-  color: var(--twb-text-normal);
-  font: 15px/1.7 var(--twb-font-ui);
-}
-```
-
-### Modes
-
-Dark is the default. Light mode applies automatically from the system preference, or force either mode:
+Drop the tokens into any page:
 
 ```html
-<html data-theme="light">  <!-- or "dark" -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-suite@main/tokens/tokens.css">
 ```
 
-### Changing the accent
+Add [`tokens/fonts.css`](tokens/fonts.css) the same way for Terminal
+Workbench Mono.
 
-Override `--twb-accent` (and `--twb-accent-alt` / `--twb-warm` if you like) — every derived tint (selection, focus ring, tags, highlights) re-derives automatically in browsers with `color-mix` support:
+## Port it anywhere
 
-```css
-:root { --twb-accent: #7aa2f7; }
+[THEME-SPEC.md](THEME-SPEC.md) is the portable source of truth — philosophy,
+token tables for both modes, typography, shape, motion, and component
+patterns. Hand it to any tool (or AI) to reproduce the theme faithfully.
+
+## Family map
+
+- **This repo** — spec, tokens, demo, ports, font.
+- [terminal-workbench](https://github.com/Real-Fruit-Snacks/terminal-workbench) — Obsidian theme (standalone for the community catalog).
+- [terminal-workbench-pet](https://github.com/Real-Fruit-Snacks/terminal-workbench-pet) · [terminal-workbench-cursor](https://github.com/Real-Fruit-Snacks/terminal-workbench-cursor) — Obsidian companion plugins.
+
+## Repository layout
+
 ```
-
-## Official typeface
-
-[Terminal Workbench Mono](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono)
-is the official `--twb-font-mono` face — a clean geometric monospace with a
-slashed zero, coding ligatures and a full terminal pack, built for this
-system. `fonts.css` loads it on the web; grab the TTFs from its
-[releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/releases)
-for terminals and editors.
-
-## Use it anywhere else
-
-For terminals, editors, dashboards, slide decks — anything that isn't CSS — give [THEME-SPEC.md](THEME-SPEC.md) to the tool or AI doing the work. Section 7 of the spec explains exactly which parts to hand over. The result should pass the spec's checklist: both modes, adequate contrast, quiet chrome, color spent only on signal.
-
-## Host it yourself
-
-Everything the site needs is in this repo — `index.html`, `tokens.css`, and `THEME-SPEC.md`. Serve the repo root from any static host:
-
-- **GitHub Pages:** Settings → Pages → deploy from `main`, root folder.
-- **GitLab Pages:** the included [.gitlab-ci.yml](.gitlab-ci.yml) publishes the site on every push to the default branch.
-- **Anything else:** copy the files to any static web server; there is no build step.
+THEME-SPEC.md   the portable spec (source of truth)
+tokens/         drop-in CSS custom properties + font loader
+index.html      live demo (GitHub Pages)
+ports/          vim · vscode · brave · notepad-plus-plus · windows-terminal
+font/           Terminal Workbench Mono — parametric engine + built fonts
+```
 
 ## License
 
-[MIT](LICENSE)
+MIT for everything except the typeface, which is licensed under the
+[SIL Open Font License](font/OFL.txt).
