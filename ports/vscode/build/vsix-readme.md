@@ -58,7 +58,7 @@ The token tables live once in `build/tokens.js`; both color themes and the file 
     node build/build.js   # regenerates themes/ and icons/ and prints a WCAG contrast report
     node --test           # test suite
 
-Design system: see [THEME-SPEC.md](THEME-SPEC.md). Never edit `themes/*.json` or `icons/*.svg` by hand — change tokens or mappings and rebuild.
+Design system: see [THEME-SPEC.md](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/blob/main/THEME-SPEC.md). Never edit `themes/*.json` or `icons/*.svg` by hand — change tokens or mappings and rebuild.
 
 ## License
 
