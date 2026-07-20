@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal/main/docs/assets/cover-dark.svg" />
-  <img alt="Terminal Workbench for Windows Terminal" src="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal/main/docs/assets/cover-light.svg" width="820" />
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench for Windows Terminal" src="docs/assets/cover-light.svg" width="820" />
 </picture>
 
 <br/>
@@ -11,11 +11,11 @@ A calm, dense, high-contrast theme for Windows Terminal — graphite backgrounds
 
 <br/>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-f0c674?style=flat-square)](LICENSE)
-&nbsp;[![Release](https://img.shields.io/github/v/release/Real-Fruit-Snacks/terminal-workbench-windows-terminal?style=flat-square&color=63f2ab&label=release)](https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-f0c674?style=flat-square)](../../LICENSE)
+&nbsp;[![Release](https://img.shields.io/github/v/release/Real-Fruit-Snacks/terminal-workbench-suite?style=flat-square&color=63f2ab&label=release)](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases)
 &nbsp;![Windows Terminal](https://img.shields.io/badge/Windows%20Terminal-1.16%2B-6bdcff?style=flat-square)
 
-[Website](https://real-fruit-snacks.github.io/terminal-workbench-windows-terminal/) · [Download](https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal/releases/latest) · [Report an issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-windows-terminal/issues)
+[Website](https://real-fruit-snacks.github.io/terminal-workbench-suite/ports/windows-terminal/docs/) · [Download](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases) · [Report an issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/issues)
 
 </div>
 
@@ -108,10 +108,10 @@ Replace both names with their light counterparts:
 
 ## Hosting the site
 
-The project page at [real-fruit-snacks.github.io/terminal-workbench-windows-terminal](https://real-fruit-snacks.github.io/terminal-workbench-windows-terminal/) is a static site served from [`docs/`](docs) with no build step.
+The project page at [real-fruit-snacks.github.io/terminal-workbench-suite/ports/windows-terminal/docs](https://real-fruit-snacks.github.io/terminal-workbench-suite/ports/windows-terminal/docs/) is a static site served from [`docs/`](docs) with no build step.
 
 - **GitHub Pages** — serve `main` : `/docs` (this repository's configuration).
-- **GitLab Pages** — the included [`.gitlab-ci.yml`](.gitlab-ci.yml) publishes the same site; push the repository to GitLab and Pages deploys on the default branch.
+- **GitLab Pages** — the suite-level [`.gitlab-ci.yml`](../../.gitlab-ci.yml) publishes this site along with the rest of the suite; push the repository to GitLab and Pages deploys on the default branch.
 - **Anywhere else** — copy the contents of `docs/` to any static file server.
 
 Each release attaches a bundle with everything needed to host.
@@ -122,4 +122,4 @@ Each release attaches a bundle with everything needed to host.
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](../../LICENSE).
