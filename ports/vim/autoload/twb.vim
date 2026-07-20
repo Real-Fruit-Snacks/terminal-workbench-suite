@@ -1,5 +1,5 @@
 " autoload/twb.vim - shared engine for the twb colorschemes
-" Port of https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system
+" Port of https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
 " Palette entries are [gui_hex, cterm_index] pairs.
 
 " See :help use-cpo-save. s:hi/s:spell below use backslash line continuations,

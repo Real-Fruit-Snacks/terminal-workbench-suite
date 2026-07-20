@@ -9,13 +9,13 @@
 
   # Terminal Workbench Mono
 
-  **The official monospace of the [Terminal Workbench design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system). Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and eleven coding ligatures.**
+  **The official monospace of the [Terminal Workbench design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite). Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and eleven coding ligatures.**
 
   [![License: OFL-1.1](https://img.shields.io/badge/License-OFL--1.1-f0c674?style=flat-square)](OFL.txt)
   [![Version](https://img.shields.io/badge/version-2.0.0-6bdcff?style=flat-square)](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases)
   ![Modes](https://img.shields.io/badge/design%20system-official%20typeface-63f2ab?style=flat-square)
 
-  [Live Specimen](https://real-fruit-snacks.github.io/terminal-workbench-suite/font/docs/) • [Design System](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system) • [Report Issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/issues)
+  [Live Specimen](https://real-fruit-snacks.github.io/terminal-workbench-suite/font/docs/) • [Design System](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite) • [Report Issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/issues)
 
 </div>
 
@@ -71,8 +71,8 @@ project, link the system's stylesheets and you get both the tokens and the
 font:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-design-system@main/fonts.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-design-system@main/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-suite@main/tokens/fonts.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Real-Fruit-Snacks/terminal-workbench-suite@main/tokens/tokens.css">
 ```
 
 ## Obsidian

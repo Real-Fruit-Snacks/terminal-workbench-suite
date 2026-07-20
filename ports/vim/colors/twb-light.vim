@@ -1,5 +1,5 @@
 " twb-light - Terminal Workbench light
-" Port of https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system
+" Port of https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
 " Calm graphite surfaces, restrained ANSI-style accents.
 
 set background=light

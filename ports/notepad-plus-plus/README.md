@@ -15,7 +15,7 @@ Dark and light Notepad++ themes implementing the Terminal Workbench design syste
 &nbsp;![Version](https://img.shields.io/badge/version-1.0.0-6bdcff?style=flat-square)
 &nbsp;![Lexers](https://img.shields.io/badge/lexers-92%2F92-63f2ab?style=flat-square)
 
-[Design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system) · [Install](#install) · [Report an issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/issues)
+[Design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite) · [Install](#install) · [Report an issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/issues)
 
 </div>
 
@@ -53,7 +53,7 @@ For the dark theme, also enabling **Settings → Preferences → Dark Mode** mak
 | Comments | text-faint, italic | `#63736F` | `#81918A` |
 | Code default | text-soft | `#B4C3BD` | `#34443F` |
 
-Selections, current-line, smart highlighting, and find marks use tints pre-mixed from the accents over the page background, exactly as the [design spec](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system/blob/main/THEME-SPEC.md) derives them.
+Selections, current-line, smart highlighting, and find marks use tints pre-mixed from the accents over the page background, exactly as the [design spec](../../THEME-SPEC.md) derives them.
 
 ## License
 

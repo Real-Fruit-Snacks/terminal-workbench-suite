@@ -11,7 +11,7 @@
 <br/>
 
 Two classic-Vim colorschemes — <code>twb-dark</code> and <code>twb-light</code> — porting the
-<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system">Terminal Workbench design system</a>:
+<a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite">Terminal Workbench design system</a>:
 calm graphite surfaces, restrained ANSI-style accents, quiet chrome with color reserved for signal.
 
 <br/><br/>
