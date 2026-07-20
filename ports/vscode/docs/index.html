@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminal Workbench</title>
+<meta name="description" content="A calm, dense, high-contrast VS Code theme. Graphite surfaces, restrained ANSI-style accents, dark and light variants, matching file icons.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%23090c0d'/%3E%3Crect x='2.5' y='5' width='11' height='6.5' rx='2' fill='%2363f2ab21' stroke='%2363f2ab'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg0:#090c0d;--bg1:#0e1214;--bg2:#13191c;--bg3:#182024;--bg4:#202a2f;
+  --border:#2a363d;--border-strong:#39484f;
+  --text:#dce4df;--soft:#b4c3bd;--muted:#879994;--faint:#63736f;--comment:#6f807b;
+  --accent:#63f2ab;--cyan:#6bdcff;--warm:#f0c674;--red:#ff6e7a;--orange:#f7a35c;--violet:#b78cff;
+  --on-accent:#07100d;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg0:#f5f7f4;--bg1:#edf2ee;--bg2:#e2eae5;--bg3:#d6e1db;--bg4:#c8d5cf;
+    --border:#bfcbc5;--border-strong:#9daea7;
+    --text:#17201d;--soft:#34443f;--muted:#60706a;--faint:#81918a;--comment:#5f6f67;
+    --accent:#007a4d;--cyan:#006f9e;--warm:#a46600;--red:#c8324c;--orange:#b65800;--violet:#7357b8;
+    --on-accent:#f9fbf8;
+  }
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg0);color:var(--soft);font:15px/1.7 "Segoe UI","SF Pro Text",system-ui,sans-serif}
+.mono,code,pre{font-family:"Cascadia Code",Consolas,"SF Mono",Menlo,monospace}
+main{max-width:880px;margin:0 auto;padding:72px 24px 96px}
+.label{font-family:"Cascadia Code",Consolas,"SF Mono",Menlo,monospace;font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:"Cascadia Code",Consolas,"SF Mono",Menlo,monospace;font-size:46px;font-weight:600;color:var(--text);line-height:1.15;margin:14px 0 10px}
+.tagline{font-size:19px;color:var(--soft);margin-bottom:28px}
+.tagline b{color:var(--accent);font-weight:600}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:72px}
+.btn{display:inline-block;padding:9px 18px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--border)}
+.btn.primary{background:var(--accent);color:var(--on-accent);border-color:transparent}
+.btn.quiet{color:var(--text);background:var(--bg2)}
+h2{font-family:"Cascadia Code",Consolas,"SF Mono",Menlo,monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:8px;margin:64px 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:10px}
+.sw{border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--bg1)}
+.sw .c{height:44px}
+.sw .m{padding:7px 10px;font-size:11px;line-height:1.5;color:var(--muted)}
+.sw .m b{display:block;color:var(--text);font-weight:600;font-size:12px}
+.window{border:1px solid var(--border);border-radius:10px;background:var(--bg1);overflow:hidden}
+.titlebar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--border)}
+.dot{width:11px;height:11px;border-radius:50%}
+.tabs{display:flex;border-bottom:1px solid var(--border);font-size:12.5px}
+.tab{padding:8px 18px;color:var(--muted)}
+.tab.on{background:var(--bg3);color:var(--accent);box-shadow:inset 0 2px 0 var(--accent);font-weight:600}
+pre{padding:18px 20px;font-size:13px;line-height:1.62;overflow-x:auto}
+.term{border-top:1px solid var(--border);background:var(--bg0)}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{font-family:"Cascadia Code",Consolas,"SF Mono",Menlo,monospace;font-size:12px;font-weight:600;padding:3px 10px;border-radius:4px;border:1px solid;background:none}
+ol{padding-left:22px}
+ol li{margin-bottom:10px}
+ol code{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:2px 7px;font-size:13px;color:var(--soft)}
+footer{margin-top:80px;border-top:1px solid var(--border);padding-top:20px;font-size:13px;color:var(--faint)}
+footer a{color:var(--muted)}
+a{color:var(--cyan)}
+</style>
+</head>
+<body>
+<main>
+  <div class="label">VS Code theme &middot; dark + light &middot; file icons</div>
+  <h1>terminal workbench</h1>
+  <p class="tagline">Quiet chrome, loud <b>signal.</b> A calm, dense, high-contrast working surface for people who live in panes, shells, logs, and code.</p>
+  <div class="actions">
+    <a class="btn primary" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode/releases/latest">Download the .vsix</a>
+    <a class="btn quiet" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode">View on GitHub</a>
+  </div>
+
+  <h2>The editor</h2>
+  <div class="window">
+    <div class="titlebar">
+      <span class="dot" style="background:var(--red)"></span>
+      <span class="dot" style="background:var(--warm)"></span>
+      <span class="dot" style="background:var(--accent)"></span>
+    </div>
+    <div class="tabs"><span class="tab on mono">main.ts</span><span class="tab mono">app.py</span><span class="tab mono">README.md</span></div>
+    <pre><span style="color:var(--violet)">import</span> { <span style="color:var(--cyan)">pane</span> } <span style="color:var(--violet)">from</span> <span style="color:var(--accent)">'workbench'</span>
+
+<span style="color:var(--violet)">const</span> session = <span style="color:var(--cyan)">attach</span>(<span style="color:var(--orange)">42</span>)
+<span style="color:var(--comment)">// quiet chrome, loud signal</span>
+session.<span style="color:var(--warm)">theme</span> = <span style="color:var(--accent)">'graphite'</span></pre>
+    <pre class="term"><span style="color:var(--accent)">$</span> npm test
+<span style="color:var(--cyan)">PASS</span> 38 tests &middot; <span style="color:var(--warm)">2 accepted warnings</span>
+<span style="color:var(--accent)">$</span> <span style="color:var(--faint)">&#9608;</span></pre>
+  </div>
+
+  <h2>The palette</h2>
+  <div class="grid">
+    <div class="sw"><div class="c" style="background:var(--bg0)"></div><div class="m mono"><b>bg-0</b>#090c0d / #f5f7f4</div></div>
+    <div class="sw"><div class="c" style="background:var(--bg1)"></div><div class="m mono"><b>bg-1</b>#0e1214 / #edf2ee</div></div>
+    <div class="sw"><div class="c" style="background:var(--bg2)"></div><div class="m mono"><b>bg-2</b>#13191c / #e2eae5</div></div>
+    <div class="sw"><div class="c" style="background:var(--bg3)"></div><div class="m mono"><b>bg-3</b>#182024 / #d6e1db</div></div>
+    <div class="sw"><div class="c" style="background:var(--bg4)"></div><div class="m mono"><b>bg-4</b>#202a2f / #c8d5cf</div></div>
+    <div class="sw"><div class="c" style="background:var(--accent)"></div><div class="m mono"><b>accent</b>#63f2ab / #007a4d</div></div>
+    <div class="sw"><div class="c" style="background:var(--cyan)"></div><div class="m mono"><b>accent-alt</b>#6bdcff / #006f9e</div></div>
+    <div class="sw"><div class="c" style="background:var(--warm)"></div><div class="m mono"><b>warm</b>#f0c674 / #a46600</div></div>
+    <div class="sw"><div class="c" style="background:var(--red)"></div><div class="m mono"><b>red</b>#ff6e7a / #c8324c</div></div>
+    <div class="sw"><div class="c" style="background:var(--orange)"></div><div class="m mono"><b>orange</b>#f7a35c / #b65800</div></div>
+    <div class="sw"><div class="c" style="background:var(--violet)"></div><div class="m mono"><b>violet</b>#b78cff / #7357b8</div></div>
+  </div>
+
+  <h2>File icons</h2>
+  <p>Terminal Workbench Icons renders file types as small uppercase type chips in the theme's tag style — 40+ types, generated from the same token tables.</p>
+  <p class="chips">
+    <span class="chip" style="color:var(--cyan);border-color:color-mix(in srgb,var(--cyan) 28%,transparent);background:color-mix(in srgb,var(--cyan) 13%,transparent)">TS</span>
+    <span class="chip" style="color:var(--accent);border-color:color-mix(in srgb,var(--accent) 28%,transparent);background:color-mix(in srgb,var(--accent) 13%,transparent)">PY</span>
+    <span class="chip" style="color:var(--warm);border-color:color-mix(in srgb,var(--warm) 28%,transparent);background:color-mix(in srgb,var(--warm) 13%,transparent)">JSON</span>
+    <span class="chip" style="color:var(--red);border-color:color-mix(in srgb,var(--red) 28%,transparent);background:color-mix(in srgb,var(--red) 13%,transparent)">HTML</span>
+    <span class="chip" style="color:var(--violet);border-color:color-mix(in srgb,var(--violet) 28%,transparent);background:color-mix(in srgb,var(--violet) 13%,transparent)">CSS</span>
+    <span class="chip" style="color:var(--orange);border-color:color-mix(in srgb,var(--orange) 28%,transparent);background:color-mix(in srgb,var(--orange) 13%,transparent)">SH</span>
+    <span class="chip" style="color:var(--soft);border-color:color-mix(in srgb,var(--soft) 28%,transparent);background:color-mix(in srgb,var(--soft) 13%,transparent)">MD</span>
+  </p>
+
+  <h2>Install</h2>
+  <ol>
+    <li>Download the <code>.vsix</code> from the <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode/releases/latest">latest release</a>.</li>
+    <li>In VS Code: Extensions panel, then Install from VSIX.</li>
+    <li>Pick the color theme with <code>Ctrl+K Ctrl+T</code>.</li>
+    <li>Enable the icons: <code>"workbench.iconTheme": "terminal-workbench-icons"</code></li>
+  </ol>
+
+  <footer>
+    MIT License &middot; <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode">GitHub</a> &middot; <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench">Obsidian original</a>
+  </footer>
+</main>
+</body>
+</html>

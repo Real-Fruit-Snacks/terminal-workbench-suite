@@ -1,0 +1,457 @@
+{
+  "iconDefinitions": {
+    "_folder": {
+      "iconPath": "../icons/folder.svg"
+    },
+    "_folder_light": {
+      "iconPath": "../icons/folder-light.svg"
+    },
+    "_folder-open": {
+      "iconPath": "../icons/folder-open.svg"
+    },
+    "_folder-open_light": {
+      "iconPath": "../icons/folder-open-light.svg"
+    },
+    "_file": {
+      "iconPath": "../icons/file.svg"
+    },
+    "_file_light": {
+      "iconPath": "../icons/file-light.svg"
+    },
+    "_chip-ts": {
+      "iconPath": "../icons/chip-ts.svg"
+    },
+    "_chip-ts_light": {
+      "iconPath": "../icons/chip-ts-light.svg"
+    },
+    "_chip-tsx": {
+      "iconPath": "../icons/chip-tsx.svg"
+    },
+    "_chip-tsx_light": {
+      "iconPath": "../icons/chip-tsx-light.svg"
+    },
+    "_chip-js": {
+      "iconPath": "../icons/chip-js.svg"
+    },
+    "_chip-js_light": {
+      "iconPath": "../icons/chip-js-light.svg"
+    },
+    "_chip-jsx": {
+      "iconPath": "../icons/chip-jsx.svg"
+    },
+    "_chip-jsx_light": {
+      "iconPath": "../icons/chip-jsx-light.svg"
+    },
+    "_chip-py": {
+      "iconPath": "../icons/chip-py.svg"
+    },
+    "_chip-py_light": {
+      "iconPath": "../icons/chip-py-light.svg"
+    },
+    "_chip-vue": {
+      "iconPath": "../icons/chip-vue.svg"
+    },
+    "_chip-vue_light": {
+      "iconPath": "../icons/chip-vue-light.svg"
+    },
+    "_chip-go": {
+      "iconPath": "../icons/chip-go.svg"
+    },
+    "_chip-go_light": {
+      "iconPath": "../icons/chip-go-light.svg"
+    },
+    "_chip-sql": {
+      "iconPath": "../icons/chip-sql.svg"
+    },
+    "_chip-sql_light": {
+      "iconPath": "../icons/chip-sql-light.svg"
+    },
+    "_chip-rs": {
+      "iconPath": "../icons/chip-rs.svg"
+    },
+    "_chip-rs_light": {
+      "iconPath": "../icons/chip-rs-light.svg"
+    },
+    "_chip-rb": {
+      "iconPath": "../icons/chip-rb.svg"
+    },
+    "_chip-rb_light": {
+      "iconPath": "../icons/chip-rb-light.svg"
+    },
+    "_chip-java": {
+      "iconPath": "../icons/chip-java.svg"
+    },
+    "_chip-java_light": {
+      "iconPath": "../icons/chip-java-light.svg"
+    },
+    "_chip-c": {
+      "iconPath": "../icons/chip-c.svg"
+    },
+    "_chip-c_light": {
+      "iconPath": "../icons/chip-c-light.svg"
+    },
+    "_chip-h": {
+      "iconPath": "../icons/chip-h.svg"
+    },
+    "_chip-h_light": {
+      "iconPath": "../icons/chip-h-light.svg"
+    },
+    "_chip-cpp": {
+      "iconPath": "../icons/chip-cpp.svg"
+    },
+    "_chip-cpp_light": {
+      "iconPath": "../icons/chip-cpp-light.svg"
+    },
+    "_chip-hpp": {
+      "iconPath": "../icons/chip-hpp.svg"
+    },
+    "_chip-hpp_light": {
+      "iconPath": "../icons/chip-hpp-light.svg"
+    },
+    "_chip-cs": {
+      "iconPath": "../icons/chip-cs.svg"
+    },
+    "_chip-cs_light": {
+      "iconPath": "../icons/chip-cs-light.svg"
+    },
+    "_chip-php": {
+      "iconPath": "../icons/chip-php.svg"
+    },
+    "_chip-php_light": {
+      "iconPath": "../icons/chip-php-light.svg"
+    },
+    "_chip-lua": {
+      "iconPath": "../icons/chip-lua.svg"
+    },
+    "_chip-lua_light": {
+      "iconPath": "../icons/chip-lua-light.svg"
+    },
+    "_chip-sh": {
+      "iconPath": "../icons/chip-sh.svg"
+    },
+    "_chip-sh_light": {
+      "iconPath": "../icons/chip-sh-light.svg"
+    },
+    "_chip-ps1": {
+      "iconPath": "../icons/chip-ps1.svg"
+    },
+    "_chip-ps1_light": {
+      "iconPath": "../icons/chip-ps1-light.svg"
+    },
+    "_chip-bat": {
+      "iconPath": "../icons/chip-bat.svg"
+    },
+    "_chip-bat_light": {
+      "iconPath": "../icons/chip-bat-light.svg"
+    },
+    "_chip-html": {
+      "iconPath": "../icons/chip-html.svg"
+    },
+    "_chip-html_light": {
+      "iconPath": "../icons/chip-html-light.svg"
+    },
+    "_chip-xml": {
+      "iconPath": "../icons/chip-xml.svg"
+    },
+    "_chip-xml_light": {
+      "iconPath": "../icons/chip-xml-light.svg"
+    },
+    "_chip-svg": {
+      "iconPath": "../icons/chip-svg.svg"
+    },
+    "_chip-svg_light": {
+      "iconPath": "../icons/chip-svg-light.svg"
+    },
+    "_chip-css": {
+      "iconPath": "../icons/chip-css.svg"
+    },
+    "_chip-css_light": {
+      "iconPath": "../icons/chip-css-light.svg"
+    },
+    "_chip-scss": {
+      "iconPath": "../icons/chip-scss.svg"
+    },
+    "_chip-scss_light": {
+      "iconPath": "../icons/chip-scss-light.svg"
+    },
+    "_chip-less": {
+      "iconPath": "../icons/chip-less.svg"
+    },
+    "_chip-less_light": {
+      "iconPath": "../icons/chip-less-light.svg"
+    },
+    "_chip-json": {
+      "iconPath": "../icons/chip-json.svg"
+    },
+    "_chip-json_light": {
+      "iconPath": "../icons/chip-json-light.svg"
+    },
+    "_chip-yml": {
+      "iconPath": "../icons/chip-yml.svg"
+    },
+    "_chip-yml_light": {
+      "iconPath": "../icons/chip-yml-light.svg"
+    },
+    "_chip-toml": {
+      "iconPath": "../icons/chip-toml.svg"
+    },
+    "_chip-toml_light": {
+      "iconPath": "../icons/chip-toml-light.svg"
+    },
+    "_chip-cfg": {
+      "iconPath": "../icons/chip-cfg.svg"
+    },
+    "_chip-cfg_light": {
+      "iconPath": "../icons/chip-cfg-light.svg"
+    },
+    "_chip-env": {
+      "iconPath": "../icons/chip-env.svg"
+    },
+    "_chip-env_light": {
+      "iconPath": "../icons/chip-env-light.svg"
+    },
+    "_chip-md": {
+      "iconPath": "../icons/chip-md.svg"
+    },
+    "_chip-md_light": {
+      "iconPath": "../icons/chip-md-light.svg"
+    },
+    "_chip-txt": {
+      "iconPath": "../icons/chip-txt.svg"
+    },
+    "_chip-txt_light": {
+      "iconPath": "../icons/chip-txt-light.svg"
+    },
+    "_chip-log": {
+      "iconPath": "../icons/chip-log.svg"
+    },
+    "_chip-log_light": {
+      "iconPath": "../icons/chip-log-light.svg"
+    },
+    "_chip-lock": {
+      "iconPath": "../icons/chip-lock.svg"
+    },
+    "_chip-lock_light": {
+      "iconPath": "../icons/chip-lock-light.svg"
+    },
+    "_chip-img": {
+      "iconPath": "../icons/chip-img.svg"
+    },
+    "_chip-img_light": {
+      "iconPath": "../icons/chip-img-light.svg"
+    },
+    "_chip-pdf": {
+      "iconPath": "../icons/chip-pdf.svg"
+    },
+    "_chip-pdf_light": {
+      "iconPath": "../icons/chip-pdf-light.svg"
+    },
+    "_chip-zip": {
+      "iconPath": "../icons/chip-zip.svg"
+    },
+    "_chip-zip_light": {
+      "iconPath": "../icons/chip-zip-light.svg"
+    },
+    "_chip-fnt": {
+      "iconPath": "../icons/chip-fnt.svg"
+    },
+    "_chip-fnt_light": {
+      "iconPath": "../icons/chip-fnt-light.svg"
+    },
+    "_chip-dock": {
+      "iconPath": "../icons/chip-dock.svg"
+    },
+    "_chip-dock_light": {
+      "iconPath": "../icons/chip-dock-light.svg"
+    },
+    "_chip-mk": {
+      "iconPath": "../icons/chip-mk.svg"
+    },
+    "_chip-mk_light": {
+      "iconPath": "../icons/chip-mk-light.svg"
+    },
+    "_chip-lic": {
+      "iconPath": "../icons/chip-lic.svg"
+    },
+    "_chip-lic_light": {
+      "iconPath": "../icons/chip-lic-light.svg"
+    },
+    "_chip-git": {
+      "iconPath": "../icons/chip-git.svg"
+    },
+    "_chip-git_light": {
+      "iconPath": "../icons/chip-git-light.svg"
+    }
+  },
+  "file": "_file",
+  "folder": "_folder",
+  "folderExpanded": "_folder-open",
+  "fileExtensions": {
+    "ts": "_chip-ts",
+    "tsx": "_chip-tsx",
+    "js": "_chip-js",
+    "mjs": "_chip-js",
+    "cjs": "_chip-js",
+    "jsx": "_chip-jsx",
+    "py": "_chip-py",
+    "vue": "_chip-vue",
+    "go": "_chip-go",
+    "sql": "_chip-sql",
+    "rs": "_chip-rs",
+    "rb": "_chip-rb",
+    "java": "_chip-java",
+    "c": "_chip-c",
+    "h": "_chip-h",
+    "cpp": "_chip-cpp",
+    "cc": "_chip-cpp",
+    "hpp": "_chip-hpp",
+    "cs": "_chip-cs",
+    "php": "_chip-php",
+    "lua": "_chip-lua",
+    "sh": "_chip-sh",
+    "bash": "_chip-sh",
+    "zsh": "_chip-sh",
+    "ps1": "_chip-ps1",
+    "bat": "_chip-bat",
+    "cmd": "_chip-bat",
+    "html": "_chip-html",
+    "htm": "_chip-html",
+    "xml": "_chip-xml",
+    "svg": "_chip-svg",
+    "css": "_chip-css",
+    "scss": "_chip-scss",
+    "sass": "_chip-scss",
+    "less": "_chip-less",
+    "json": "_chip-json",
+    "jsonc": "_chip-json",
+    "yml": "_chip-yml",
+    "yaml": "_chip-yml",
+    "toml": "_chip-toml",
+    "ini": "_chip-cfg",
+    "cfg": "_chip-cfg",
+    "conf": "_chip-cfg",
+    "env": "_chip-env",
+    "md": "_chip-md",
+    "markdown": "_chip-md",
+    "txt": "_chip-txt",
+    "log": "_chip-log",
+    "lock": "_chip-lock",
+    "png": "_chip-img",
+    "jpg": "_chip-img",
+    "jpeg": "_chip-img",
+    "gif": "_chip-img",
+    "webp": "_chip-img",
+    "ico": "_chip-img",
+    "bmp": "_chip-img",
+    "pdf": "_chip-pdf",
+    "zip": "_chip-zip",
+    "tar": "_chip-zip",
+    "gz": "_chip-zip",
+    "7z": "_chip-zip",
+    "ttf": "_chip-fnt",
+    "otf": "_chip-fnt",
+    "woff": "_chip-fnt",
+    "woff2": "_chip-fnt"
+  },
+  "fileNames": {
+    "dockerfile": "_chip-dock",
+    "makefile": "_chip-mk",
+    "license": "_chip-lic",
+    "license.md": "_chip-lic",
+    "license.txt": "_chip-lic",
+    ".gitignore": "_chip-git",
+    ".gitattributes": "_chip-git",
+    ".gitmodules": "_chip-git",
+    ".editorconfig": "_chip-cfg",
+    ".env": "_chip-env",
+    ".env.local": "_chip-env",
+    ".env.example": "_chip-env"
+  },
+  "light": {
+    "file": "_file_light",
+    "folder": "_folder_light",
+    "folderExpanded": "_folder-open_light",
+    "fileExtensions": {
+      "ts": "_chip-ts_light",
+      "tsx": "_chip-tsx_light",
+      "js": "_chip-js_light",
+      "mjs": "_chip-js_light",
+      "cjs": "_chip-js_light",
+      "jsx": "_chip-jsx_light",
+      "py": "_chip-py_light",
+      "vue": "_chip-vue_light",
+      "go": "_chip-go_light",
+      "sql": "_chip-sql_light",
+      "rs": "_chip-rs_light",
+      "rb": "_chip-rb_light",
+      "java": "_chip-java_light",
+      "c": "_chip-c_light",
+      "h": "_chip-h_light",
+      "cpp": "_chip-cpp_light",
+      "cc": "_chip-cpp_light",
+      "hpp": "_chip-hpp_light",
+      "cs": "_chip-cs_light",
+      "php": "_chip-php_light",
+      "lua": "_chip-lua_light",
+      "sh": "_chip-sh_light",
+      "bash": "_chip-sh_light",
+      "zsh": "_chip-sh_light",
+      "ps1": "_chip-ps1_light",
+      "bat": "_chip-bat_light",
+      "cmd": "_chip-bat_light",
+      "html": "_chip-html_light",
+      "htm": "_chip-html_light",
+      "xml": "_chip-xml_light",
+      "svg": "_chip-svg_light",
+      "css": "_chip-css_light",
+      "scss": "_chip-scss_light",
+      "sass": "_chip-scss_light",
+      "less": "_chip-less_light",
+      "json": "_chip-json_light",
+      "jsonc": "_chip-json_light",
+      "yml": "_chip-yml_light",
+      "yaml": "_chip-yml_light",
+      "toml": "_chip-toml_light",
+      "ini": "_chip-cfg_light",
+      "cfg": "_chip-cfg_light",
+      "conf": "_chip-cfg_light",
+      "env": "_chip-env_light",
+      "md": "_chip-md_light",
+      "markdown": "_chip-md_light",
+      "txt": "_chip-txt_light",
+      "log": "_chip-log_light",
+      "lock": "_chip-lock_light",
+      "png": "_chip-img_light",
+      "jpg": "_chip-img_light",
+      "jpeg": "_chip-img_light",
+      "gif": "_chip-img_light",
+      "webp": "_chip-img_light",
+      "ico": "_chip-img_light",
+      "bmp": "_chip-img_light",
+      "pdf": "_chip-pdf_light",
+      "zip": "_chip-zip_light",
+      "tar": "_chip-zip_light",
+      "gz": "_chip-zip_light",
+      "7z": "_chip-zip_light",
+      "ttf": "_chip-fnt_light",
+      "otf": "_chip-fnt_light",
+      "woff": "_chip-fnt_light",
+      "woff2": "_chip-fnt_light"
+    },
+    "fileNames": {
+      "dockerfile": "_chip-dock_light",
+      "makefile": "_chip-mk_light",
+      "license": "_chip-lic_light",
+      "license.md": "_chip-lic_light",
+      "license.txt": "_chip-lic_light",
+      ".gitignore": "_chip-git_light",
+      ".gitattributes": "_chip-git_light",
+      ".gitmodules": "_chip-git_light",
+      ".editorconfig": "_chip-cfg_light",
+      ".env": "_chip-env_light",
+      ".env.local": "_chip-env_light",
+      ".env.example": "_chip-env_light"
+    }
+  },
+  "hidesExplorerArrows": false
+}

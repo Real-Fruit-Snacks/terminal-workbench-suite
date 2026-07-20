@@ -1,0 +1,52 @@
+{
+  "name": "terminal-workbench",
+  "displayName": "Terminal Workbench",
+  "description": "A calm, dense, high-contrast theme for people who live in panes, shells, logs, and code. Graphite surfaces, restrained ANSI-style accents, dark and light.",
+  "version": "0.2.0",
+  "publisher": "real-fruit-snacks",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "light",
+    "terminal",
+    "graphite",
+    "icon-theme",
+    "file-icons"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Real-Fruit-Snacks/terminal-workbench-vscode"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Terminal Workbench",
+        "uiTheme": "vs-dark",
+        "path": "./themes/terminal-workbench-dark-color-theme.json"
+      },
+      {
+        "label": "Terminal Workbench Light",
+        "uiTheme": "vs",
+        "path": "./themes/terminal-workbench-light-color-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "terminal-workbench-icons",
+        "label": "Terminal Workbench Icons",
+        "path": "./themes/terminal-workbench-file-icons.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node build/build.js",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,4 @@
+node_modules/
+*.vsix
+.superpowers/
+docs/superpowers/

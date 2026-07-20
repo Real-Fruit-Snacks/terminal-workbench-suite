@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460">
+<rect x="1" y="1" width="1198" height="458" rx="24" fill="#f5f7f4" stroke="#bfcbc5" stroke-width="1.5"/>
+<text x="66" y="104" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="15" font-weight="600" letter-spacing="2.2" fill="#81918a">VS CODE THEME · DARK + LIGHT</text>
+<text x="64" y="182" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="58" font-weight="600" fill="#17201d">terminal</text>
+<text x="64" y="248" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="58" font-weight="600" fill="#17201d">workbench</text>
+<text x="66" y="304" font-family="'Segoe UI','SF Pro Text',system-ui,sans-serif" font-size="21" fill="#34443f">Quiet chrome, loud <tspan fill="#007a4d">signal.</tspan></text>
+<text x="66" y="368" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="12.5" font-weight="600" letter-spacing="2" fill="#81918a">EDITOR · TERMINAL · ICONS · SYNTAX</text>
+<rect x="624" y="64" width="512" height="332" rx="14" fill="#edf2ee" stroke="#bfcbc5"/>
+<circle cx="652" cy="92" r="5.5" fill="#c8324c"/>
+<circle cx="672" cy="92" r="5.5" fill="#a46600"/>
+<circle cx="692" cy="92" r="5.5" fill="#007a4d"/>
+<line x1="624" y1="108" x2="1136" y2="108" stroke="#bfcbc5"/>
+<rect x="640" y="108" width="100" height="32" fill="#d6e1db"/>
+<rect x="640" y="108" width="100" height="2" fill="#007a4d"/>
+<text x="690" y="129" text-anchor="middle" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="12" font-weight="600" fill="#007a4d">main.ts</text>
+<text x="790" y="129" text-anchor="middle" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="12" fill="#60706a">app.py</text>
+<line x1="624" y1="140" x2="1136" y2="140" stroke="#bfcbc5"/>
+<text x="648" y="172" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="13"><tspan fill="#7357b8">import</tspan><tspan fill="#34443f"> { </tspan><tspan fill="#006f9e">pane</tspan><tspan fill="#34443f"> } </tspan><tspan fill="#7357b8">from</tspan><tspan fill="#007a4d"> 'workbench'</tspan></text>
+<text x="648" y="196" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="13"><tspan fill="#7357b8">const</tspan><tspan fill="#34443f"> session = </tspan><tspan fill="#006f9e">attach</tspan><tspan fill="#34443f">(</tspan><tspan fill="#b65800">42</tspan><tspan fill="#34443f">)</tspan></text>
+<text x="648" y="220" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="13" fill="#5f6f67">// quiet chrome, loud signal</text>
+<text x="648" y="244" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="13"><tspan fill="#34443f">session.</tspan><tspan fill="#a46600">theme</tspan><tspan fill="#34443f"> = </tspan><tspan fill="#007a4d">'graphite'</tspan></text>
+<line x1="624" y1="264" x2="1136" y2="264" stroke="#bfcbc5"/>
+<text x="648" y="292" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="13"><tspan fill="#007a4d">$</tspan><tspan fill="#34443f"> npm test</tspan></text>
+<text x="648" y="316" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="13"><tspan fill="#006f9e">PASS</tspan><tspan fill="#34443f"> 38 tests · </tspan><tspan fill="#a46600">2 accepted warnings</tspan></text>
+<rect x="648" y="344" width="46" height="22" rx="4" fill="#006f9e21" stroke="#006f9e47"/><text x="671" y="359" text-anchor="middle" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="11" font-weight="600" fill="#006f9e">TS</text>
+<rect x="704" y="344" width="46" height="22" rx="4" fill="#007a4d21" stroke="#007a4d47"/><text x="727" y="359" text-anchor="middle" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="11" font-weight="600" fill="#007a4d">PY</text>
+<rect x="760" y="344" width="46" height="22" rx="4" fill="#34443f21" stroke="#34443f47"/><text x="783" y="359" text-anchor="middle" font-family="'Cascadia Code','Consolas','SF Mono','Menlo',monospace" font-size="11" font-weight="600" fill="#34443f">MD</text>
+</svg>

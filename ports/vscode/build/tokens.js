@@ -1,0 +1,53 @@
+'use strict';
+
+const dark = {
+  name: 'Terminal Workbench',
+  type: 'dark',
+  accent: '#63f2ab',
+  accentAlt: '#6bdcff',
+  warm: '#f0c674',
+  red: '#ff6e7a',
+  orange: '#f7a35c',
+  violet: '#b78cff',
+  bg0: '#090c0d',
+  bg1: '#0e1214',
+  bg2: '#13191c',
+  bg3: '#182024',
+  bg4: '#202a2f',
+  border: '#2a363d',
+  borderStrong: '#39484f',
+  textNormal: '#dce4df',
+  textSoft: '#b4c3bd',
+  textMuted: '#879994',
+  textFaint: '#63736f',
+  textOnAccent: '#07100d',
+  codeComment: '#6f807b',
+  ansiBlue: '#7fb2ff',
+};
+
+const light = {
+  name: 'Terminal Workbench Light',
+  type: 'light',
+  accent: '#007a4d',
+  accentAlt: '#006f9e',
+  warm: '#a46600',
+  red: '#c8324c',
+  orange: '#b65800',
+  violet: '#7357b8',
+  bg0: '#f5f7f4',
+  bg1: '#edf2ee',
+  bg2: '#e2eae5',
+  bg3: '#d6e1db',
+  bg4: '#c8d5cf',
+  border: '#bfcbc5',
+  borderStrong: '#9daea7',
+  textNormal: '#17201d',
+  textSoft: '#34443f',
+  textMuted: '#60706a',
+  textFaint: '#81918a',
+  textOnAccent: '#f9fbf8',
+  codeComment: '#5f6f67',
+  ansiBlue: '#2d63b8',
+};
+
+module.exports = { dark, light };
