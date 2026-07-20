@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="Terminal Workbench for Notepad++ — dark and light editor themes, with a preview of highlighted code">
+  <title>Terminal Workbench for Notepad++</title>
+  <rect x="0.75" y="0.75" width="1198.5" height="458.5" rx="24" fill="#f5f7f4" stroke="#bfcbc5" stroke-width="1.5"/>
+
+  <!-- left column -->
+  <text x="68" y="128" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15" font-weight="600" letter-spacing="2.2" fill="#81918a">NOTEPAD++ THEMES · DARK + LIGHT</text>
+  <text x="66" y="204" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="58" font-weight="700" letter-spacing="0.5" fill="#17201d">terminal</text>
+  <text x="66" y="268" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="58" font-weight="700" letter-spacing="0.5" fill="#17201d">workbench</text>
+  <rect x="372" y="224" width="13" height="44" rx="2" fill="#007a4d"/>
+  <text x="68" y="326" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="21" fill="#60706a">Quiet chrome. <tspan fill="#007a4d" font-weight="600">Loud signal.</tspan></text>
+  <text x="68" y="384" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12.5" letter-spacing="1.6" fill="#81918a">ALL 92 LEXERS · EDITOR CHROME · DARK + LIGHT</text>
+
+  <!-- right column: mock editor window -->
+  <rect x="624" y="64" width="512" height="332" rx="14" fill="#f5f7f4" stroke="#bfcbc5" stroke-width="1.5"/>
+  <path d="M638 64 h484 a14 14 0 0 1 14 14 v30 h-512 v-30 a14 14 0 0 1 14 -14 z" fill="#d6e1db"/>
+  <line x1="624" y1="108" x2="1136" y2="108" stroke="#bfcbc5" stroke-width="1"/>
+  <circle cx="648" cy="86" r="5.5" fill="#c8324c"/>
+  <circle cx="668" cy="86" r="5.5" fill="#a46600"/>
+  <circle cx="688" cy="86" r="5.5" fill="#007a4d"/>
+  <text x="714" y="90" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#81918a">Notepad++ — terminal_workbench.py</text>
+
+  <!-- line number margin -->
+  <path d="M625.5 109 h42 v286 h-42 a13 13 0 0 1 -13 -13 v-260 a13 13 0 0 1 13 -13 z" fill="#edf2ee" transform="translate(12 0)"/>
+
+  <!-- current line band -->
+  <rect x="682" y="196" width="452" height="38" fill="#e3edee"/>
+
+  <!-- line numbers -->
+  <text x="668" y="151" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#81918a" text-anchor="end">1</text>
+  <text x="668" y="189" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#81918a" text-anchor="end">2</text>
+  <text x="668" y="227" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#60706a" text-anchor="end">3</text>
+  <text x="668" y="265" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#81918a" text-anchor="end">4</text>
+  <text x="668" y="303" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#81918a" text-anchor="end">5</text>
+  <text x="668" y="341" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="14" fill="#81918a" text-anchor="end">6</text>
+
+  <!-- code -->
+  <text x="694" y="151" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15" font-style="italic" fill="#81918a"># quiet chrome, loud signal</text>
+  <text x="694" y="189" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15"><tspan fill="#7357b8" font-weight="600">def</tspan><tspan fill="#34443f"> </tspan><tspan fill="#006f9e">render</tspan><tspan fill="#34443f">(mode):</tspan></text>
+  <text x="726" y="227" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15"><tspan fill="#34443f">accent = </tspan><tspan fill="#007a4d">"#007a4d"</tspan></text>
+  <rect x="879" y="206" width="2.5" height="24" fill="#007a4d"/>
+  <text x="726" y="265" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15"><tspan fill="#34443f">steps = </tspan><tspan fill="#b65800">5</tspan></text>
+  <text x="726" y="303" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15"><tspan fill="#7357b8" font-weight="600">return</tspan><tspan fill="#34443f"> </tspan><tspan fill="#006f9e">paint</tspan><tspan fill="#34443f">(accent, steps)</tspan></text>
+  <text x="694" y="341" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15" font-style="italic" fill="#81918a"># keywords · strings · numbers</text>
+</svg>
