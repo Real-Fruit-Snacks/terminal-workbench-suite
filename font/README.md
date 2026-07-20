@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-mono/main/docs/assets/cover-dark.svg" />
-  <img alt="Terminal Workbench Mono — the official typeface of the Terminal Workbench design system" src="https://raw.githubusercontent.com/Real-Fruit-Snacks/terminal-workbench-mono/main/docs/assets/cover-light.svg" width="820" />
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench Mono — the official typeface of the Terminal Workbench design system" src="docs/assets/cover-light.svg" width="820" />
 </picture>
 
 <br/>
@@ -12,10 +12,10 @@
   **The official monospace of the [Terminal Workbench design system](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system). Every glyph is generated from a parametric Python engine: clean geometric letterforms, a slashed zero, unambiguous 0O / Il1 / 5S / 8B, and eleven coding ligatures.**
 
   [![License: OFL-1.1](https://img.shields.io/badge/License-OFL--1.1-f0c674?style=flat-square)](OFL.txt)
-  [![Version](https://img.shields.io/badge/version-2.0.0-6bdcff?style=flat-square)](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/releases)
+  [![Version](https://img.shields.io/badge/version-2.0.0-6bdcff?style=flat-square)](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases)
   ![Modes](https://img.shields.io/badge/design%20system-official%20typeface-63f2ab?style=flat-square)
 
-  [Live Specimen](https://real-fruit-snacks.github.io/terminal-workbench-mono/) • [Design System](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system) • [Report Issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/issues)
+  [Live Specimen](https://real-fruit-snacks.github.io/terminal-workbench-suite/font/docs/) • [Design System](https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system) • [Report Issue](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/issues)
 
 </div>
 
@@ -33,30 +33,18 @@
 | **Formats** | TTF (desktop) · WOFF2 (web, ~5 KB per style) |
 | **License** | [SIL Open Font License 1.1](OFL.txt) — free to use, modify and embed |
 
-Every release is built from source by CI and ships with **signed build provenance**
-— see [Verify the download](#verify-the-download). Full history in [CHANGELOG.md](CHANGELOG.md).
+Full history in [CHANGELOG.md](CHANGELOG.md).
 
 ## Download
 
-Grab the [**latest release**](https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/releases/latest):
+Grab **`terminal-workbench-mono.zip`** from the suite's
+[**latest release**](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases) —
+it bundles `dist/` (TTF + WOFF2, all six styles), `OFL.txt`, and this `README.md`.
 
-| Asset | Contents |
-|---|---|
-| `TerminalWorkbenchMono-TTF.zip` | Desktop fonts for Windows / macOS / Linux |
-| `TerminalWorkbenchMono-WOFF2.zip` | Web fonts + ready-made `terminal-workbench-mono.css` |
-| `TerminalWorkbenchMono-Obsidian.zip` | Single-file CSS snippet for Obsidian (fonts embedded) |
-| `TerminalWorkbenchMono-Site.zip` | The full specimen site, ready to self-host (fonts, CSS, page, GitLab CI file) — works fully offline |
-| `SHA256SUMS.txt` | Checksums for everything — verify before you trust |
-
-### Verify the download
-
-Every release is built by GitHub Actions and carries signed build provenance.
-Confirm a file came from this repo's pipeline (not a hand-upload):
-
-```bash
-gh attestation verify TerminalWorkbenchMono-TTF.zip --repo Real-Fruit-Snacks/terminal-workbench-mono
-sha256sum -c SHA256SUMS.txt        # or: shasum -a 256 -c
-```
+Need the Obsidian snippet or the specimen site too? Clone the
+[suite repo](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite) and take
+everything under `font/`, or build the whole family from source yourself — see
+[Build from source](#build-from-source) below.
 
 ## Install
 
@@ -132,13 +120,11 @@ That keeps your published notes visually identical to your local vault.
 ## Host it yourself
 
 The specimen site is fully self-contained — no CDNs, no build step, works
-with no internet access. Grab `TerminalWorkbenchMono-Site.zip` from the
-latest release (or copy the `docs/` folder) and serve it from any static
-host:
-
-- **GitHub Pages:** already configured — every push to `main` deploys `docs/` via Actions.
-- **GitLab Pages:** the included [.gitlab-ci.yml](.gitlab-ci.yml) publishes the site on every push to the default branch — ideal for air-gapped GitLab instances.
-- **Anything else:** copy the files to any static web server.
+with no internet access. It's already live via the suite's GitHub Pages at
+[real-fruit-snacks.github.io/terminal-workbench-suite/font/docs/](https://real-fruit-snacks.github.io/terminal-workbench-suite/font/docs/)
+— GitHub Pages serves the whole `terminal-workbench-suite` tree, so this font
+needs no separate deployment of its own. To host it elsewhere, copy the
+`docs/` folder and serve it from any static web server.
 
 ## Build from source
 
