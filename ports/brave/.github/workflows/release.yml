@@ -1,0 +1,30 @@
+name: Release Brave theme
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package themes
+        run: |
+          cd dist
+          zip -r ../terminal-workbench-dark.zip terminal-workbench-dark
+          zip -r ../terminal-workbench-light.zip terminal-workbench-light
+
+      - name: Create release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          gh release create "$tag" \
+            --title="$tag" \
+            terminal-workbench-dark.zip terminal-workbench-light.zip

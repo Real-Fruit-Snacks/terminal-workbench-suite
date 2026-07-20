@@ -1,0 +1,75 @@
+{
+  "manifest_version": 3,
+  "name": "Terminal Workbench Light",
+  "version": "1.7.0",
+  "description": "Calm graphite terminal-workbench chrome — light mode.",
+  "theme": {
+    "colors": {
+      "frame": [
+        255,
+        255,
+        255
+      ],
+      "frame_inactive": [
+        255,
+        255,
+        255
+      ],
+      "toolbar": [
+        235,
+        235,
+        235
+      ],
+      "tab_text": [
+        0,
+        77,
+        49
+      ],
+      "tab_background_text": [
+        79,
+        122,
+        99
+      ],
+      "tab_background_text_inactive": [
+        107,
+        154,
+        128
+      ],
+      "omnibox_background": [
+        245,
+        245,
+        245
+      ],
+      "omnibox_text": [
+        0,
+        102,
+        65
+      ],
+      "bookmark_text": [
+        0,
+        102,
+        65
+      ],
+      "toolbar_button_icon": [
+        47,
+        109,
+        77
+      ],
+      "ntp_background": [
+        255,
+        255,
+        255
+      ],
+      "ntp_text": [
+        0,
+        102,
+        65
+      ],
+      "ntp_link": [
+        0,
+        102,
+        65
+      ]
+    }
+  }
+}

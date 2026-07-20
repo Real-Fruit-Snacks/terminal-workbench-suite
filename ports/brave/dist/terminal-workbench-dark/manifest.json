@@ -1,0 +1,75 @@
+{
+  "manifest_version": 3,
+  "name": "Terminal Workbench Dark",
+  "version": "1.7.0",
+  "description": "Calm graphite terminal-workbench chrome — dark mode.",
+  "theme": {
+    "colors": {
+      "frame": [
+        0,
+        0,
+        0
+      ],
+      "frame_inactive": [
+        0,
+        0,
+        0
+      ],
+      "toolbar": [
+        11,
+        11,
+        11
+      ],
+      "tab_text": [
+        140,
+        247,
+        195
+      ],
+      "tab_background_text": [
+        63,
+        122,
+        92
+      ],
+      "tab_background_text_inactive": [
+        52,
+        101,
+        76
+      ],
+      "omnibox_background": [
+        6,
+        6,
+        6
+      ],
+      "omnibox_text": [
+        99,
+        242,
+        171
+      ],
+      "bookmark_text": [
+        99,
+        242,
+        171
+      ],
+      "toolbar_button_icon": [
+        79,
+        154,
+        115
+      ],
+      "ntp_background": [
+        0,
+        0,
+        0
+      ],
+      "ntp_text": [
+        99,
+        242,
+        171
+      ],
+      "ntp_link": [
+        99,
+        242,
+        171
+      ]
+    }
+  }
+}

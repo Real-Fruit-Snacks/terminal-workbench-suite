@@ -1,0 +1,11 @@
+# GitLab CI: lets this repository be mirrored or self-hosted on GitLab with no
+# extra setup. Push to GitLab and the pipeline below runs automatically.
+
+build:
+  stage: build
+  image: node:20
+  script:
+    - node build.mjs
+  artifacts:
+    paths:
+      - dist

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-label="Terminal Workbench for Brave — dark and light browser themes, with a preview of the themed browser chrome">
+  <title>Terminal Workbench for Brave</title>
+  <rect x="0.75" y="0.75" width="1198.5" height="458.5" rx="24" fill="#f5f7f4" stroke="#bfcbc5" stroke-width="1.5"/>
+
+  <!-- left column -->
+  <text x="68" y="128" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="15" font-weight="600" letter-spacing="2.2" fill="#81918a">BRAVE THEMES · DARK + LIGHT</text>
+  <text x="66" y="204" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="58" font-weight="700" letter-spacing="0.5" fill="#17201d">terminal</text>
+  <text x="66" y="268" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="58" font-weight="700" letter-spacing="0.5" fill="#17201d">workbench</text>
+  <rect x="372" y="224" width="13" height="44" rx="2" fill="#007a4d"/>
+  <text x="68" y="326" font-family="ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif" font-size="21" fill="#60706a">Quiet chrome. <tspan fill="#007a4d" font-weight="600">Loud signal.</tspan></text>
+  <text x="68" y="384" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12.5" letter-spacing="1.6" fill="#81918a">LAYERED GRAPHITE CHROME · MINT ACCENT · WCAG AA</text>
+
+  <!-- right column: mock browser window -->
+  <rect x="624" y="64" width="512" height="332" rx="14" fill="#eef1ee" stroke="#bfcbc5" stroke-width="1.5"/>
+
+  <!-- tab strip -->
+  <path d="M638 64 h484 a14 14 0 0 1 14 14 v26 h-512 v-26 a14 14 0 0 1 14 -14 z" fill="#eef1ee"/>
+  <path d="M652 104 v-16 a8 8 0 0 1 8 -8 h132 a8 8 0 0 1 8 8 v16 z" fill="#ffffff"/>
+  <rect x="652" y="102" width="148" height="2.5" fill="#007a4d"/>
+  <circle cx="672" cy="92" r="4.5" fill="#007a4d"/>
+  <text x="686" y="96" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11.5" fill="#33413c">workbench — active</text>
+  <path d="M816 104 v-16 a8 8 0 0 1 8 -8 h124 a8 8 0 0 1 8 8 v16 z" fill="#eef1ee"/>
+  <circle cx="836" cy="92" r="4.5" fill="#a9b7b0"/>
+  <text x="850" y="96" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="11.5" fill="#81918a">background tab</text>
+
+  <!-- toolbar -->
+  <rect x="624" y="104" width="512" height="44" fill="#ffffff"/>
+  <line x1="624" y1="148" x2="1136" y2="148" stroke="#bfcbc5" stroke-width="1"/>
+  <circle cx="650" cy="126" r="7" fill="none" stroke="#81918a" stroke-width="1.8"/>
+  <circle cx="678" cy="126" r="7" fill="none" stroke="#81918a" stroke-width="1.8"/>
+
+  <!-- address field -->
+  <rect x="700" y="112" width="366" height="28" rx="14" fill="#f5f7f4" stroke="#bfcbc5" stroke-width="1"/>
+  <circle cx="720" cy="126" r="4" fill="#007a4d"/>
+  <text x="734" y="130" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12.5" fill="#33413c">brave://settings/appearance</text>
+  <circle cx="1094" cy="126" r="7" fill="none" stroke="#81918a" stroke-width="1.8"/>
+  <circle cx="1118" cy="126" r="7" fill="none" stroke="#81918a" stroke-width="1.8"/>
+
+  <!-- new tab page -->
+  <rect x="625" y="149" width="510" height="246" fill="#f5f7f4"/>
+  <text x="880" y="222" text-anchor="middle" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="26" font-weight="700" fill="#17201d">terminal<tspan fill="#007a4d"> workbench</tspan></text>
+  <rect x="742" y="248" width="276" height="26" rx="13" fill="#ffffff" stroke="#bfcbc5" stroke-width="1"/>
+  <text x="758" y="265" font-family="ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#81918a">search or type a url</text>
+
+  <!-- shortcut tiles -->
+  <g>
+    <rect x="742" y="296" width="60" height="52" rx="10" fill="#ffffff" stroke="#bfcbc5" stroke-width="1"/>
+    <circle cx="772" cy="316" r="8" fill="#007a4d" opacity="0.85"/>
+    <rect x="756" y="332" width="32" height="6" rx="3" fill="#a9b7b0"/>
+    <rect x="814" y="296" width="60" height="52" rx="10" fill="#ffffff" stroke="#bfcbc5" stroke-width="1"/>
+    <circle cx="844" cy="316" r="8" fill="#0f7ea8" opacity="0.85"/>
+    <rect x="828" y="332" width="32" height="6" rx="3" fill="#a9b7b0"/>
+    <rect x="886" y="296" width="60" height="52" rx="10" fill="#ffffff" stroke="#bfcbc5" stroke-width="1"/>
+    <circle cx="916" cy="316" r="8" fill="#9a6a00" opacity="0.85"/>
+    <rect x="900" y="332" width="32" height="6" rx="3" fill="#a9b7b0"/>
+    <rect x="958" y="296" width="60" height="52" rx="10" fill="#ffffff" stroke="#bfcbc5" stroke-width="1"/>
+    <circle cx="988" cy="316" r="8" fill="#60706a" opacity="0.85"/>
+    <rect x="972" y="332" width="32" height="6" rx="3" fill="#a9b7b0"/>
+  </g>
+</svg>
