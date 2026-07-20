@@ -1,0 +1,8 @@
+# Build + QA toolchain for Terminal Workbench Mono (pinned for reproducible builds).
+fonttools==4.63.0
+skia-pathops==0.9.2
+brotli==1.2.0
+pillow==12.2.0
+
+# QA only (not needed just to build the fonts):
+fontbakery==1.1.0

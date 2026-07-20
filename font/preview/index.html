@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Your Font — Style Directions</title>
+<style>
+  :root {
+    --bg: #0b1018; --panel: #101724; --line: #1d2839;
+    --fg: #dfe7ef; --dim: #8291a0; --accent: #7ed3d3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.6 "Segoe UI", system-ui, sans-serif;
+    padding: 48px 24px 96px;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: .5px; }
+  .sub { color: var(--dim); margin-bottom: 14px; }
+  .note {
+    border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    background: var(--panel); padding: 12px 16px; border-radius: 6px;
+    color: var(--dim); font-size: 14px; margin-bottom: 44px;
+  }
+  .note b { color: var(--accent); font-weight: 600; }
+  .card {
+    border: 1px solid var(--line); background: var(--panel);
+    border-radius: 10px; overflow: hidden; margin-bottom: 44px;
+  }
+  .card header { padding: 18px 22px 14px; border-bottom: 1px solid var(--line); }
+  .tag {
+    display: inline-block; font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--accent);
+    border: 1px solid var(--accent); border-radius: 99px;
+    padding: 2px 10px; margin-bottom: 8px;
+  }
+  .card h2 { margin: 0 0 4px; font-size: 22px; }
+  .card p { margin: 0; color: var(--dim); font-size: 14.5px; }
+  .card img { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Three directions for your font</h1>
+  <div class="sub">Same letter skeletons, three personalities — pick the one that feels like you.</div>
+  <div class="note">
+    These are <b>not stock fonts</b> — every glyph below was generated a few minutes ago by the
+    parametric engine that will build your final font. Whichever direction you pick is literally
+    what gets refined into the full character set (A–Z, a–z, 0–9, all symbols, Bold + Italic,
+    coding ligatures).
+  </div>
+
+  <div class="card">
+    <header>
+      <span class="tag">Option A</span>
+      <h2>Sharp &amp; Angular</h2>
+      <p>45° cut corners, octagonal rounds — sci-fi terminal energy, edges like volcanic glass.
+         Distinctive in headings, still calm enough for long notes.</p>
+    </header>
+    <img src="style-angular.png" alt="Sharp angular style sample">
+  </div>
+
+  <div class="card">
+    <header>
+      <span class="tag">Option B</span>
+      <h2>Retro Terminal</h2>
+      <p>Square corners, heavy strokes — chunky DOS/CRT nostalgia. Loudest of the three;
+         great for headers and terminals, heavier as body text.</p>
+    </header>
+    <img src="style-retro.png" alt="Retro terminal style sample">
+  </div>
+
+  <div class="card">
+    <header>
+      <span class="tag">Option C</span>
+      <h2>Clean &amp; Minimal</h2>
+      <p>Rounded geometric forms — quiet and highly readable, closer to a classic coding font.
+         The tech personality lives in details: slashed zero, square dots, angular tilde.</p>
+    </header>
+    <img src="style-clean.png" alt="Clean minimal style sample">
+  </div>
+</div>
+</body>
+</html>

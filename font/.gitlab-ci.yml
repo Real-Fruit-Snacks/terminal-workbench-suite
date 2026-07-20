@@ -1,0 +1,18 @@
+# GitLab Pages deployment for the Terminal Workbench Mono specimen site.
+# Publishes the static site on every push to the default branch.
+# No build step, no external resources — works on air-gapped instances.
+
+pages:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - mkdir -p public public/fonts public/assets
+    - cp docs/index.html docs/tokens.css docs/terminal-workbench-mono.css docs/favicon.png docs/og-image.png public/
+    - cp docs/fonts/*.woff2 public/fonts/
+    - cp docs/assets/*.svg public/assets/
+    - cp OFL.txt public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

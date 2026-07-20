@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminal Workbench Mono — official monospace of Terminal Workbench</title>
+<meta name="description" content="A clean geometric monospace with a slashed zero, unambiguous glyphs, coding ligatures and a full terminal pack. The official typeface of the Terminal Workbench design system.">
+<meta property="og:title" content="Terminal Workbench Mono">
+<meta property="og:description" content="The official monospace of the Terminal Workbench design system.">
+<meta property="og:image" content="https://real-fruit-snacks.github.io/terminal-workbench-mono/og-image.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="terminal-workbench-mono.css">
+<style>
+  /* ===== Base (copied from the design-system demo) ===== */
+  * { box-sizing: border-box; }
+  html { background: var(--twb-bg-0); }
+  body {
+    margin: 0; background: var(--twb-bg-0); color: var(--twb-text-normal);
+    font-family: var(--twb-font-ui); font-size: 15px;
+    line-height: var(--twb-line-height);
+  }
+  ::selection { background: var(--twb-selection); }
+  a { color: var(--twb-accent-alt); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: var(--twb-accent-alt); }
+  code, pre, kbd, .mono { font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  @media (prefers-reduced-motion: no-preference) {
+    button, a { transition: background var(--twb-transition), color var(--twb-transition),
+      border-color var(--twb-transition); }
+  }
+
+  /* ===== Manifest label idiom (copied from the demo) ===== */
+  .manifest {
+    font-family: "Terminal Workbench Mono", var(--twb-font-mono);
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--twb-text-muted);
+  }
+
+  /* ===== Layout / header / mode switch (copied from the demo) ===== */
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+  header.site {
+    border-bottom: 1px solid var(--twb-border); background: var(--twb-bg-1);
+    position: sticky; top: 0; z-index: 10;
+  }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; height: 46px; }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand .prompt { color: var(--twb-accent); font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-weight: 700; }
+  .mode-switch { display: flex; border: 1px solid var(--twb-border); border-radius: var(--twb-radius-s); overflow: hidden; }
+  .mode-switch button {
+    appearance: none; border: 0; background: transparent; padding: 5px 10px; cursor: pointer;
+    font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-size: 9.5px; font-weight: 700;
+    letter-spacing: 0.07em; text-transform: uppercase; color: var(--twb-text-muted);
+  }
+  .mode-switch button + button { border-left: 1px solid var(--twb-border); }
+  .mode-switch button:hover { background: var(--twb-bg-3); color: var(--twb-text-normal); }
+  .mode-switch button[aria-pressed="true"] { background: var(--twb-bg-3); color: var(--twb-accent); }
+  .mode-switch button:focus-visible { outline: 2px solid var(--twb-focus-ring); outline-offset: -2px; }
+
+  main { padding: 48px 0 24px; }
+  section { margin: 56px 0; }
+  section > .manifest { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+  section > .manifest::after {
+    content: ""; flex: 1; height: 1px;
+    background: linear-gradient(to right, var(--twb-border), transparent);
+  }
+
+  /* ===== Hero ===== */
+  h1 { font-size: 2.1em; font-weight: 760; line-height: 1.2; margin: 0 0 6px;
+       font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  .subtitle { color: var(--twb-text-muted); margin: 0 0 20px; max-width: 62ch; }
+  .hero-links { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 7px 14px; border-radius: var(--twb-radius-m);
+    font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-size: 12px; font-weight: 700;
+    border: 1px solid var(--twb-border);
+  }
+  .btn.primary { background: var(--twb-accent); color: var(--twb-text-on-accent); border-color: transparent; }
+  .btn.primary:hover { border-bottom-color: transparent; filter: brightness(1.08); }
+  .btn.ghost { color: var(--twb-text-soft); }
+  .btn.ghost:hover { background: var(--twb-bg-3); border-bottom-color: transparent; }
+
+  /* ===== Panel idiom (pane with header band) ===== */
+  .pane { border: 1px solid var(--twb-border); border-radius: var(--twb-radius-m);
+          background: var(--twb-bg-2); overflow: hidden; }
+  .pane .pane-head {
+    display: flex; justify-content: space-between; align-items: center;
+    background: var(--twb-bg-3); border-bottom: 1px solid var(--twb-border); padding: 6px 12px;
+  }
+  .pane pre { margin: 0; padding: 14px 16px; overflow-x: auto;
+              font-size: 14px; line-height: var(--twb-line-height-code); color: var(--twb-text-soft); }
+
+  /* ===== Specimen sections ===== */
+  .waterfall div { white-space: nowrap; overflow: hidden; color: var(--twb-text-normal);
+                   font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  .waterfall .size { color: var(--twb-text-faint); font-size: 10.5px; margin-right: 10px;
+                     font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+
+  .pairs { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+  .pair { border: 1px solid var(--twb-border); border-radius: var(--twb-radius-m);
+          background: var(--twb-bg-1); padding: 14px 16px; text-align: center; }
+  .pair .glyphs { font-family: "Terminal Workbench Mono", var(--twb-font-mono); font-size: 44px;
+                  color: var(--twb-accent); line-height: 1.3; }
+  .pair .why { font-size: 12.5px; color: var(--twb-text-muted); }
+
+  .liga-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .liga-grid pre { font-size: 22px; line-height: 1.9; }
+  .liga-off pre { font-feature-settings: "calt" 0, "liga" 0; }
+  @media (max-width: 640px) { .liga-grid { grid-template-columns: 1fr; } }
+
+  .styles-list div { font-size: 21px; line-height: 1.9; color: var(--twb-text-normal);
+                     font-family: "Terminal Workbench Mono", var(--twb-font-mono); }
+  .styles-list .tag { color: var(--twb-text-faint); font-size: 10.5px; letter-spacing: 0.08em;
+                      text-transform: uppercase; margin-right: 12px; font-weight: 400; font-style: normal; }
+
+  .code .k { color: var(--twb-violet); }
+  .code .s { color: var(--twb-accent); }
+  .code .n { color: var(--twb-orange); }
+  .code .f { color: var(--twb-accent-alt); }
+  .code .c { color: var(--twb-text-faint); font-style: italic; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; }
+  .card { border: 1px solid var(--twb-border); border-radius: var(--twb-radius-m);
+          background: var(--twb-bg-1); padding: 16px; font-size: 13.5px; color: var(--twb-text-soft); }
+  .card .manifest { display: block; margin-bottom: 8px; color: var(--twb-accent); }
+  .card code { font-size: 12px; background: var(--twb-bg-2); border: 1px solid var(--twb-border);
+               border-radius: var(--twb-radius-s); padding: 1px 5px; }
+
+  footer { border-top: 1px solid var(--twb-border); margin-top: 64px; padding: 20px 0 40px;
+           color: var(--twb-text-faint); font-size: 12.5px; }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <span class="prompt">❯</span>
+      <span class="manifest" style="color:var(--twb-text-normal)">terminal-workbench-mono</span>
+    </div>
+    <div class="mode-switch" role="group" aria-label="Color mode">
+      <button type="button" data-mode="dark">Dark</button>
+      <button type="button" data-mode="auto">Auto</button>
+      <button type="button" data-mode="light">Light</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <h1>Terminal Workbench Mono</h1>
+  <p class="subtitle">The official monospace of the
+    <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-design-system">Terminal
+    Workbench design system</a> — clean geometric letterforms, a slashed zero,
+    unambiguous 0O&thinsp;Il1&thinsp;5S&thinsp;8B, eleven coding ligatures and a full
+    terminal pack. Six styles, generated from a parametric Python engine, OFL licensed.</p>
+  <div class="hero-links">
+    <a class="btn primary" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-mono/releases/latest">Download</a>
+    <a class="btn ghost" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-mono">GitHub</a>
+    <a class="btn ghost" href="https://real-fruit-snacks.github.io/terminal-workbench-design-system/">Design system</a>
+  </div>
+
+  <section id="waterfall">
+    <div class="manifest">Waterfall</div>
+    <div class="waterfall">
+      <div style="font-size:33px"><span class="size">33</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklm</div>
+      <div style="font-size:27px"><span class="size">27</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrs</div>
+      <div style="font-size:21px"><span class="size">21</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456</div>
+      <div style="font-size:17px"><span class="size">17</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 !@#$%&amp;*</div>
+      <div style="font-size:14px"><span class="size">14</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 !@#$%&amp;* ({[&lt;&gt;]})</div>
+      <div style="font-size:12px"><span class="size">12</span>ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 !@#$%&amp;* ({[&lt;&gt;]}) à é ñ ü ç</div>
+    </div>
+  </section>
+
+  <section id="disambiguation">
+    <div class="manifest">Disambiguation</div>
+    <div class="pairs">
+      <div class="pair"><div class="glyphs">0 O</div><div class="why">slashed zero vs round O</div></div>
+      <div class="pair"><div class="glyphs">I l 1</div><div class="why">serifed cap-I, tailed ell, footed one</div></div>
+      <div class="pair"><div class="glyphs">5 S</div><div class="why">flat-top five vs spined S</div></div>
+      <div class="pair"><div class="glyphs">8 B</div><div class="why">pinched eight vs straight B</div></div>
+    </div>
+  </section>
+
+  <section id="ligatures">
+    <div class="manifest">Ligatures</div>
+    <div class="liga-grid">
+      <div class="pane">
+        <div class="pane-head"><span class="manifest">liga on</span><span class="manifest" style="color:var(--twb-accent)">calt + liga</span></div>
+        <pre>-&gt;  &lt;-  =&gt;
+!=  ==  ===  !==
+&lt;=  &gt;=  :=  ::</pre>
+      </div>
+      <div class="pane liga-off">
+        <div class="pane-head"><span class="manifest">liga off</span><span class="manifest">plain</span></div>
+        <pre>-&gt;  &lt;-  =&gt;
+!=  ==  ===  !==
+&lt;=  &gt;=  :=  ::</pre>
+      </div>
+    </div>
+  </section>
+
+  <section id="terminal">
+    <div class="manifest">Terminal</div>
+    <div class="pane">
+      <div class="pane-head"><span class="manifest" style="color:var(--twb-accent)">tmux · session 0</span><span class="manifest">80×12</span></div>
+      <pre>┌─ pane 1 ─────────┬─ pane 2 ─────────┐
+│ $ tail -f app.log│ $ htop           │
+│ ▁▂▃▄▅▆▇█ blocks  │ ░▒▓█ shades      │
+╞══════════════════╪══════════════════╡
+│ ╭─ rounded ─────╮│ ┏━ heavy ━━━━━━┓ │
+│ ╰───────────────╯│ ┗━━━━━━━━━━━━━━┛ │
+└──────────────────┴──────────────────┘</pre>
+    </div>
+  </section>
+
+  <section id="styles">
+    <div class="manifest">Styles</div>
+    <div class="styles-list">
+      <div style="font-weight:400"><span class="tag">400</span>Regular — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:400;font-style:italic"><span class="tag">400i</span>Italic — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:500"><span class="tag">500</span>Medium — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:500;font-style:italic"><span class="tag">500i</span>Medium Italic — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:700"><span class="tag">700</span>Bold — Sphinx of black quartz, judge my vow.</div>
+      <div style="font-weight:700;font-style:italic"><span class="tag">700i</span>Bold Italic — Sphinx of black quartz, judge my vow.</div>
+    </div>
+  </section>
+
+  <section id="code" class="code">
+    <div class="manifest">Code</div>
+    <div class="pane">
+      <div class="pane-head"><span class="manifest" style="color:var(--twb-accent)">workbench.py</span><span class="manifest">utf-8</span></div>
+      <pre><span class="c"># attach every pane in the session</span>
+<span class="k">def</span> <span class="f">attach</span>(session, count=<span class="n">4</span>):
+    panes = [<span class="f">Pane</span>(i) <span class="k">for</span> i <span class="k">in</span> <span class="f">range</span>(count)]
+    <span class="k">if</span> session.status == <span class="s">"active"</span>:
+        <span class="f">print</span>(<span class="s">f"attached -&gt; {panes}"</span>)
+    <span class="k">return</span> panes</pre>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="manifest">Install</div>
+    <div class="cards">
+      <div class="card"><span class="manifest">Desktop · TTF</span>
+        Unzip <code>TerminalWorkbenchMono-TTF.zip</code>, install all six TTFs,
+        then pick "Terminal Workbench Mono" in your terminal or editor.</div>
+      <div class="card"><span class="manifest">Obsidian · Snippet</span>
+        Drop <code>terminal-workbench-mono.css</code> into
+        <code>.obsidian/snippets/</code> and enable it — fonts embedded, nothing
+        to install.</div>
+      <div class="card"><span class="manifest">Web · WOFF2</span>
+        Link <code>terminal-workbench-mono.css</code> next to a
+        <code>fonts/</code> folder — six styles, ~5&nbsp;KB each.</div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    SIL Open Font License 1.1 · built from a parametric Python engine ·
+    <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-mono">source</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var KEY = "twm-theme";
+  var buttons = document.querySelectorAll(".mode-switch button");
+  function apply(mode) {
+    if (mode === "auto") document.documentElement.removeAttribute("data-theme");
+    else document.documentElement.setAttribute("data-theme", mode);
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.mode === mode));
+    });
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () { apply(b.dataset.mode); });
+  });
+  var saved = "auto";
+  try { saved = localStorage.getItem(KEY) || "auto"; } catch (e) {}
+  apply(saved);
+})();
+</script>
+
+</body>
+</html>
