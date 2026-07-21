@@ -25,6 +25,8 @@ A calm, dense, high-contrast theme for people who live in panes, shells, logs, a
 
 Port of the [Terminal Workbench Obsidian theme](https://github.com/Real-Fruit-Snacks/terminal-workbench). Graphite surfaces, restrained ANSI-style accents, and chrome that stays quiet so the signal (syntax, links, active elements) carries the color. Ships two color themes — Terminal Workbench (dark) and Terminal Workbench Light — plus Terminal Workbench Icons, a matching file icon theme.
 
+The theme JSONs in `themes/` also work as-is as [Shiki](https://shiki.style) themes, for syntax highlighting outside VS Code.
+
 ## Install
 
 From a `.vsix`:
@@ -37,7 +39,7 @@ Or from source:
     git clone https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
     cd terminal-workbench-suite/ports/vscode
     npx --yes @vscode/vsce package --no-dependencies --readme-path build/vsix-readme.md
-    code --install-extension terminal-workbench-1.0.0.vsix
+    code --install-extension terminal-workbench-1.1.0.vsix
 
 ## Recommended settings
 

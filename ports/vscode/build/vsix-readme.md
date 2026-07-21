@@ -31,7 +31,7 @@ Or from source:
     git clone https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
     cd terminal-workbench-suite/ports/vscode
     npx --yes @vscode/vsce package --no-dependencies --readme-path build/vsix-readme.md
-    code --install-extension terminal-workbench-1.0.0.vsix
+    code --install-extension terminal-workbench-1.1.0.vsix
 
 ## Recommended settings
 
