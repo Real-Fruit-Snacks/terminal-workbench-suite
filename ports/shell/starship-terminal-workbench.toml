@@ -1,0 +1,38 @@
+# Terminal Workbench — dark
+# https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+
+palette = "terminal_workbench_dark"
+
+[palettes.terminal_workbench_dark]
+accent = "#63f2ab"
+accent_alt = "#6bdcff"
+warm = "#f0c674"
+red = "#ff6e7a"
+orange = "#f7a35c"
+violet = "#b78cff"
+text_muted = "#879994"
+
+[palettes.terminal_workbench_light]
+accent = "#007a4d"
+accent_alt = "#006f9e"
+warm = "#a46600"
+red = "#c8324c"
+orange = "#b65800"
+violet = "#7357b8"
+text_muted = "#60706a"
+
+[directory]
+style = "accent_alt"
+
+[git_branch]
+style = "violet"
+
+[git_status]
+style = "warm"
+
+[cmd_duration]
+style = "text_muted"
+
+[character]
+success_symbol = "[❯](accent)"
+error_symbol = "[❯](red)"

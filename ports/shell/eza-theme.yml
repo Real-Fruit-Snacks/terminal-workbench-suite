@@ -1,0 +1,82 @@
+# Terminal Workbench — dark
+# https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+
+filekinds:
+  normal:
+    foreground: "#dce4df"
+  directory:
+    foreground: "#6bdcff"
+  symlink:
+    foreground: "#63f2ab"
+  executable:
+    foreground: "#63f2ab"
+    is_bold: true
+  pipe:
+    foreground: "#879994"
+  socket:
+    foreground: "#879994"
+  block_device:
+    foreground: "#879994"
+  char_device:
+    foreground: "#879994"
+
+perms:
+  user_read:
+    foreground: "#f0c674"
+  user_write:
+    foreground: "#f0c674"
+  user_execute_file:
+    foreground: "#f0c674"
+    is_bold: true
+  user_execute_other:
+    foreground: "#f0c674"
+    is_bold: true
+  group_read:
+    foreground: "#b4c3bd"
+  group_write:
+    foreground: "#b4c3bd"
+  group_execute:
+    foreground: "#b4c3bd"
+  other_read:
+    foreground: "#879994"
+  other_write:
+    foreground: "#879994"
+  other_execute:
+    foreground: "#879994"
+
+size:
+  major:
+    foreground: "#879994"
+  minor:
+    foreground: "#879994"
+  number_byte:
+    foreground: "#879994"
+  number_kilo:
+    foreground: "#879994"
+  number_mega:
+    foreground: "#879994"
+  number_giga:
+    foreground: "#879994"
+  number_huge:
+    foreground: "#879994"
+  unit_byte:
+    foreground: "#879994"
+  unit_kilo:
+    foreground: "#879994"
+  unit_mega:
+    foreground: "#879994"
+  unit_giga:
+    foreground: "#879994"
+  unit_huge:
+    foreground: "#879994"
+
+date:
+  foreground: "#63736f"
+
+git:
+  new:
+    foreground: "#63f2ab"
+  modified:
+    foreground: "#f0c674"
+  deleted:
+    foreground: "#ff6e7a"
