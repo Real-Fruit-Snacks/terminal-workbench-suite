@@ -1,0 +1,65 @@
+# Terminal Workbench — light
+# https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+
+comment = "text_muted"
+string = "accent"
+"constant.character.escape" = "accent_alt"
+"string.regexp" = "orange"
+keyword = "violet"
+operator = "text_soft"
+function = "accent_alt"
+type = "accent_alt"
+constructor = "accent_alt"
+"constant.numeric" = "orange"
+"constant.builtin" = "orange"
+"variable.other.member" = "warm"
+attribute = "warm"
+tag = "red"
+variable = "text_normal"
+punctuation = "text_muted"
+"markup.link.url" = "accent_alt"
+
+"markup.heading" = { fg = "accent", modifiers = ["bold"] }
+
+"diagnostic.error" = "red"
+"diagnostic.warning" = "warm"
+"diagnostic.info" = "accent_alt"
+"diagnostic.hint" = "text_muted"
+
+"ui.background" = "bg0"
+"ui.text" = "text_normal"
+"ui.cursor" = { fg = "bg0", bg = "accent" }
+"ui.selection" = { bg = "visual" }
+"ui.linenr" = "text_faint"
+"ui.linenr.selected" = "text_soft"
+"ui.cursorline.primary" = { bg = "bg2" }
+"ui.statusline" = { fg = "text_muted", bg = "bg1" }
+"ui.statusline.normal" = { fg = "text_on_accent", bg = "accent_alt" }
+"ui.statusline.insert" = { fg = "text_on_accent", bg = "accent" }
+"ui.statusline.select" = { fg = "text_on_accent", bg = "violet" }
+"ui.popup" = { bg = "bg1" }
+"ui.menu" = { bg = "bg1" }
+"ui.menu.selected" = { bg = "bg3" }
+"ui.help" = { bg = "bg1" }
+"ui.virtual.whitespace" = "text_faint"
+"ui.virtual.ruler" = { bg = "bg2" }
+"ui.window" = { fg = "border" }
+
+[palette]
+bg0 = "#f5f7f4"
+bg1 = "#edf2ee"
+bg2 = "#e2eae5"
+bg3 = "#d6e1db"
+border = "#bfcbc5"
+text_normal = "#17201d"
+text_soft = "#34443f"
+text_muted = "#60706a"
+text_faint = "#81918a"
+text_on_accent = "#f9fbf8"
+accent = "#007a4d"
+accent_alt = "#006f9e"
+warm = "#a46600"
+red = "#c8324c"
+orange = "#b65800"
+violet = "#7357b8"
+visual = "#b8d8ca"
