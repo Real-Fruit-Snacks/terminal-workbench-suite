@@ -11,6 +11,7 @@ pages:
     - cp tokens/tokens.css tokens/fonts.css public/tokens/
     - cp docs/assets/*.svg public/docs/assets/
     - cp font/dist/webfonts/*.woff2 public/font/dist/webfonts/
+    - for f in ports/*/docs/assets/cover-*.svg font/docs/assets/cover-*.svg; do mkdir -p "public/$(dirname "$f")"; cp "$f" "public/$f"; done
   artifacts:
     paths:
       - public

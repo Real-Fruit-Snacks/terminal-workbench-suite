@@ -502,6 +502,31 @@
   .usage-steps h3 { margin: 0 0 6px; }
   .usage-steps p { margin: 0 0 10px; font-size: 14px; color: var(--twb-text-soft); }
 
+  /* ===== Ports gallery ===== */
+  .ports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 14px;
+  }
+  .port-card { display: flex; flex-direction: column; }
+  .port-cover {
+    display: block;
+    background: var(--twb-bg-2);
+    border-bottom: 1px solid var(--twb-border);
+    line-height: 0;
+  }
+  .port-cover img { display: block; width: 100%; height: auto; }
+  .port-cover .cover-light { display: none; }
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) .port-cover .cover-dark { display: none; }
+    :root:not([data-theme="dark"]) .port-cover .cover-light { display: block; }
+  }
+  :root[data-theme="light"] .port-cover .cover-dark { display: none; }
+  :root[data-theme="light"] .port-cover .cover-light { display: block; }
+  .port-card .body { padding: 12px 14px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+  .ports-grid .hint { margin: 0; font-size: 13px; color: var(--twb-text-soft); flex: 1; }
+  .ports-grid .port-link { font-size: 12.5px; align-self: flex-start; }
+
   footer.site {
     border-top: 1px solid var(--twb-border);
     background: var(--twb-bg-1);
@@ -730,6 +755,237 @@
         <p>Building for a terminal, an editor, a slide deck? Give <a href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/blob/main/THEME-SPEC.md">THEME-SPEC.md</a> to any tool or AI — it carries the philosophy, both mode tables, and the component rules needed to reproduce the theme anywhere.</p>
       </li>
     </ol>
+  </section>
+
+  <section id="ports">
+    <span class="manifest">§ Ports</span>
+    <div class="ports-grid">
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/vim/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Vim">
+          <img class="cover-light" src="ports/vim/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Vim">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Vim</span>
+          <p class="hint"><code class="inline">:colorscheme twb-dark</code></p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/vim">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/neovim/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Neovim">
+          <img class="cover-light" src="ports/neovim/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Neovim">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Neovim</span>
+          <p class="hint">Native Lua, treesitter-aware.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/neovim">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/vscode/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="VS Code">
+          <img class="cover-light" src="ports/vscode/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="VS Code">
+        </div>
+        <div class="body">
+          <span class="manifest faint">VS Code</span>
+          <p class="hint">Install the .vsix from Releases.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/vscode">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/jetbrains/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="JetBrains">
+          <img class="cover-light" src="ports/jetbrains/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="JetBrains">
+        </div>
+        <div class="body">
+          <span class="manifest faint">JetBrains</span>
+          <p class="hint">Import the .icls scheme.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/jetbrains">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/tmtheme/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Sublime, bat, delta">
+          <img class="cover-light" src="ports/tmtheme/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Sublime, bat, delta">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Sublime / bat / delta</span>
+          <p class="hint">One .tmTheme, three tools.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/tmtheme">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/zed/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Zed">
+          <img class="cover-light" src="ports/zed/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Zed">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Zed</span>
+          <p class="hint">Drop into ~/.config/zed/themes.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/zed">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/helix/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Helix">
+          <img class="cover-light" src="ports/helix/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Helix">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Helix</span>
+          <p class="hint">theme = "terminal-workbench-dark"</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/helix">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/terminals/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Ten terminals">
+          <img class="cover-light" src="ports/terminals/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Ten terminals">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Ten terminals</span>
+          <p class="hint">ghostty, alacritty, kitty, wezterm, putty, mobaxterm, gnome, konsole, foot, tmux.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/terminals">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/windows-terminal/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Windows Terminal">
+          <img class="cover-light" src="ports/windows-terminal/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Windows Terminal">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Windows Terminal</span>
+          <p class="hint">Merge the JSON scheme.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/windows-terminal">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/brave/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Brave">
+          <img class="cover-light" src="ports/brave/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Brave">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Brave</span>
+          <p class="hint">Load the unpacked theme.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/brave">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/firefox/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Firefox">
+          <img class="cover-light" src="ports/firefox/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Firefox">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Firefox</span>
+          <p class="hint">Temporary load or self-sign.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/firefox">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/notepad-plus-plus/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Notepad++">
+          <img class="cover-light" src="ports/notepad-plus-plus/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Notepad++">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Notepad++</span>
+          <p class="hint">XMLs into your themes folder.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/notepad-plus-plus">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/wireshark/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Wireshark">
+          <img class="cover-light" src="ports/wireshark/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Wireshark">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Wireshark</span>
+          <p class="hint">Coloring-rule profiles.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/wireshark">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/shell/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Shell pack">
+          <img class="cover-light" src="ports/shell/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Shell pack">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Shell pack</span>
+          <p class="hint">oh-my-posh, starship, fzf, eza, btop.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/shell">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/xtermjs/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="xterm.js">
+          <img class="cover-light" src="ports/xtermjs/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="xterm.js">
+        </div>
+        <div class="body">
+          <span class="manifest faint">xterm.js</span>
+          <p class="hint">Theme object for the browser.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/xtermjs">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/codemirror/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="CodeMirror 6">
+          <img class="cover-light" src="ports/codemirror/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="CodeMirror 6">
+        </div>
+        <div class="body">
+          <span class="manifest faint">CodeMirror 6</span>
+          <p class="hint">Editor extension pair.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/codemirror">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="ports/slack/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Slack">
+          <img class="cover-light" src="ports/slack/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Slack">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Slack</span>
+          <p class="hint">Paste the sidebar string.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/ports/slack">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card port-card">
+        <div class="port-cover">
+          <img class="cover-dark" src="font/docs/assets/cover-dark.svg" width="820" height="190" loading="lazy" alt="Terminal Workbench Mono">
+          <img class="cover-light" src="font/docs/assets/cover-light.svg" width="820" height="190" loading="lazy" alt="Terminal Workbench Mono">
+        </div>
+        <div class="body">
+          <span class="manifest faint">Terminal Workbench Mono</span>
+          <p class="hint">The monospace face behind every code block, on its own.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/tree/main/font">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="body">
+          <span class="manifest faint">Obsidian</span>
+          <p class="hint">The original theme, in the community catalog.</p>
+          <a class="port-link" href="https://github.com/Real-Fruit-Snacks/terminal-workbench">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
   </section>
 
 </main>
