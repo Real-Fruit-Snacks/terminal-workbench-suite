@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+
+; Terminal Workbench - light
+; https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\Terminal%20Workbench%20Light]
+"Colour0"="23,32,29"
+"Colour1"="23,32,29"
+"Colour2"="245,247,244"
+"Colour3"="245,247,244"
+"Colour4"="245,247,244"
+"Colour5"="0,122,77"
+"Colour6"="23,32,29"
+"Colour7"="96,112,106"
+"Colour8"="200,50,76"
+"Colour9"="180,45,68"
+"Colour10"="0,122,77"
+"Colour11"="0,110,69"
+"Colour12"="164,102,0"
+"Colour13"="148,92,0"
+"Colour14"="46,98,184"
+"Colour15"="41,88,166"
+"Colour16"="115,87,184"
+"Colour17"="104,78,166"
+"Colour18"="0,111,158"
+"Colour19"="0,100,142"
+"Colour20"="200,213,207"
+"Colour21"="245,247,244"

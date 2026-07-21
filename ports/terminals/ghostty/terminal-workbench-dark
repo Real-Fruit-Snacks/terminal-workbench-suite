@@ -1,0 +1,26 @@
+# Terminal Workbench — dark
+# https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+
+palette = 0=#202a2f
+palette = 1=#ff6e7a
+palette = 2=#63f2ab
+palette = 3=#f0c674
+palette = 4=#74a8ff
+palette = 5=#b78cff
+palette = 6=#6bdcff
+palette = 7=#b4c3bd
+palette = 8=#63736f
+palette = 9=#ff7f8a
+palette = 10=#76f4b5
+palette = 11=#f2cd85
+palette = 12=#85b2ff
+palette = 13=#c09aff
+palette = 14=#7de0ff
+palette = 15=#dce4df
+
+background = #090c0d
+foreground = #dce4df
+cursor-color = #63f2ab
+cursor-text = #090c0d
+selection-background = #1b3a2d
+selection-foreground = #dce4df
