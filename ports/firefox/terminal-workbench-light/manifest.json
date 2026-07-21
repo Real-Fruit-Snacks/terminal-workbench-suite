@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "Terminal Workbench Light",
+  "description": "Calm graphite terminal-workbench chrome for Firefox — light mode.",
+  "author": "Real-Fruit-Snacks",
+  "version": "1.1.0",
+  "applications": {
+    "gecko": {
+      "id": "terminal-workbench-light@real-fruit-snacks"
+    }
+  },
+  "theme": {
+    "colors": {
+      "frame": "#ffffff",
+      "frame_inactive": "#ffffff",
+      "toolbar": "#ebebeb",
+      "tab_selected": "#ebebeb",
+      "tab_background_text": "#4f7a63",
+      "tab_text": "#004d31",
+      "tab_line": "#007a4d",
+      "toolbar_text": "#006641",
+      "toolbar_field": "#f5f5f5",
+      "toolbar_field_text": "#006641",
+      "toolbar_field_border": "#bfcbc5",
+      "toolbar_field_focus": "#d6e1db",
+      "toolbar_top_separator": "#bfcbc5",
+      "toolbar_bottom_separator": "#bfcbc5",
+      "bookmark_text": "#006641",
+      "icons": "#2f6d4d",
+      "icons_attention": "#007a4d",
+      "button_background_hover": "#d6e1db",
+      "button_background_active": "#c8d5cf",
+      "popup": "#edf2ee",
+      "popup_text": "#17201d",
+      "popup_border": "#bfcbc5",
+      "popup_highlight": "#b8d8ca",
+      "popup_highlight_text": "#17201d",
+      "sidebar": "#edf2ee",
+      "sidebar_text": "#17201d",
+      "sidebar_border": "#bfcbc5",
+      "sidebar_highlight": "#b8d8ca",
+      "sidebar_highlight_text": "#17201d",
+      "ntp_background": "#ffffff",
+      "ntp_text": "#006641"
+    }
+  }
+}
