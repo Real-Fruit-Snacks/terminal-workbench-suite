@@ -1,3 +1,12 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench for terminal emulators" src="docs/assets/cover-light.svg" width="820" />
+</picture>
+
+</div>
+
 # Terminal Workbench for terminal emulators
 
 Dark and light Terminal Workbench color schemes for ten terminal emulators and multiplexers: [Ghostty](#ghostty), [Alacritty](#alacritty), [kitty](#kitty), [WezTerm](#wezterm), [PuTTY](#putty), [MobaXterm](#mobaxterm), [GNOME Terminal](#gnome-terminal), [Konsole](#konsole), [foot](#foot), and [tmux](#tmux). Each app gets its own subfolder with a dark and a light config file, generated from the same palette as the rest of the suite.

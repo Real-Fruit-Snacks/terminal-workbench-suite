@@ -1,3 +1,12 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench for JetBrains IDEs" src="docs/assets/cover-light.svg" width="820" />
+</picture>
+
+</div>
+
 # Terminal Workbench for JetBrains IDEs
 
 Dark and light `.icls` editor color schemes implementing the Terminal

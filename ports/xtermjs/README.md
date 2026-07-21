@@ -1,3 +1,12 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench for xterm.js" src="docs/assets/cover-light.svg" width="820" />
+</picture>
+
+</div>
+
 # Terminal Workbench for xterm.js
 
 Dark and light [`ITheme`](https://xtermjs.org/docs/api/terminal/interfaces/itheme/)

@@ -1,3 +1,12 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench for Firefox" src="docs/assets/cover-light.svg" width="820" />
+</picture>
+
+</div>
+
 # Terminal Workbench for Firefox
 
 A manifest v2 static theme implementing the [Terminal Workbench design

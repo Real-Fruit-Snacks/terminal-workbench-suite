@@ -1,3 +1,12 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.svg" />
+  <img alt="Terminal Workbench for Neovim" src="docs/assets/cover-light.svg" width="820" />
+</picture>
+
+</div>
+
 # Terminal Workbench for Neovim
 
 A native Lua colorscheme — `twb-dark` and `twb-light` — porting the
