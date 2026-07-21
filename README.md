@@ -23,6 +23,18 @@ mandatory dark **and** light modes, color spent only on signal.
 | **Notepad++** | `terminal-workbench-notepad-plus-plus.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), XMLs into your `themes\` folder — see [ports/notepad-plus-plus](ports/notepad-plus-plus) |
 | **Windows Terminal** | Merge [`terminal-workbench.json`](ports/windows-terminal/terminal-workbench.json) into `settings.json` — see [ports/windows-terminal](ports/windows-terminal) |
 | **Font** | `terminal-workbench-mono.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases) — TTFs + webfonts, see [font/](font) |
+| **Neovim** | `terminal-workbench-neovim.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), drop `colors/` + `lua/twb/` into your Neovim config — see [ports/neovim](ports/neovim) |
+| **Terminal emulators** (Ghostty · Alacritty · kitty · WezTerm · PuTTY · MobaXterm · GNOME Terminal · Konsole · foot · tmux) | `terminal-workbench-terminals.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), per-app config files — see [ports/terminals](ports/terminals) |
+| **Sublime Text / bat / delta** | `terminal-workbench-tmtheme.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), drop the `.tmTheme` files into each tool's theme folder — see [ports/tmtheme](ports/tmtheme) |
+| **Zed** | `terminal-workbench-zed.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), copy the theme JSON into `~/.config/zed/themes/` — see [ports/zed](ports/zed) |
+| **Helix** | `terminal-workbench-helix.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), copy both `.toml` files into `~/.config/helix/themes/` — see [ports/helix](ports/helix) |
+| **JetBrains IDEs** | `terminal-workbench-jetbrains.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), import the `.icls` files via **Editor → Color Scheme** — see [ports/jetbrains](ports/jetbrains) |
+| **xterm.js** | `terminal-workbench-xtermjs.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), or import `index.mjs` as an `ITheme` — see [ports/xtermjs](ports/xtermjs) |
+| **CodeMirror 6** | `terminal-workbench-codemirror.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), or copy `terminal-workbench.mjs` into your project — see [ports/codemirror](ports/codemirror) |
+| **Firefox** | `terminal-workbench-firefox.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), load unpacked via `about:debugging#/runtime/this-firefox` — see [ports/firefox](ports/firefox) |
+| **Wireshark** | `terminal-workbench-wireshark.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), drop the profile folders into your Wireshark `profiles/` directory — see [ports/wireshark](ports/wireshark) |
+| **Shell prompt & CLI tools** (Oh My Posh · Starship · fzf · eza · btop) | `terminal-workbench-shell.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), per-tool config files — see [ports/shell](ports/shell) |
+| **Slack** | Copy `terminal-workbench-dark.txt` or `-light.txt` into Slack's **Preferences → Themes → Custom Theme** field — see [ports/slack](ports/slack) |
 
 ## Build for the web
 
@@ -53,7 +65,7 @@ patterns. Hand it to any tool (or AI) to reproduce the theme faithfully.
 THEME-SPEC.md   the portable spec (source of truth)
 tokens/         drop-in CSS custom properties + font loader
 index.html      live demo (GitHub Pages)
-ports/          vim · vscode · brave · notepad-plus-plus · windows-terminal
+ports/          vim · vscode · brave · notepad-plus-plus · windows-terminal · neovim · terminals · tmtheme · zed · helix · jetbrains · xtermjs · codemirror · firefox · wireshark · shell · slack
 font/           Terminal Workbench Mono — parametric engine + built fonts
 ```
 

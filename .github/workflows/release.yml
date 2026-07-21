@@ -41,6 +41,17 @@ jobs:
           (cd ports/notepad-plus-plus && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-notepad-plus-plus.zip" "Terminal Workbench Dark.xml" "Terminal Workbench Light.xml" README.md)
           cp ports/windows-terminal/terminal-workbench.json out/terminal-workbench-windows-terminal.json
           (cd font && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-mono.zip" dist OFL.txt README.md)
+          (cd ports/neovim && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-neovim.zip" colors lua README.md)
+          (cd ports/terminals && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-terminals.zip" .)
+          (cd ports/tmtheme && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-tmtheme.zip" .)
+          (cd ports/zed && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-zed.zip" .)
+          (cd ports/helix && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-helix.zip" .)
+          (cd ports/jetbrains && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-jetbrains.zip" .)
+          (cd ports/xtermjs && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-xtermjs.zip" .)
+          (cd ports/codemirror && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-codemirror.zip" .)
+          (cd ports/firefox && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-firefox.zip" .)
+          (cd ports/wireshark && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-wireshark.zip" .)
+          (cd ports/shell && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-shell.zip" .)
           cp ports/vscode/*.vsix out/
           ls -l out
       - name: Create release

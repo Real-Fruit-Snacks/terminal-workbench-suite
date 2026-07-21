@@ -29,3 +29,14 @@ jobs:
         run: |
           node build.mjs
           git diff --exit-code -- .
+      - name: Validate port data files
+        run: |
+          node -e '
+            const fs = require("fs"), path = require("path");
+            const walk = d => fs.readdirSync(d, {withFileTypes:true}).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : path.join(d, e.name));
+            const files = walk("ports").filter(f => f.endsWith(".json"));
+            files.forEach(f => { JSON.parse(fs.readFileSync(f, "utf8")); });
+            console.log("parsed " + files.length + " JSON files");
+          '
+          node --check ports/codemirror/terminal-workbench.mjs
+          node --check ports/xtermjs/index.mjs
