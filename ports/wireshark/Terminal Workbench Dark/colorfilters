@@ -1,0 +1,16 @@
+# Terminal Workbench — dark
+# https://github.com/Real-Fruit-Snacks/terminal-workbench-suite
+
+@Bad TCP@tcp.analysis.flags && !tcp.analysis.window_update@[11822,6939,7453][65535,28270,31354]
+@TCP RST@tcp.flags.reset == 1@[11822,6939,7453][65535,32639,35466]
+@HTTP error@http.response.code >= 400@[11822,6939,7453][65535,28270,31354]
+@TCP SYN/FIN@tcp.flags & 0x02 || tcp.flags.fin == 1@[5654,11822,9509][25443,62194,43947]
+@HTTP@http || http2 || http3@[2313,3084,3341][25443,62194,43947]
+@TLS handshake@tls.handshake@[2313,3084,3341][27499,56540,65535]
+@DNS@dns || mdns@[2313,3084,3341][27499,56540,65535]
+@Routing@hsrp || eigrp || ospf || bgp || rip@[2313,3084,3341][47031,35980,65535]
+@ICMP@icmp || icmpv6@[2313,3084,3341][47031,35980,65535]
+@ARP@arp@[2313,3084,3341][25443,29555,28527]
+@Broadcast@eth[0] & 1@[2313,3084,3341][34695,39321,38036]
+@Retransmission@tcp.analysis.retransmission@[11308,10280,7196][61680,50886,29812]
+@Checksum errors@ip.checksum.status=="Bad" || tcp.checksum.status=="Bad" || udp.checksum.status=="Bad"@[11822,6939,7453][65535,28270,31354]
