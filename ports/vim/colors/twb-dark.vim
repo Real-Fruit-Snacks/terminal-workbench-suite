@@ -15,7 +15,7 @@ let s:p.bg0            = ['#090c0d', 232]
 let s:p.bg1            = ['#0e1214', 233]
 let s:p.bg2            = ['#13191c', 234]
 let s:p.bg3            = ['#182024', 234]
-let s:p.bg4            = ['#202a2f', 235]  " reserved: highest raised surface, kept for palette completeness
+let s:p.bg4            = ['#202a2f', 235]  " highest raised surface; also the :terminal ANSI black slot
 let s:p.border         = ['#2a363d', 236]
 let s:p.border_strong  = ['#39484f', 238]
 " Text
@@ -40,7 +40,8 @@ let s:p.diff_change    = ['#15252a', 235]
 let s:p.diff_text      = ['#2b5562', 239]
 let s:p.todo_bg        = ['#2c281c', 235]
 " :terminal slot aliases
-let s:p.ansi_black        = s:p.bg0
+let s:p.ansi_black        = s:p.bg4
+let s:p.ansi_bright_black = s:p.text_faint
 let s:p.ansi_white        = s:p.text_soft
 let s:p.ansi_bright_white = s:p.text_normal
 

@@ -140,7 +140,7 @@ function! twb#apply(p) abort
   let g:terminal_ansi_colors = [
         \ l:p.ansi_black[0], l:p.red[0],    l:p.accent[0],     l:p.warm[0],
         \ l:p.accent_alt[0], l:p.violet[0], l:p.accent_alt[0], l:p.ansi_white[0],
-        \ l:p.text_faint[0], l:p.red[0],    l:p.accent[0],     l:p.warm[0],
+        \ l:p.ansi_bright_black[0], l:p.red[0], l:p.accent[0],  l:p.warm[0],
         \ l:p.accent_alt[0], l:p.violet[0], l:p.accent_alt[0], l:p.ansi_bright_white[0],
         \ ]
 endfunction

@@ -23,15 +23,15 @@
     <option name="CONSOLE_BLUE_OUTPUT" value="2e62b8"/>
     <option name="CONSOLE_MAGENTA_OUTPUT" value="7357b8"/>
     <option name="CONSOLE_CYAN_OUTPUT" value="006f9e"/>
-    <option name="CONSOLE_GRAY_OUTPUT" value="c8d5cf"/>
-    <option name="CONSOLE_DARKGRAY_OUTPUT" value="60706a"/>
+    <option name="CONSOLE_GRAY_OUTPUT" value="60706a"/>
+    <option name="CONSOLE_DARKGRAY_OUTPUT" value="34443f"/>
     <option name="CONSOLE_RED_BRIGHT_OUTPUT" value="b42d44"/>
     <option name="CONSOLE_GREEN_BRIGHT_OUTPUT" value="006e45"/>
     <option name="CONSOLE_YELLOW_BRIGHT_OUTPUT" value="945c00"/>
     <option name="CONSOLE_BLUE_BRIGHT_OUTPUT" value="2958a6"/>
     <option name="CONSOLE_MAGENTA_BRIGHT_OUTPUT" value="684ea6"/>
     <option name="CONSOLE_CYAN_BRIGHT_OUTPUT" value="00648e"/>
-    <option name="CONSOLE_WHITE_OUTPUT" value="f5f7f4"/>
+    <option name="CONSOLE_WHITE_OUTPUT" value="81918a"/>
     <option name="CONSOLE_NORMAL_OUTPUT" value="17201d"/>
     <option name="CONSOLE_ERROR_OUTPUT" value="c8324c"/>
   </colors>

@@ -89,14 +89,14 @@ Replace both names with their light counterparts:
 | Slot | Hex | | Slot | Hex |
 |---|---|---|---|---|
 | background | `#F5F7F4` | | foreground | `#17201D` |
-| black | `#17201D` | | brightBlack | `#60706A` |
+| black | `#17201D` | | brightBlack | `#34443F` |
 | red | `#C8324C` | | brightRed | `#B42D44` |
 | green | `#007A4D` | | brightGreen | `#006E45` |
 | yellow | `#A46600` | | brightYellow | `#945C00` |
 | blue | `#2E62B8` | | brightBlue | `#2958A6` |
 | purple | `#7357B8` | | brightPurple | `#684EA6` |
 | cyan | `#006F9E` | | brightCyan | `#00648E` |
-| white | `#C8D5CF` | | brightWhite | `#F5F7F4` |
+| white | `#60706A` | | brightWhite | `#81918A` |
 | cursor | `#007A4D` | | selection | `#CBE2D8` |
 
 ## Design notes

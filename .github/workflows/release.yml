@@ -33,6 +33,8 @@ jobs:
         run: |
           node build.mjs
           git diff --exit-code -- .
+      - name: Verify ANSI palette across ports
+        run: node tools/verify-palette.mjs
       - name: Package vsix
         working-directory: ports/vscode
         run: |

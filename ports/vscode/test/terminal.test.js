@@ -17,9 +17,9 @@ test('ANSI hues map to spec tokens', () => {
   assert.equal(c['terminal.ansiCyan'], dark.accentAlt);
 });
 
-test('bright variants mix 12% toward white (dark) / black (light)', () => {
+test('bright variants mix 12% toward white (dark) / 10% toward black (light)', () => {
   assert.equal(terminalColors(dark, true)['terminal.ansiBrightGreen'], mix(dark.accent, '#ffffff', 0.12));
-  assert.equal(terminalColors(light, false)['terminal.ansiBrightGreen'], mix(light.accent, '#000000', 0.12));
+  assert.equal(terminalColors(light, false)['terminal.ansiBrightGreen'], mix(light.accent, '#000000', 0.10));
 });
 
 test('dark-mode black/white anchors', () => {

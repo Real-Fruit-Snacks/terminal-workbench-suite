@@ -22,7 +22,7 @@ const dark = {
   textFaint: '#63736f',
   textOnAccent: '#07100d',
   codeComment: '#6f807b',
-  ansiBlue: '#7fb2ff',
+  ansiBlue: '#74a8ff',
 };
 
 const light = {
@@ -47,7 +47,7 @@ const light = {
   textFaint: '#81918a',
   textOnAccent: '#f9fbf8',
   codeComment: '#5f6f67',
-  ansiBlue: '#2d63b8',
+  ansiBlue: '#2e62b8',
 };
 
 module.exports = { dark, light };

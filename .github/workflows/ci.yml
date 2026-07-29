@@ -34,6 +34,8 @@ jobs:
         run: |
           node build.mjs
           git diff --exit-code -- .
+      - name: Verify ANSI palette across ports
+        run: node tools/verify-palette.mjs
       - name: Validate port data files
         run: |
           node -e '

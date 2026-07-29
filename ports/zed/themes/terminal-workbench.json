@@ -111,15 +111,15 @@
         "terminal.ansi.blue": "#2e62b8",
         "terminal.ansi.magenta": "#7357b8",
         "terminal.ansi.cyan": "#006f9e",
-        "terminal.ansi.white": "#c8d5cf",
-        "terminal.ansi.bright_black": "#60706a",
+        "terminal.ansi.white": "#60706a",
+        "terminal.ansi.bright_black": "#34443f",
         "terminal.ansi.bright_red": "#b42d44",
         "terminal.ansi.bright_green": "#006e45",
         "terminal.ansi.bright_yellow": "#945c00",
         "terminal.ansi.bright_blue": "#2958a6",
         "terminal.ansi.bright_magenta": "#684ea6",
         "terminal.ansi.bright_cyan": "#00648e",
-        "terminal.ansi.bright_white": "#f5f7f4",
+        "terminal.ansi.bright_white": "#81918a",
         "cursor": "#007a4d",
         "players": [
           {

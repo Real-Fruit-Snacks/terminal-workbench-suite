@@ -3,11 +3,12 @@
 const { alpha, mix } = require('./lib/color');
 
 // ANSI palette (design doc). Bright variants: mix 12% toward white in
-// dark mode, toward black in light mode. Light-mode black/white are
-// remapped to inks — ANSI black is a foreground color and light bg4
-// would be invisible on light surfaces.
+// dark mode, 10% toward black in light mode — the ratios the rest of the
+// suite's ports use. Light-mode black/white are remapped to inks — ANSI
+// black is a foreground color and light bg4 would be invisible on light
+// surfaces.
 function terminalColors(t, isDark) {
-  const bright = (hex) => (isDark ? mix(hex, '#ffffff', 0.12) : mix(hex, '#000000', 0.12));
+  const bright = (hex) => (isDark ? mix(hex, '#ffffff', 0.12) : mix(hex, '#000000', 0.10));
   return {
     'terminal.background': t.bg0,
     'terminal.foreground': t.textSoft,

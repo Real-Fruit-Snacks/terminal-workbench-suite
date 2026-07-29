@@ -9,8 +9,8 @@ cursor_fg = "#f5f7f4"
 cursor_border = "#007a4d"
 selection_bg = "#cbe2d8"
 selection_fg = "#17201d"
-ansi = ["#17201d", "#c8324c", "#007a4d", "#a46600", "#2e62b8", "#7357b8", "#006f9e", "#c8d5cf"]
-brights = ["#60706a", "#b42d44", "#006e45", "#945c00", "#2958a6", "#684ea6", "#00648e", "#f5f7f4"]
+ansi = ["#17201d", "#c8324c", "#007a4d", "#a46600", "#2e62b8", "#7357b8", "#006f9e", "#60706a"]
+brights = ["#34443f", "#b42d44", "#006e45", "#945c00", "#2958a6", "#684ea6", "#00648e", "#81918a"]
 
 [metadata]
 name = "Terminal Workbench Light"

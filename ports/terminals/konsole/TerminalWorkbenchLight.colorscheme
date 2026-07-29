@@ -39,10 +39,10 @@ Color=115,87,184
 Color=0,111,158
 
 [Color7]
-Color=200,213,207
+Color=96,112,106
 
 [Color0Intense]
-Color=96,112,106
+Color=52,68,63
 
 [Color1Intense]
 Color=180,45,68
@@ -63,4 +63,4 @@ Color=104,78,166
 Color=0,100,142
 
 [Color7Intense]
-Color=245,247,244
+Color=129,145,138

@@ -41,7 +41,8 @@ let s:p.diff_text      = ['#9fc7d6', 152]
 let s:p.todo_bg        = ['#e9e1cf', 253]
 " :terminal slot aliases
 let s:p.ansi_black        = s:p.text_normal
-let s:p.ansi_white        = s:p.bg2
-let s:p.ansi_bright_white = s:p.bg0
+let s:p.ansi_bright_black = s:p.text_soft
+let s:p.ansi_white        = s:p.text_muted
+let s:p.ansi_bright_white = s:p.text_faint
 
 call twb#apply(s:p)

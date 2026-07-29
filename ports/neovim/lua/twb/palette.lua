@@ -95,15 +95,15 @@ M.light = {
     blue = "#2e62b8",
     magenta = "#7357b8",
     cyan = "#006f9e",
-    white = "#c8d5cf",
-    brblack = "#60706a",
+    white = "#60706a",
+    brblack = "#34443f",
     brred = "#b42d44",
     brgreen = "#006e45",
     bryellow = "#945c00",
     brblue = "#2958a6",
     brmagenta = "#684ea6",
     brcyan = "#00648e",
-    brwhite = "#f5f7f4",
+    brwhite = "#81918a",
   },
 }
 
