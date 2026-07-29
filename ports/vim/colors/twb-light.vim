@@ -31,6 +31,15 @@ let s:p.warm           = ['#a46600', 130]
 let s:p.red            = ['#c8324c', 167]
 let s:p.orange         = ['#b65800', 130]
 let s:p.violet         = ['#7357b8', 61]
+let s:p.blue           = ['#2e62b8', 25]
+" ANSI bright variants — base mixed 10% toward black. The 256-color cube
+" cannot resolve a 10% step, so several fall back onto their base cell.
+let s:p.br_red         = ['#b42d44', 125]
+let s:p.br_green       = ['#006e45', 23]
+let s:p.br_yellow      = ['#945c00', 94]
+let s:p.br_blue        = ['#2958a6', 25]
+let s:p.br_magenta     = ['#684ea6', 61]
+let s:p.br_cyan        = ['#00648e', 24]
 " Derived tints (mix(source, bg0, pct) precomputed per the design system)
 let s:p.visual         = ['#b8d8ca', 151]
 let s:p.search_bg      = ['#acceda', 152]

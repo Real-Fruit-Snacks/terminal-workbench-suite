@@ -138,10 +138,10 @@ function! twb#apply(p) abort
 
   " --- :terminal ANSI palette (GUI/true-color only) ----------------------
   let g:terminal_ansi_colors = [
-        \ l:p.ansi_black[0], l:p.red[0],    l:p.accent[0],     l:p.warm[0],
-        \ l:p.accent_alt[0], l:p.violet[0], l:p.accent_alt[0], l:p.ansi_white[0],
-        \ l:p.ansi_bright_black[0], l:p.red[0], l:p.accent[0],  l:p.warm[0],
-        \ l:p.accent_alt[0], l:p.violet[0], l:p.accent_alt[0], l:p.ansi_bright_white[0],
+        \ l:p.ansi_black[0],        l:p.red[0],        l:p.accent[0],     l:p.warm[0],
+        \ l:p.blue[0],              l:p.violet[0],     l:p.accent_alt[0], l:p.ansi_white[0],
+        \ l:p.ansi_bright_black[0], l:p.br_red[0],     l:p.br_green[0],   l:p.br_yellow[0],
+        \ l:p.br_blue[0],           l:p.br_magenta[0], l:p.br_cyan[0],    l:p.ansi_bright_white[0],
         \ ]
 endfunction
 

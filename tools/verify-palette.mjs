@@ -115,6 +115,21 @@ function collect(mode) {
   }
   ports['putty'] = puPal;
 
+  // vim assembles its palette in vimscript: read the slot order out of the
+  // autoload function, then resolve each key (following aliases) against the
+  // colorscheme file, so the wiring itself is what gets checked.
+  const twb = read('ports/vim/autoload/twb.vim');
+  const ansiStart = twb.indexOf('let g:terminal_ansi_colors');
+  const order = [...twb.slice(ansiStart, twb.indexOf('endfunction', ansiStart))
+    .matchAll(/l:p\.(\w+)\[0\]/g)].map(m => m[1]);
+  const vimSrc = read(`ports/vim/colors/twb-${mode}.vim`);
+  const direct = Object.fromEntries(
+    [...vimSrc.matchAll(/let s:p\.(\w+)\s*=\s*\['(#[0-9a-fA-F]{6})'/g)].map(m => [m[1], m[2].toLowerCase()]));
+  const alias = Object.fromEntries(
+    [...vimSrc.matchAll(/let s:p\.(\w+)\s*=\s*s:p\.(\w+)\s*$/gm)].map(m => [m[1], m[2]]));
+  const resolve = k => direct[k] ?? (alias[k] ? resolve(alias[k]) : '');
+  ports['vim'] = Object.fromEntries(ROLES.map((r, i) => [r, resolve(order[i])]));
+
   const mo = read(`ports/terminals/mobaxterm/terminal-workbench-${mode}.ini`);
   const moNames = ['Black', 'Red', 'Green', 'Yellow', 'Blue', 'Magenta', 'Cyan', 'White'];
   ports['mobaxterm'] = byList(
