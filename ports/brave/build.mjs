@@ -4,21 +4,29 @@
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
-// Chromium theme.colors key -> token; one mapping for both modes.
+// Chromium theme.colors key -> design token; one mapping for both modes.
+//
+// Surfaces follow the THEME-SPEC graphite ramp, stepping away from the page:
+// the tab strip sits at the page surface, the toolbar (which Chromium also
+// paints behind the active tab) is the "title/tab bar" step, and the omnibox
+// is a form field one step further in. Text follows "quiet chrome, loud
+// signal" — near-monochrome graphite everywhere, accent spent only on the
+// active tab and the bookmark bar, cyan reserved for links.
 const MAPPING = {
-  frame: 'chrome-frame',
-  frame_inactive: 'chrome-page',
-  toolbar: 'chrome-toolbar',
-  tab_text: 'tab-label',
-  tab_background_text: 'chrome-muted',
-  tab_background_text_inactive: 'chrome-muted-dim',
-  omnibox_background: 'chrome-field',
-  omnibox_text: 'chrome-text',
-  bookmark_text: 'bookmark-text',
-  toolbar_button_icon: 'chrome-icon',
-  ntp_background: 'chrome-page',
-  ntp_text: 'chrome-text',
-  ntp_link: 'chrome-link',
+  frame: 'bg-0',                             // tab strip, behind inactive tabs
+  frame_inactive: 'bg-0',                    // unfocused window
+  toolbar: 'bg-1',                           // toolbar + active tab block
+  tab_text: 'accent',                        // active tab label (spec 5)
+  tab_background_text: 'text-muted',         // inactive tab label (spec 5)
+  tab_background_text_inactive: 'text-faint', // inactive tab, unfocused window
+  omnibox_background: 'bg-2',                // form field (spec 2.2)
+  omnibox_text: 'text-normal',               // body text, not signal
+  bookmark_text: 'accent',
+  toolbar_button_icon: 'text-muted',         // icons need 3:1, and text-faint
+                                             // misses it on light surfaces
+  ntp_background: 'bg-0',                    // page background (spec 2.2)
+  ntp_text: 'text-normal',
+  ntp_link: 'accent-alt',                    // links are cyan (spec 2.1)
 };
 
 // [foreground key, background key, minimum WCAG ratio]
@@ -61,7 +69,7 @@ export function buildManifest(mode, tokens) {
   return {
     manifest_version: 3,
     name: `Terminal Workbench ${label}`,
-    version: '1.7.0',
+    version: '1.8.0',
     description: `Calm graphite terminal-workbench chrome — ${mode} mode.`,
     theme: { colors },
   };
