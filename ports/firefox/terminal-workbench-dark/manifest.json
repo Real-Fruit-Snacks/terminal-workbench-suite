@@ -3,7 +3,7 @@
   "name": "Terminal Workbench",
   "description": "Calm graphite terminal-workbench chrome for Firefox — dark mode.",
   "author": "Real-Fruit-Snacks",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "applications": {
     "gecko": {
       "id": "terminal-workbench-dark@real-fruit-snacks"
@@ -11,37 +11,37 @@
   },
   "theme": {
     "colors": {
-      "frame": "#000000",
-      "frame_inactive": "#000000",
-      "toolbar": "#0b0b0b",
-      "tab_selected": "#0b0b0b",
-      "tab_background_text": "#3f7a5c",
-      "tab_text": "#8cf7c3",
+      "frame": "#090c0d",
+      "frame_inactive": "#090c0d",
+      "toolbar": "#0e1214",
+      "tab_selected": "#0e1214",
+      "tab_background_text": "#879994",
+      "tab_text": "#63f2ab",
       "tab_line": "#63f2ab",
       "toolbar_text": "#63f2ab",
-      "toolbar_field": "#060606",
-      "toolbar_field_text": "#63f2ab",
+      "toolbar_field": "#13191c",
+      "toolbar_field_text": "#dce4df",
       "toolbar_field_border": "#2a363d",
       "toolbar_field_focus": "#182024",
       "toolbar_top_separator": "#2a363d",
       "toolbar_bottom_separator": "#2a363d",
       "bookmark_text": "#63f2ab",
-      "icons": "#4f9a73",
+      "icons": "#879994",
       "icons_attention": "#63f2ab",
       "button_background_hover": "#182024",
       "button_background_active": "#202a2f",
       "popup": "#0e1214",
       "popup_text": "#dce4df",
       "popup_border": "#2a363d",
-      "popup_highlight": "#204634",
+      "popup_highlight": "#1f3f32",
       "popup_highlight_text": "#dce4df",
       "sidebar": "#0e1214",
       "sidebar_text": "#dce4df",
       "sidebar_border": "#2a363d",
-      "sidebar_highlight": "#204634",
+      "sidebar_highlight": "#1f3f32",
       "sidebar_highlight_text": "#dce4df",
-      "ntp_background": "#000000",
-      "ntp_text": "#63f2ab"
+      "ntp_background": "#090c0d",
+      "ntp_text": "#dce4df"
     }
   }
 }
