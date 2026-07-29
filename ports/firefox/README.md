@@ -20,10 +20,14 @@ same chrome roles so the two browsers match.
 ```
 terminal-workbench-dark/manifest.json    dark theme, WebExtension manifest v2
 terminal-workbench-light/manifest.json   light theme, WebExtension manifest v2
+tokens.json                              single source for every color, both modes
+build.mjs                                generates both manifests, runs the contrast gate
 ```
 
-Each folder is a complete, installable extension on its own — there is no
-build step; the manifests are the shipped artifact.
+Each theme folder is a complete, installable extension on its own — the
+manifests are committed, so installing needs no build step. They are
+generated from `tokens.json` rather than hand-edited; see
+[Development](#development).
 
 ## Install
 
@@ -70,6 +74,28 @@ select the default theme there to revert.
 A Firefox static theme styles the browser frame, tab strip, toolbar and
 address bar, popups/menus, sidebar, and New Tab Page colors. It cannot
 affect web page content or the internal `about:` pages beyond New Tab.
+
+## Development
+
+Every color lives in [tokens.json](tokens.json), keyed by design-token name
+for both modes — a mirror of the suite's [`tokens/tokens.css`](../../tokens/tokens.css).
+After editing:
+
+```sh
+node build.mjs
+```
+
+The build (Node.js 18 or later, no dependencies) regenerates both manifests
+and enforces a WCAG contrast gate over every text and surface pair it emits
+— 4.5:1 for primary text, 3:1 for de-emphasized UI. It refuses to write
+output if any pair falls below its target. CI reruns it and fails if the
+committed manifests don't match, so the chrome cannot drift off the token
+system.
+
+`build.mjs` also holds the Firefox-key-to-token mapping, which is where the
+design decisions live: which surface each chrome region sits on, and where
+the accent is spent. The chrome roles shared with the
+[Brave port](../brave/) resolve to the same tokens in both.
 
 ## See also
 

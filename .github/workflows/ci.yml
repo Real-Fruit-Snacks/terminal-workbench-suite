@@ -29,6 +29,11 @@ jobs:
         run: |
           node build.mjs
           git diff --exit-code -- .
+      - name: Verify firefox committed artifacts
+        working-directory: ports/firefox
+        run: |
+          node build.mjs
+          git diff --exit-code -- .
       - name: Validate port data files
         run: |
           node -e '

@@ -28,6 +28,11 @@ jobs:
         run: |
           node build.mjs
           git diff --exit-code -- .
+      - name: Verify firefox committed artifacts
+        working-directory: ports/firefox
+        run: |
+          node build.mjs
+          git diff --exit-code -- .
       - name: Package vsix
         working-directory: ports/vscode
         run: |
@@ -49,7 +54,7 @@ jobs:
           (cd ports/jetbrains && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-jetbrains.zip" .)
           (cd ports/xtermjs && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-xtermjs.zip" .)
           (cd ports/codemirror && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-codemirror.zip" .)
-          (cd ports/firefox && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-firefox.zip" .)
+          (cd ports/firefox && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-firefox.zip" terminal-workbench-dark terminal-workbench-light README.md)
           (cd ports/wireshark && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-wireshark.zip" .)
           (cd ports/shell && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-shell.zip" .)
           (cd ports/notesnook && zip -r "$GITHUB_WORKSPACE/out/terminal-workbench-notesnook.zip" terminal-workbench-dark.json terminal-workbench-light.json README.md)
