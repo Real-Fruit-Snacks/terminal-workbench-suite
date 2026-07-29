@@ -1,0 +1,317 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetwriters/notesnook-themes/main/schemas/v1.schema.json",
+  "name": "Terminal Workbench Light",
+  "id": "terminal-workbench-light",
+  "version": 1,
+  "compatibilityVersion": 1,
+  "license": "MIT",
+  "homepage": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite",
+  "description": "Calm paper-graphite surfaces, restrained ANSI-style accents darkened for legibility, quiet chrome with color spent only on signal. The light half of the Terminal Workbench design system.",
+  "colorScheme": "light",
+  "authors": [
+    {
+      "name": "Real-Fruit-Snacks",
+      "url": "https://github.com/Real-Fruit-Snacks"
+    }
+  ],
+  "tags": ["light", "graphite", "terminal", "monospace", "minimal", "high-contrast"],
+  "scopes": {
+    "base": {
+      "primary": {
+        "accent": "#007a4d",
+        "accentForeground": "#f9fbf8",
+        "paragraph": "#17201d",
+        "background": "#f5f7f4",
+        "border": "#bfcbc5",
+        "heading": "#17201d",
+        "icon": "#60706a",
+        "separator": "#bfcbc5",
+        "placeholder": "#81918a",
+        "hover": "#e2eae5",
+        "backdrop": "#17201d59",
+        "shade": "#007a4d1b",
+        "textSelection": "#007a4d2b"
+      },
+      "secondary": {
+        "accent": "#006f9e",
+        "accentForeground": "#f9fbf8",
+        "paragraph": "#34443f",
+        "background": "#edf2ee",
+        "border": "#bfcbc5",
+        "heading": "#34443f",
+        "icon": "#60706a",
+        "separator": "#bfcbc5",
+        "placeholder": "#81918a",
+        "hover": "#d6e1db",
+        "backdrop": "#17201d59",
+        "shade": "#006f9e13",
+        "textSelection": "#007a4d2b"
+      },
+      "disabled": {
+        "accent": "#81918a",
+        "accentForeground": "#f5f7f4",
+        "paragraph": "#81918a",
+        "background": "#edf2ee",
+        "border": "#bfcbc5",
+        "heading": "#81918a",
+        "icon": "#81918a",
+        "separator": "#bfcbc5",
+        "placeholder": "#81918a",
+        "hover": "#edf2ee",
+        "backdrop": "#17201d59",
+        "shade": "#81918a13",
+        "textSelection": "#007a4d2b"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "accentForeground": "#f9fbf8",
+        "paragraph": "#17201d",
+        "background": "#d6e1db",
+        "border": "#007a4d",
+        "heading": "#17201d",
+        "icon": "#007a4d",
+        "separator": "#bfcbc5",
+        "placeholder": "#81918a",
+        "hover": "#c8d5cf",
+        "backdrop": "#17201d59",
+        "shade": "#007a4d21",
+        "textSelection": "#007a4d2b"
+      },
+      "error": {
+        "accent": "#c8324c",
+        "accentForeground": "#f9fbf8",
+        "paragraph": "#c8324c",
+        "background": "#f4f1ef",
+        "border": "#c2979c",
+        "heading": "#c8324c",
+        "icon": "#c8324c",
+        "separator": "#bfcbc5",
+        "placeholder": "#81918a",
+        "hover": "#f3edec",
+        "backdrop": "#17201d59",
+        "shade": "#c8324c1b",
+        "textSelection": "#007a4d2b"
+      },
+      "success": {
+        "accent": "#007a4d",
+        "accentForeground": "#f9fbf8",
+        "paragraph": "#007a4d",
+        "background": "#eef3ef",
+        "border": "#7eaf9c",
+        "heading": "#007a4d",
+        "icon": "#007a4d",
+        "separator": "#bfcbc5",
+        "placeholder": "#81918a",
+        "hover": "#e9f1ec",
+        "backdrop": "#17201d59",
+        "shade": "#007a4d1b",
+        "textSelection": "#007a4d2b"
+      }
+    },
+    "titleBar": {
+      "primary": {
+        "background": "#edf2ee",
+        "paragraph": "#34443f",
+        "heading": "#34443f",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#e2eae5"
+      },
+      "selected": {
+        "background": "#d6e1db",
+        "paragraph": "#17201d",
+        "icon": "#007a4d"
+      }
+    },
+    "statusBar": {
+      "primary": {
+        "background": "#edf2ee",
+        "paragraph": "#34443f",
+        "heading": "#34443f",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#e2eae5"
+      }
+    },
+    "navigationMenu": {
+      "primary": {
+        "background": "#edf2ee",
+        "paragraph": "#34443f",
+        "heading": "#34443f",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#e2eae5"
+      },
+      "secondary": {
+        "background": "#e2eae5",
+        "paragraph": "#34443f",
+        "icon": "#60706a",
+        "hover": "#d6e1db"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "background": "#007a4d1b",
+        "paragraph": "#17201d",
+        "heading": "#17201d",
+        "icon": "#007a4d",
+        "hover": "#007a4d21"
+      }
+    },
+    "list": {
+      "primary": {
+        "background": "#f5f7f4",
+        "paragraph": "#17201d",
+        "heading": "#17201d",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#e2eae5"
+      },
+      "secondary": {
+        "background": "#edf2ee",
+        "paragraph": "#34443f",
+        "icon": "#60706a",
+        "hover": "#d6e1db"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "background": "#d6e1db",
+        "paragraph": "#17201d",
+        "heading": "#17201d",
+        "border": "#007a4d",
+        "icon": "#007a4d",
+        "hover": "#c8d5cf"
+      }
+    },
+    "editor": {
+      "primary": {
+        "background": "#f5f7f4",
+        "paragraph": "#17201d",
+        "heading": "#17201d",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "placeholder": "#81918a",
+        "hover": "#e2eae5",
+        "textSelection": "#007a4d2b"
+      },
+      "secondary": {
+        "background": "#e2eae5",
+        "paragraph": "#34443f",
+        "border": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#d6e1db"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "background": "#d6e1db",
+        "paragraph": "#17201d",
+        "icon": "#007a4d",
+        "hover": "#c8d5cf"
+      }
+    },
+    "editorToolbar": {
+      "primary": {
+        "background": "#edf2ee",
+        "paragraph": "#34443f",
+        "heading": "#34443f",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#e2eae5"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "background": "#d6e1db",
+        "paragraph": "#17201d",
+        "icon": "#007a4d",
+        "hover": "#c8d5cf"
+      }
+    },
+    "editorSidebar": {
+      "primary": {
+        "background": "#edf2ee",
+        "paragraph": "#34443f",
+        "heading": "#17201d",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#e2eae5"
+      },
+      "secondary": {
+        "background": "#e2eae5",
+        "paragraph": "#34443f",
+        "icon": "#60706a",
+        "hover": "#d6e1db"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "background": "#d6e1db",
+        "paragraph": "#17201d",
+        "icon": "#007a4d"
+      }
+    },
+    "dialog": {
+      "primary": {
+        "background": "#edf2ee",
+        "paragraph": "#17201d",
+        "heading": "#17201d",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "backdrop": "#17201d59",
+        "hover": "#e2eae5"
+      },
+      "secondary": {
+        "background": "#e2eae5",
+        "paragraph": "#34443f",
+        "border": "#bfcbc5",
+        "hover": "#d6e1db"
+      }
+    },
+    "contextMenu": {
+      "primary": {
+        "background": "#e2eae5",
+        "paragraph": "#34443f",
+        "heading": "#34443f",
+        "border": "#9daea7",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "hover": "#d6e1db"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "background": "#d6e1db",
+        "paragraph": "#17201d",
+        "icon": "#007a4d"
+      }
+    },
+    "sheet": {
+      "primary": {
+        "background": "#edf2ee",
+        "paragraph": "#17201d",
+        "heading": "#17201d",
+        "border": "#bfcbc5",
+        "separator": "#bfcbc5",
+        "icon": "#60706a",
+        "backdrop": "#17201d59",
+        "hover": "#e2eae5"
+      },
+      "secondary": {
+        "background": "#e2eae5",
+        "paragraph": "#34443f",
+        "icon": "#60706a",
+        "hover": "#d6e1db"
+      },
+      "selected": {
+        "accent": "#007a4d",
+        "background": "#d6e1db",
+        "paragraph": "#17201d",
+        "icon": "#007a4d"
+      }
+    }
+  }
+}

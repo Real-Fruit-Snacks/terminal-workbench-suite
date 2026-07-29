@@ -1,0 +1,24 @@
+<svg width="820" height="190" viewBox="0 0 820 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="notesnook — Terminal Workbench for Notesnook">
+  <rect x="1" y="1" width="818" height="188" rx="12" fill="#090c0d" stroke="#2a363d" stroke-width="2"/>
+  <g font-family="ui-monospace,'Cascadia Code','JetBrains Mono',Consolas,monospace">
+    <text x="48" y="60" font-size="12" font-weight="600" letter-spacing="3" fill="#879994">TERMINAL WORKBENCH · NOTESNOOK PORT</text>
+    <text x="46" y="110" font-size="46" font-weight="700" fill="#63f2ab">notesnook</text>
+    <text x="48" y="150" font-size="15" fill="#b4c3bd">theme.json, dark + light</text>
+    <rect x="269" y="137" width="9" height="16" fill="#63f2ab"/>
+  </g>
+  <line x1="500" y1="40" x2="500" y2="150" stroke="#2a363d" stroke-width="1"/>
+  <g>
+    <circle cx="560" cy="78" r="9" fill="#63f2ab"/>
+    <circle cx="592" cy="78" r="9" fill="#6bdcff"/>
+    <circle cx="624" cy="78" r="9" fill="#f0c674"/>
+    <circle cx="656" cy="78" r="9" fill="#ff6e7a"/>
+    <circle cx="688" cy="78" r="9" fill="#f7a35c"/>
+    <circle cx="720" cy="78" r="9" fill="#b78cff"/>
+    <rect x="551" y="100" width="18" height="18" rx="4" fill="#0e1214" stroke="#2a363d"/>
+    <rect x="583" y="100" width="18" height="18" rx="4" fill="#13191c" stroke="#2a363d"/>
+    <rect x="615" y="100" width="18" height="18" rx="4" fill="#182024" stroke="#2a363d"/>
+    <rect x="647" y="100" width="18" height="18" rx="4" fill="#202a2f" stroke="#2a363d"/>
+    <rect x="679" y="100" width="18" height="18" rx="4" fill="#2a363d" stroke="#39484f"/>
+    <rect x="711" y="100" width="18" height="18" rx="4" fill="#39484f" stroke="#39484f"/>
+  </g>
+</svg>

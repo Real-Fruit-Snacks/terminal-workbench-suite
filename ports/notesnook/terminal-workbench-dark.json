@@ -1,0 +1,317 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetwriters/notesnook-themes/main/schemas/v1.schema.json",
+  "name": "Terminal Workbench Dark",
+  "id": "terminal-workbench-dark",
+  "version": 1,
+  "compatibilityVersion": 1,
+  "license": "MIT",
+  "homepage": "https://github.com/Real-Fruit-Snacks/terminal-workbench-suite",
+  "description": "Calm graphite surfaces, restrained ANSI-style accents, quiet chrome with color spent only on signal. The dark half of the Terminal Workbench design system.",
+  "colorScheme": "dark",
+  "authors": [
+    {
+      "name": "Real-Fruit-Snacks",
+      "url": "https://github.com/Real-Fruit-Snacks"
+    }
+  ],
+  "tags": ["dark", "graphite", "terminal", "monospace", "minimal", "high-contrast"],
+  "scopes": {
+    "base": {
+      "primary": {
+        "accent": "#63f2ab",
+        "accentForeground": "#07100d",
+        "paragraph": "#dce4df",
+        "background": "#090c0d",
+        "border": "#2a363d",
+        "heading": "#dce4df",
+        "icon": "#879994",
+        "separator": "#2a363d",
+        "placeholder": "#63736f",
+        "hover": "#13191c",
+        "backdrop": "#090c0dcc",
+        "shade": "#63f2ab1b",
+        "textSelection": "#63f2ab33"
+      },
+      "secondary": {
+        "accent": "#6bdcff",
+        "accentForeground": "#07100d",
+        "paragraph": "#b4c3bd",
+        "background": "#0e1214",
+        "border": "#2a363d",
+        "heading": "#b4c3bd",
+        "icon": "#879994",
+        "separator": "#2a363d",
+        "placeholder": "#63736f",
+        "hover": "#182024",
+        "backdrop": "#090c0dcc",
+        "shade": "#6bdcff13",
+        "textSelection": "#63f2ab33"
+      },
+      "disabled": {
+        "accent": "#63736f",
+        "accentForeground": "#090c0d",
+        "paragraph": "#63736f",
+        "background": "#0e1214",
+        "border": "#2a363d",
+        "heading": "#63736f",
+        "icon": "#63736f",
+        "separator": "#2a363d",
+        "placeholder": "#63736f",
+        "hover": "#0e1214",
+        "backdrop": "#090c0dcc",
+        "shade": "#63736f13",
+        "textSelection": "#63f2ab33"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "accentForeground": "#07100d",
+        "paragraph": "#dce4df",
+        "background": "#182024",
+        "border": "#63f2ab",
+        "heading": "#dce4df",
+        "icon": "#63f2ab",
+        "separator": "#2a363d",
+        "placeholder": "#63736f",
+        "hover": "#202a2f",
+        "backdrop": "#090c0dcc",
+        "shade": "#63f2ab21",
+        "textSelection": "#63f2ab33"
+      },
+      "error": {
+        "accent": "#ff6e7a",
+        "accentForeground": "#07100d",
+        "paragraph": "#ff6e7a",
+        "background": "#1f1517",
+        "border": "#724952",
+        "heading": "#ff6e7a",
+        "icon": "#ff6e7a",
+        "separator": "#2a363d",
+        "placeholder": "#63736f",
+        "hover": "#2b1a1c",
+        "backdrop": "#090c0dcc",
+        "shade": "#ff6e7a1b",
+        "textSelection": "#63f2ab33"
+      },
+      "success": {
+        "accent": "#63f2ab",
+        "accentForeground": "#07100d",
+        "paragraph": "#63f2ab",
+        "background": "#11211b",
+        "border": "#3d7662",
+        "heading": "#63f2ab",
+        "icon": "#63f2ab",
+        "separator": "#2a363d",
+        "placeholder": "#63736f",
+        "hover": "#162c23",
+        "backdrop": "#090c0dcc",
+        "shade": "#63f2ab1b",
+        "textSelection": "#63f2ab33"
+      }
+    },
+    "titleBar": {
+      "primary": {
+        "background": "#0e1214",
+        "paragraph": "#879994",
+        "heading": "#879994",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "hover": "#13191c"
+      },
+      "selected": {
+        "background": "#182024",
+        "paragraph": "#63f2ab",
+        "icon": "#63f2ab"
+      }
+    },
+    "statusBar": {
+      "primary": {
+        "background": "#0e1214",
+        "paragraph": "#879994",
+        "heading": "#879994",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "hover": "#13191c"
+      }
+    },
+    "navigationMenu": {
+      "primary": {
+        "background": "#0e1214",
+        "paragraph": "#879994",
+        "heading": "#879994",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "hover": "#13191c"
+      },
+      "secondary": {
+        "background": "#13191c",
+        "paragraph": "#b4c3bd",
+        "icon": "#879994",
+        "hover": "#182024"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "background": "#63f2ab1b",
+        "paragraph": "#dce4df",
+        "heading": "#dce4df",
+        "icon": "#63f2ab",
+        "hover": "#63f2ab21"
+      }
+    },
+    "list": {
+      "primary": {
+        "background": "#090c0d",
+        "paragraph": "#dce4df",
+        "heading": "#dce4df",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "hover": "#13191c"
+      },
+      "secondary": {
+        "background": "#0e1214",
+        "paragraph": "#879994",
+        "icon": "#879994",
+        "hover": "#182024"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "background": "#182024",
+        "paragraph": "#dce4df",
+        "heading": "#dce4df",
+        "border": "#63f2ab",
+        "icon": "#63f2ab",
+        "hover": "#202a2f"
+      }
+    },
+    "editor": {
+      "primary": {
+        "background": "#090c0d",
+        "paragraph": "#dce4df",
+        "heading": "#dce4df",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "placeholder": "#63736f",
+        "hover": "#13191c",
+        "textSelection": "#63f2ab33"
+      },
+      "secondary": {
+        "background": "#13191c",
+        "paragraph": "#b4c3bd",
+        "border": "#2a363d",
+        "icon": "#879994",
+        "hover": "#182024"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "background": "#182024",
+        "paragraph": "#dce4df",
+        "icon": "#63f2ab",
+        "hover": "#202a2f"
+      }
+    },
+    "editorToolbar": {
+      "primary": {
+        "background": "#0e1214",
+        "paragraph": "#b4c3bd",
+        "heading": "#b4c3bd",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "hover": "#13191c"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "background": "#182024",
+        "paragraph": "#dce4df",
+        "icon": "#63f2ab",
+        "hover": "#202a2f"
+      }
+    },
+    "editorSidebar": {
+      "primary": {
+        "background": "#0e1214",
+        "paragraph": "#b4c3bd",
+        "heading": "#dce4df",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "hover": "#13191c"
+      },
+      "secondary": {
+        "background": "#13191c",
+        "paragraph": "#b4c3bd",
+        "icon": "#879994",
+        "hover": "#182024"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "background": "#182024",
+        "paragraph": "#dce4df",
+        "icon": "#63f2ab"
+      }
+    },
+    "dialog": {
+      "primary": {
+        "background": "#0e1214",
+        "paragraph": "#dce4df",
+        "heading": "#dce4df",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "backdrop": "#090c0dcc",
+        "hover": "#13191c"
+      },
+      "secondary": {
+        "background": "#13191c",
+        "paragraph": "#b4c3bd",
+        "border": "#2a363d",
+        "hover": "#182024"
+      }
+    },
+    "contextMenu": {
+      "primary": {
+        "background": "#13191c",
+        "paragraph": "#b4c3bd",
+        "heading": "#b4c3bd",
+        "border": "#39484f",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "hover": "#182024"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "background": "#182024",
+        "paragraph": "#dce4df",
+        "icon": "#63f2ab"
+      }
+    },
+    "sheet": {
+      "primary": {
+        "background": "#0e1214",
+        "paragraph": "#dce4df",
+        "heading": "#dce4df",
+        "border": "#2a363d",
+        "separator": "#2a363d",
+        "icon": "#879994",
+        "backdrop": "#090c0dcc",
+        "hover": "#13191c"
+      },
+      "secondary": {
+        "background": "#13191c",
+        "paragraph": "#b4c3bd",
+        "icon": "#879994",
+        "hover": "#182024"
+      },
+      "selected": {
+        "accent": "#63f2ab",
+        "background": "#182024",
+        "paragraph": "#63f2ab",
+        "icon": "#63f2ab"
+      }
+    }
+  }
+}

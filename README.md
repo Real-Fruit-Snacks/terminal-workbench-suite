@@ -35,6 +35,7 @@ mandatory dark **and** light modes, color spent only on signal.
 | **Wireshark** | `terminal-workbench-wireshark.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), drop the profile folders into your Wireshark `profiles/` directory — see [ports/wireshark](ports/wireshark) |
 | **Shell prompt & CLI tools** (Oh My Posh · Starship · fzf · eza · btop) | `terminal-workbench-shell.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), per-tool config files — see [ports/shell](ports/shell) |
 | **Slack** | Copy `terminal-workbench-dark.txt` or `-light.txt` into Slack's **Preferences → Themes → Custom Theme** field — see [ports/slack](ports/slack) |
+| **Notesnook** | `terminal-workbench-notesnook.zip` from [Releases](https://github.com/Real-Fruit-Snacks/terminal-workbench-suite/releases), then **Settings → Appearance → Themes → Load from file** — see [ports/notesnook](ports/notesnook) |
 
 ## Build for the web
 
@@ -65,7 +66,7 @@ patterns. Hand it to any tool (or AI) to reproduce the theme faithfully.
 THEME-SPEC.md   the portable spec (source of truth)
 tokens/         drop-in CSS custom properties + font loader
 index.html      live demo (GitHub Pages)
-ports/          vim · vscode · brave · notepad-plus-plus · windows-terminal · neovim · terminals · tmtheme · zed · helix · jetbrains · xtermjs · codemirror · firefox · wireshark · shell · slack
+ports/          vim · vscode · brave · notepad-plus-plus · windows-terminal · neovim · terminals · tmtheme · zed · helix · jetbrains · xtermjs · codemirror · firefox · wireshark · shell · slack · notesnook
 font/           Terminal Workbench Mono — parametric engine + built fonts
 ```
 
