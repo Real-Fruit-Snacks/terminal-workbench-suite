@@ -75,7 +75,7 @@ A Chromium theme styles the browser frame, toolbar, tab strip, bookmark bar, and
 | `dist/terminal-workbench-light/` | Installable light theme package |
 | [`THEME-SPEC.md`](../../THEME-SPEC.md) | Portable design specification for reusing this visual system elsewhere |
 
-To cut a release: edit `tokens.json`, run `node build.mjs`, commit, then push a tag with the version number — the suite's single release workflow builds and publishes every port's release assets from there.
+To cut a release: edit `tokens.json`, run `node build.mjs`, commit, then push a tag with the version number — the suite's single release workflow builds and publishes every port's release assets from there. Where pushing a tag isn't possible, the same workflow can be started from the Actions tab with **Run workflow** and a tag name, which creates the tag at the commit it builds.
 
 ## License
 

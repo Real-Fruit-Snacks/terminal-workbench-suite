@@ -3,6 +3,14 @@ name: Release
 on:
   push:
     tags: ["v*"]
+  # Manual path, for when pushing a tag from a workstation isn't possible.
+  # Creates the tag at the checked-out commit as part of publishing.
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to create and publish (e.g. v1.2.0)"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -10,8 +18,32 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      # On a tag push this is the pushed tag; on dispatch it is the input.
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
     steps:
       - uses: actions/checkout@v4
+      - name: Validate release tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          case "$RELEASE_TAG" in
+            v*) ;;
+            *) echo "Release tag must start with 'v' (got '$RELEASE_TAG')" >&2; exit 1 ;;
+          esac
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "A release for $RELEASE_TAG already exists" >&2; exit 1
+          fi
+          # On dispatch the tag is created from $GITHUB_SHA. If it already
+          # exists, GitHub ignores --target and would publish at whatever
+          # commit the tag points to, so refuse rather than release the
+          # wrong tree.
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] &&
+             git ls-remote --exit-code --tags origin "refs/tags/$RELEASE_TAG" >/dev/null 2>&1; then
+            echo "Tag $RELEASE_TAG already exists — push it to release, or pick a new version" >&2
+            exit 1
+          fi
+          echo "Releasing $RELEASE_TAG from $GITHUB_SHA"
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -65,4 +97,10 @@ jobs:
       - name: Create release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes out/*
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            # The tag does not exist yet — create it at the commit just built.
+            gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" --generate-notes out/*
+          else
+            gh release create "$RELEASE_TAG" --verify-tag --generate-notes out/*
+          fi
