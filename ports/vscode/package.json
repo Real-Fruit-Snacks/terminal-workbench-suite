@@ -2,7 +2,7 @@
   "name": "terminal-workbench",
   "displayName": "Terminal Workbench",
   "description": "A calm, dense, high-contrast theme for people who live in panes, shells, logs, and code. Graphite surfaces, restrained ANSI-style accents, dark and light.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "publisher": "real-fruit-snacks",
   "license": "MIT",
   "engines": {
